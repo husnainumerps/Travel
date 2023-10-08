@@ -1,0 +1,12 @@
+<!-- Search banner -->
+<form class="rlr-banner-search {{bannerModifier}}">
+    <div class="rlr-banner-search__input-wrapper">
+        {{> "@banner-input-group--location-dropdown" name="location" inputId='destination_input' type='text' autocomplete="off" modifier="rlr-banner-input-group rlr-banner-input-group--home-search rlr-js-autocomplete-demo rlr-banner-search__banner-input
+        rlr-js-search-layout-wrapper" label="Location" placeholder="Enter your destination" tagName="i" iconClass="flaticon-map-marker"}}
+        {{> "@banner-input-group--activity-dropdown" inputId='rlr-banner-input-group-activity' modifier="rlr-js-autocomplete-activity-demo rlr-banner-search__banner-input rlr-js-search-layout-wrapper" label="Activity" placeholder="Bungee jump" tagName="i" iconClass="flaticon-outline-down"}}
+        {{> "@banner-input-group--date-dropdown" inputId='rlr-banner-input-group-dates' modifier="rlr-banner-search__banner-input rlr-js-search-layout-wrapper" label="Date" placeholder="Set dates" tagName="i" iconClass="flaticon-calendar"}}
+    </div>
+    <button class="rlr-banner-search__submit-button" aria-label="banner submit">
+        {{> '@icon-fonts' tagName="i" iconClass="flaticon-search"}}
+    </button>
+</form>

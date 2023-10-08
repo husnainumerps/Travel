@@ -1,0 +1,222 @@
+%type-d1,
+%type-h1,
+%type-h2,
+%type-h2-bold,
+%type-h2-36-bold,
+%type-h3,
+%type-h4,
+%type-h5,
+%type-h6-medium,
+%type-h6-semi-bold,
+%type-sub-title,
+%type-sub-title-medium {
+  color: var(--heading-color);
+}
+
+%type-lead,
+%type-lead-semibold,
+%type-lead-medium,
+%type-body,
+%type-body-semibold,
+%type-body-medium,
+%type-subtitle {
+  color: var(--body-color);
+}
+
+//128
+%type-d1 {
+  @include font-size(4rem);
+
+  font-weight: 700;
+  letter-spacing: -2.05px;
+}
+
+//56
+%type-d2 {
+  @include font-size(3.5rem);
+
+  font-weight: 500;
+  letter-spacing: -2.05px;
+}
+
+//48
+%type-h1 {
+  @include font-size(3rem);
+
+  font-weight: 700;
+  letter-spacing: -2.05px;
+}
+
+%type-h1-semi-bold {
+  @include font-size(3rem);
+
+  font-weight: 600;
+  letter-spacing: -2.05px;
+}
+
+//40
+%type-h2 {
+  @include font-size(2.5rem);
+
+  font-weight: 500;
+  letter-spacing: -0.64px;
+  line-height: 1.5;
+}
+
+%type-h2-bold {
+  @include font-size(2.5rem);
+
+  font-weight: 700;
+  letter-spacing: -0.38px;
+  line-height: 1.5;
+}
+
+//36
+%type-h3 {
+  @include font-size(2.25rem);
+
+  font-weight: 700;
+  line-height: 1.33;
+}
+
+//32
+%type-h4 {
+  @include font-size(2rem);
+
+  font-weight: 600;
+  letter-spacing: -0.51px;
+}
+
+%type-h4-bold {
+  @include font-size(2rem);
+
+  font-weight: 700;
+  letter-spacing: -0.51px;
+}
+
+%type-h4-medium {
+  @include font-size(2rem);
+
+  font-weight: 500;
+  letter-spacing: -0.51px;
+}
+
+//28
+%type-h5 {
+  @include font-size(1.75rem);
+
+  font-weight: 600;
+  letter-spacing: -0.45px;
+  line-height: 1.79;
+}
+
+%type-h5-bold {
+  @include font-size(1.75rem);
+
+  font-weight: 700;
+  letter-spacing: -0.45px;
+  line-height: 1.79;
+}
+
+//24
+%type-h6-light {
+  @include font-size(1.5rem);
+
+  font-weight: 300;
+}
+
+%type-h6 {
+  @include font-size(1.5rem);
+
+  font-weight: 400;
+  letter-spacing: -0.38px;
+}
+
+%type-h6-medium {
+  @include font-size(1.5rem);
+
+  font-weight: 500;
+  letter-spacing: -0.38px;
+  line-height: 1.5;
+}
+
+%type-h6-semi-bold {
+  @include font-size(1.5rem);
+
+  font-weight: 600;
+  letter-spacing: -0.38px;
+}
+
+//20
+%type-sub-title {
+  @include font-size(1.25rem);
+
+  font-weight: 400;
+  letter-spacing: -0.29px;
+  line-height: 1.5;
+}
+
+%type-sub-title-medium {
+  @include font-size(1.25rem);
+
+  font-weight: 500;
+  line-height: 1;
+}
+
+//18
+%type-lead-light {
+  @include font-size(1.125rem);
+
+  font-weight: 300;
+  letter-spacing: -0.29px;
+  line-height: 1.5;
+}
+
+%type-lead {
+  @include font-size(1.125rem);
+
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+%type-lead-medium {
+  @include font-size(1.125rem);
+
+  font-weight: 500;
+}
+
+%type-lead-semibold {
+  @include font-size(1.125rem);
+
+  font-weight: 600;
+  line-height: 1.11;
+}
+
+//16
+%type-body {
+  @include font-size(1rem);
+
+  letter-spacing: -0.26px;
+}
+
+%type-body-medium {
+  @include font-size(1rem);
+
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+%type-body-semibold {
+  @include font-size(1rem);
+
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+//14
+%type-small {
+  @include font-size(0.875rem);
+
+  font-weight: 500;
+  line-height: 1.25;
+}

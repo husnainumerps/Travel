@@ -1,0 +1,122 @@
+.rlr-data {
+  &-table {
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    border-radius: var(--spacing-6);
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 7%);
+    list-style: none;
+
+    &__title {
+      margin-bottom: var(--spacing-8);
+      color: var(--brand-09);
+      font-weight: 500;
+      line-height: 1.25rem;
+    }
+
+    &__header {
+      padding: 0;
+      border: none;
+
+      &-row {
+        border-bottom: 0;
+        background-color: var(--gray-01) !important; // overwrite bootstrap table bg
+        color: var(--gray-05);
+
+        th {
+          @extend %type-body-medium;
+
+          padding: var(--spacing-8) var(--spacing-9);
+
+          @include media-breakpoint-up(lg) {
+            padding: var(--spacing-6) var(--spacing-7);
+          }
+
+          @include media-breakpoint-down(md) {
+            padding: var(--spacing-3) var(--spacing-6);
+          }
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    tbody {
+      border-bottom: 1px solid var(--gray-03);
+    }
+
+    &__row {
+      @include media-breakpoint-down(md) {
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+      }
+
+      td {
+        padding: var(--spacing-8) var(--spacing-9);
+
+        @include media-breakpoint-up(lg) {
+          padding: var(--spacing-6) var(--spacing-7);
+        }
+
+        @include media-breakpoint-down(md) {
+          padding: var(--spacing-3) var(--spacing-6);
+        }
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--gray-03);
+      }
+
+      a,
+      p {
+        margin: 0;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    &__cell {
+      color: var(--gray-07);
+
+      @include media-breakpoint-down(md) {
+        &::before {
+          color: var(--gray-05);
+          content: attr(data-title) ":";
+          float: left;
+          font-weight: 700;
+        }
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .num-tems {
+        color: var(--gray-05);
+      }
+
+      &-totlal {
+        color: var(--gray-05);
+        font-weight: 600;
+      }
+
+      .view {
+        @extend %type-body-medium;
+
+        color: var(--brand);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--brand);
+        }
+      }
+    }
+
+    &__amount {
+      font-weight: 600;
+    }
+  }
+}

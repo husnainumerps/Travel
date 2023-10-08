@@ -1,0 +1,24 @@
+.rlr-form-check-input {
+  box-shadow: 0 0;
+  transition: all 0.3s;
+
+  // Radio Buttons
+  &[type="radio"] {
+    width: var(--spacing-6);
+    height: var(--spacing-6);
+    border: solid 2px var(--body-color);
+
+    &:checked {
+      border-color: var(--brand);
+      background: url("../assets/images/checkbox-bg.png") no-repeat 50% 50%;
+    }
+  }
+}
+
+.rlr-radios {
+  padding-left: 0;
+
+  &--no-bottom-spacer {
+    margin-bottom: 0;
+  }
+}

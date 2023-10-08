@@ -1,0 +1,42 @@
+.rlr-header-layout {
+  $self: &;
+
+  &__navigation {
+    &--fullwidth {
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
+
+      & .navigation {
+        background: transparent;
+      }
+
+      & .rlr-navigation__link {
+        color: var(--white);
+
+        & svg {
+          fill: var(--white);
+        }
+      }
+
+      & .rlr-navigation__button-login {
+        color: var(--white);
+      }
+    }
+  }
+
+  &--fullwidth {
+    padding-right: 0;
+    padding-left: 0;
+
+    #{$self}__search-layout {
+      @include media-breakpoint-up(xxl) {
+        position: absolute;
+        bottom: 12rem;
+      }
+    }
+  }
+}

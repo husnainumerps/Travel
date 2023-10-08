@@ -1,0 +1,47 @@
+.rlr-progress {
+  &__steps {
+    position: relative;
+    display: inline-flex;
+    padding-left: 0;
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      top: var(--spacing-7);
+      right: calc(var(--spacing-2) - 1px);
+      width: 2px;
+      height: calc(100% - var(--spacing-7) * 2 - var(--spacing-14));
+      background: var(--gray-02);
+      content: "";
+
+      @include media-breakpoint-down(xl) {
+        top: calc(var(--spacing-2) - 1px);
+        left: var(--spacing-7);
+        width: calc(100% - 7.75rem);
+        height: 2px;
+      }
+    }
+
+    @include media-breakpoint-down(xl) {
+      column-gap: var(--spacing-9);
+    }
+
+    @include media-breakpoint-down(sm) {
+      column-gap: var(--spacing-7);
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    overflow-x: auto;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__steps {
+      flex-direction: column;
+    }
+
+    & .rlr-step {
+      margin-bottom: var(--spacing-14);
+    }
+  }
+}

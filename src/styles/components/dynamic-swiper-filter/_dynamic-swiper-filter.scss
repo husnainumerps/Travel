@@ -1,0 +1,32 @@
+.rlr-js-dynamic-filter-swiper {
+  & .swiper-slide {
+    width: auto;
+  }
+
+  &:hover {
+    @include media-breakpoint-up(lg) {
+      & .splide__arrow--next,
+      & .splide__arrow--prev {
+        display: flex;
+        background-color: var(--gray-05);
+
+        & i {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  & .splide__arrow--next,
+  & .splide__arrow--prev {
+    border-radius: 2rem;
+  }
+
+  & .splide__arrow--next {
+    right: 0;
+  }
+
+  & .splide__arrow--prev {
+    left: 0;
+  }
+}

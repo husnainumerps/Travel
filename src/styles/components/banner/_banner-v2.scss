@@ -1,0 +1,273 @@
+.rlr-banner-splide {
+  position: relative;
+
+  $self: &;
+
+  &__slide {
+    position: relative;
+    display: grid;
+    border-radius: var(--spacing-8);
+    grid-column-gap: 0;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 0;
+  }
+
+  &__image-wrapper {
+    overflow: hidden;
+    border-radius: var(--spacing-8);
+  }
+
+  &__image-wrapper,
+  &__content-wrapper,
+  &__search-layout-container,
+  &__overlay {
+    background: rgb(0 0 0 / 20%);
+    grid-area: 1 / 1 / 6 / 6;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 22%);
+  }
+
+  &__banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--spacing-7) var(--spacing-8);
+    border-radius: var(--spacing-8);
+    row-gap: var(--spacing-9);
+
+    @include media-breakpoint-up(md) {
+      padding: var(--spacing-10) var(--spacing-11);
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: var(--spacing-15) var(--spacing-17) var(--spacing-18) var(--spacing-17);
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--spacing-3);
+  }
+
+  &__slogan {
+    @extend %type-d1;
+
+    color: var(--white);
+    letter-spacing: -2.56px;
+    text-align: left;
+  }
+
+  &__sub-title {
+    @extend %type-h6-light;
+
+    color: var(--white);
+    font-weight: 300;
+    text-align: left;
+
+    &::before {
+      display: inline-block;
+      width: 1.5rem;
+      height: var(--spacing-1);
+      margin-right: var(--spacing-5);
+      background-color: var(--white);
+      content: "";
+      vertical-align: middle;
+    }
+  }
+
+  &__content-desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-8);
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__content-desc-right {
+    display: flex;
+    max-width: 23rem;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: var(--spacing-7);
+    }
+  }
+
+  &__payment-option {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-5);
+
+    @include media-breakpoint-up(sm) {
+      flex-direction: row;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 40%;
+    }
+
+    .flaticon-credit-cards-payment {
+      position: relative;
+      display: flex;
+      width: 4rem;
+      height: 4rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 4rem;
+        height: 4rem;
+        background-color: white;
+        border-radius: 50%;
+        content: "";
+      }
+    }
+  }
+
+  &__payment-desc {
+    @extend %type-h6-light;
+
+    color: var(--white);
+    font-weight: 300;
+  }
+
+  &__temperature {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-8);
+
+    & span {
+      @extend %type-h6-medium;
+
+      color: var(--white);
+      font-weight: 400;
+    }
+  }
+
+  &__book-now.rlr-button {
+    @extend %type-h6-semi-bold;
+
+    padding-left: 0;
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: normal;
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--brand-03);
+      text-decoration: none;
+      transition: all 2s linear;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    column-gap: 0.594rem;
+  }
+
+  &__arrow {
+    border: none;
+    background: transparent;
+
+    i {
+      display: flex;
+      width: 2.906rem;
+      height: 2.906rem;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.906rem;
+      font-weight: 100;
+
+      &:hover {
+        // background: var(--brand);
+        //border-radius: 50%;
+        color: var(--brand-02);
+      }
+    }
+  }
+
+  &__search-layout {
+    position: relative;
+    top: 100%;
+
+    @include media-breakpoint-up(xl) {
+      top: calc(100% - var(--spacing-15));
+      left: 5%;
+      width: 90%;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      left: 10%;
+      width: 80%;
+    }
+
+    .rlr-banner-input-group__input {
+      margin-right: 0;
+    }
+  }
+
+  &--fullwidth {
+    #{$self}__slide {
+      border-radius: 0;
+      height: calc(100vh - 200px);
+    }
+    // #{$self}__search-layout {
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   flex-direction: column;
+
+    //   @include media-breakpoint-up(xxl) {
+    //     flex-direction: row;
+    //   }
+
+    //   .rlr-banner-search__submit-button {
+    //     width: 100%;
+
+    //     @include media-breakpoint-up(xxl) {
+    //       width: var(--spacing-16);
+    //     }
+    //   }
+    // }
+    #{$self}__content-wrapper,
+    #{$self}__image-wrapper {
+      border-radius: 0;
+    }
+
+    #{$self}__content-wrapper {
+      justify-content: flex-start;
+      padding-top: calc(var(--spacing-7) + var(--spacing-18));
+
+      @include media-breakpoint-up(md) {
+        padding-top: calc(var(--spacing-10) + var(--spacing-18));
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding-top: calc(var(--spacing-15) + var(--spacing-18));
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<h3 class="rlr-itinerary__title">Lake Nakuru National Park</h3>
+{{> "@read-more-description" content="You can add your images, videos and itinerary route in lightbox for each
+itinerary as shown below, simply by changing the src path of each media."}}
+<div class="rlr-itinerary__media-group">
+    <div class="rlr-itinerary__media">
+        {{> "@lightbox--image-icon" wrapperTag="figure" ahref="../../assets/images/gallery/1568/suzy-brooks-nygy9pb5mp4-unsplash1568.jpg" imgThumb="../../assets/images/gallery/thumbs/suzy-brooks-nygy9pb5mp4-unsplash507.jpg" alt="Anchor Button" tagName="i" iconClass="flaticon-insert-picture-icon" }}
+    </div>
+    <div class="rlr-itinerary__media">
+        {{> "@lightbox--video-icon" wrapperTag="figure" ahref="../../assets/images/gallery/videos/spiderboat.mp4" imgThumb="../../assets/images/gallery/videos/spliderboat-sc.jpg" alt="Anchor Button" tagName="i" iconClass="flaticon-play"}}
+    </div>
+    <div class="rlr-itinerary__media">
+        {{> "@lightbox--map" wrapperTag="div" modifier="rlr-lightbox--gallery" iframeID="#google-maps" mapSrc="https://www.google.com/maps/d/embed?mid=1uTVu66YGp2Jy_bjtGs9SOZ16_ZQIwLjr&ehbc=2E312F" imgThumb="../../assets/images/lightbox-map-thumb.jpg" alt="Itinerary Map" tagName="i" iconClass="flaticon-map-1" }}
+    </div>
+</div>
+<div class="rlr-itinerary__tabbed-content">
+    {{> "@tabbed-field--itinerary"}}
+</div>

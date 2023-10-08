@@ -1,0 +1,125 @@
+$transition: all 0.2s ease;
+
+.rlr-header-search {
+  --search-icon-color: var(--heading-color);
+
+  position: relative;
+  width: var(--spacing-8);
+  transition: $transition;
+
+  $self: &;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1199.98px) {
+      align-self: flex-start;
+    }
+
+    & ul,
+    li {
+      list-style: none;
+    }
+
+    & ul {
+      @include media-breakpoint-down(lg) {
+        padding-left: 1rem;
+      }
+
+      i span {
+        display: none;
+        font-style: normal;
+
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
+      }
+    }
+
+    & #{ $self }__results {
+      position: absolute;
+      z-index: 99999;
+      padding-left: 0;
+      margin-left: 2rem;
+      background-color: var(--white);
+      border-radius: 0 0 1rem 1rem;
+      transform: translate(-8px, 60px); // align the search results header with input box
+
+      & .rlr-icon-font {
+        color: var(--search-icon-color);
+        font-size: 1.5rem;
+        line-height: 0;
+      }
+    }
+  }
+
+  & .form-control {
+    border: 0;
+  }
+
+  & .rlr-banner-input-group__input::placeholder {
+    color: var(--white);
+  }
+
+  &.open {
+    width: calc(100% - 20px);
+
+    @include media-breakpoint-up(xl) {
+      width: calc(100% - 20px);
+    }
+
+    &::before {
+      position: absolute;
+      margin: 20px 0 20px 30px;
+    }
+
+    & .form-control {
+      border-bottom: 2px solid var(--body-color);
+      border-radius: 0;
+    }
+
+    & .rlr-banner-input-group__input {
+      padding-left: 0.5rem;
+
+      &::placeholder {
+        color: var(--neutral-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: block;
+    margin-left: 5px;
+    transition: $transition;
+
+    & .rlr-icon-font {
+      color: var(--search-icon-color);
+      font-size: 1.5rem;
+    }
+  }
+
+  .open & {
+    margin: 0;
+  }
+
+  & input[type="search" i]::-webkit-search-cancel-button {
+    display: none;
+  }
+}
+
+.is-hidden {
+  display: none;
+}

@@ -1,0 +1,19 @@
+.rlr-listings {
+  &__header {
+    margin-bottom: var(--spacing-8);
+  }
+}
+
+.rlr-search-results-page__card-wrapper {
+  & .sticky {
+    width: 100%;
+
+    & .rlr-product-card__title {
+      @extend %type-h1;
+    }
+
+    & .rlr-postcard {
+      background: var(--brand-00);
+    }
+  }
+}

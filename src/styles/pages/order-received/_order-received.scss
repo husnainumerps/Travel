@@ -1,0 +1,397 @@
+.rlr-section__title--v2 {
+  @include flex;
+  @include flexAlignCenterVertically;
+
+  position: relative;
+  height: 5.25rem;
+  min-height: var(--spacing-13);
+  align-items: center;
+  padding: 7px 0 5px;
+  padding-left: 6rem;
+  margin: var(--spacing-14) 0;
+  color: var(--brand-10);
+
+  @include media-breakpoint-up(sm) {
+    width: calc(100% - var(--spacing-7));
+    margin-left: var(--spacing-7);
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: calc(100% - var(--spacing-9));
+    height: 5.25rem;
+    padding: 15px 0 5px;
+    padding-left: 6rem;
+    margin-left: var(--spacing-9);
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: calc(100% - var(--spacing-14));
+    margin-left: var(--spacing-14);
+  }
+
+  @include media-breakpoint-up(xxxl) {
+    width: calc(100% - 8.5rem);
+    margin-left: 8.5rem;
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: calc(100% - 8.5rem);
+    margin-left: 8.5rem;
+  }
+
+  .type-h1,
+  .type-h6 {
+    margin-bottom: 0;
+    letter-spacing: 0;
+  }
+
+  .type-h1 {
+    margin-bottom: var(--spacing-3);
+    font-weight: 500;
+    line-height: 20px;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: var(--spacing-4);
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: var(--spacing-6);
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: var(--spacing-7);
+    }
+  }
+
+  .type-h6 {
+    line-height: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: grid;
+    width: 5.25rem;
+    height: 5.25rem;
+    background: var(--brand-02);
+    color: var(--brand-10);
+    content: "\f161";
+    font-family: $flaticon-font;
+    font-size: 2.5rem;
+    place-items: center;
+    transform: translateY(-50%);
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.woocommerce-thankyou-order {
+  &-details {
+    display: grid;
+    padding: var(--spacing-8) 0;
+    border-top: 1px solid var(--gray-03);
+    border-bottom: 1px solid var(--gray-03);
+    grid-template-columns: repeat(3, 1fr);
+
+    li {
+      @extend %type-lead-medium;
+
+      display: flex;
+      flex-direction: column;
+      color: var(--gray-05);
+
+      & > span {
+        @extend %type-lead;
+
+        margin-top: var(--spacing-6);
+        color: var(--body-color);
+      }
+
+      .woocommerce-Price-amount,
+      .woocommerce-Price-currencySymbol {
+        @extend %type-lead-medium;
+
+        color: var(--brand-07);
+        font-weight: 600;
+        letter-spacing: -0.38;
+        white-space: nowrap;
+      }
+
+      .woocommerce-order-overview__payment-method {
+        @extend %type-small;
+
+        color: var(--gray-07);
+        font-weight: 400;
+        white-space: nowrap;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 1fr;
+
+      li {
+        margin-top: var(--spacing-5);
+
+        & > span {
+          margin-top: var(--spacing-2);
+        }
+      }
+    }
+  }
+}
+
+.order-detail-cards {
+  width: 100%;
+}
+
+.woocommerce {
+  margin-top: 0;
+
+  &-column__title {
+    @extend %type-h6-medium;
+
+    margin-bottom: var(--spacing-7);
+    color: var(--heading-color);
+  }
+
+  &-details {
+    &__items {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    &__item {
+      display: grid;
+      align-items: center;
+      margin-bottom: var(--spacing-8);
+      grid-column-gap: var(--spacing-6);
+      grid-template-columns: 3rem auto;
+    }
+
+    &__icon {
+      @include flex;
+      @include flexAlignCenter;
+      @include flexAlignCenterVertically;
+
+      width: 3rem;
+      height: 3rem;
+      color: var(--brand-07);
+      font-size: 2rem;
+
+      i {
+        @include flex;
+        @include flexAlignCenter;
+        @include flexAlignCenterVertically;
+      }
+    }
+
+    &__title {
+      @extend %type-body-semibold;
+
+      margin-bottom: var(--spacing-2);
+      color: var(--gray-05);
+      letter-spacing: 1.5px;
+    }
+
+    &__desc {
+      @extend %type-lead;
+
+      margin-bottom: 0;
+      color: var(--body-color);
+      letter-spacing: 0;
+    }
+  }
+
+  &-order {
+    display: flex;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+
+    &-details {
+      position: sticky;
+      top: 80px;
+      display: flex;
+      width: 100%;
+      height: fit-content;
+      flex-direction: column;
+      padding: var(--spacing-8) var(--spacing-5);
+      border: none;
+      margin: 0;
+      background-color: var(--brand-00);
+      border-collapse: separate;
+      border-radius: var(--spacing-7);
+      row-gap: var(--spacing-6);
+      text-align: left;
+
+      @include media-breakpoint-up(lg) {
+        margin: 0 var(--spacing-7);
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin: 0 var(--spacing-9);
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: 24.167rem;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin: 0 6.5rem 0 4rem;
+      }
+
+      &__title {
+        @extend %type-lead-medium;
+
+        margin-bottom: 0;
+      }
+    }
+
+    &__col-1 {
+      height: fit-content;
+      padding: 0 0 var(--spacing-9) 0;
+
+      @include media-breakpoint-up(sm) {
+        padding: 0 var(--spacing-7);
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: calc(8 / 12 * 100%);
+        padding-right: var(--spacing-9);
+        padding-left: var(--spacing-9);
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: calc(8 / 12 * 100%);
+        padding-right: var(--spacing-14);
+        padding-left: var(--spacing-14);
+      }
+
+      @include media-breakpoint-up(xxxl) {
+        padding-right: 6.5rem;
+        padding-left: 8.5rem;
+      }
+    }
+
+    &-overview {
+      margin-bottom: var(--spacing-9);
+    }
+  }
+}
+
+.order-detail {
+  &-card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-left: 0;
+    background-color: $white;
+    border-radius: var(--spacing-5);
+    box-shadow: 0 2px 4px 0 rgb(14 86 124 / 15%);
+    list-style-type: none;
+
+    &:last-child {
+      margin-bottom: var(--spacing-7);
+    }
+
+    &__close {
+      position: absolute;
+      z-index: 100;
+      top: var(--spacing-5);
+      right: var(--spacing-5);
+      cursor: pointer;
+    }
+
+    &__header {
+      display: grid;
+      align-items: center;
+      padding: var(--spacing-4);
+      grid-gap: var(--spacing-4);
+      grid-template-columns: 5.1875rem auto;
+    }
+
+    &__title {
+      @extend %type-body-semibold;
+
+      max-width: calc(100% - 20px);
+      margin-bottom: var(--spacing-2);
+      color: var(--gray-09);
+    }
+
+    &__date {
+      @extend %type-small;
+
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+      color: var(--gray-05);
+      font-weight: 400;
+    }
+
+    &__img {
+      width: 5.1875rem;
+      border-radius: 10px;
+    }
+
+    &__item {
+      @extend %type-small;
+
+      padding: 1.125rem 0;
+      border-top: 1px solid var(--gray-03);
+      margin: 0 var(--spacing-4);
+      color: var(--gray-07);
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    &__iconcontainer {
+      display: grid;
+      width: 2rem;
+      height: 2rem;
+      background-color: var(--brand-01);
+      border-radius: 50%;
+      color: var(--brand-07);
+      font-size: 1.125rem;
+      place-items: center;
+
+      i {
+        display: grid;
+        place-items: center;
+      }
+    }
+
+    &__footer {
+      padding: 0.5313rem 0 0.4688rem;
+      background-color: var(--gray-01);
+      text-align: center;
+
+      a {
+        @extend %type-body-medium;
+        @include flex;
+        @include flexAlignCenter;
+        @include flexAlignCenterVertically;
+
+        margin-bottom: 0;
+        color: var(--gray-07);
+        grid-gap: var(--spacing-2);
+        text-decoration: none;
+
+        i {
+          @include flex;
+          @include flexAlignCenter;
+          @include flexAlignCenterVertically;
+
+          &::before {
+            font-weight: bold !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,257 @@
+.rlr-button {
+  @extend %type-sub-title;
+
+  --border-radius: 0;
+  --button-background-color: transparent;
+  --padding: 0.5em;
+  --button-text-color: var(--white);
+  --button-border-color: var(--neutral-color);
+  --button-font-weight: 300;
+  --button-font-weight-bold: 500;
+
+  background-color: var(--button-background-color);
+  border-radius: var(--border-radius);
+  color: var(--white);
+  white-space: nowrap;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &--google {
+    display: flex;
+    height: 44px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d0d5dd;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
+    color: var(--heading-color);
+    text-align: center;
+
+    &::before {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      background: url("../assets/images/google-signin.png") no-repeat 0 0;
+      content: "";
+    }
+  }
+
+  &--form-tooltip {
+    & .rlr-icon-font {
+      color: var(--brand);
+      font-size: 1.5rem;
+
+      &:hover {
+        color: var(--brand-04);
+        transition: color 0.3s;
+      }
+    }
+  }
+
+  &--fullwidth {
+    width: 100%;
+  }
+
+  &--primary {
+    width: 100%;
+    height: 44px;
+    background: var(--brand);
+    border-radius: var(--spacing-3);
+    color: var(--white);
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+
+  &--search {
+    padding: 40px;
+  }
+
+  &--large {
+    @extend %type-h6-medium;
+
+    padding: var(--spacing-5) var(--spacing-8);
+
+    & .rlr-icon-font {
+      font-size: 2rem;
+      line-height: 0;
+    }
+  }
+
+  &--medium {
+    @extend %type-sub-title-medium;
+
+    padding: var(--spacing-5) var(--spacing-6);
+    font-weight: var(--button-font-weight-bold);
+  }
+
+  &--small {
+    @extend %type-sub-title-medium;
+
+    padding: var(--spacing-3) var(--spacing-5);
+  }
+
+  &--rounded {
+    border-radius: 2rem;
+  }
+
+  &--circle {
+    @include rfs(50%, border-radius);
+
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+  }
+
+  &--carousel {
+    @include rfs(50%, border-radius);
+
+    border: 2px solid var(--gray-04);
+    background: transparent;
+    color: var(--neutral-color);
+
+    @include media-breakpoint-up(sm) {
+      width: 4.5rem;
+      height: 4.5rem;
+      padding: 1rem;
+
+      & .rlr-icon-font {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+    }
+
+    &.button--next {
+      background: var(--brand);
+      color: var(--brand-01);
+    }
+
+    &:hover {
+      border-color: var(--brand);
+      background-color: var(--brand-08);
+      box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+      color: var(--white);
+    }
+
+    &.button--previous {
+      color: var(--gray-03);
+
+      &:hover {
+        background: var(--brand);
+        color: var(--white);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &--outline {
+    border: 1px solid var(--button-border-color);
+    stroke: var(--body-color);
+  }
+
+  &--link {
+    padding: 0;
+    text-decoration: underline;
+  }
+
+  &--link-no-underline {
+    padding: 0;
+    text-decoration: none;
+  }
+
+  &--brand {
+    background-color: var(--brand);
+    color: var(--brand-01);
+
+    &:hover {
+      box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+      color: var(--white);
+      transition: all 0.3s;
+    }
+  }
+
+  &--white {
+    background-color: var(--white);
+  }
+
+  &--gray-10 {
+    background-color: var(--gray-10);
+  }
+
+  &--gray-09 {
+    background-color: var(--gray-09);
+  }
+
+  &--gray-08 {
+    background-color: var(--gray-08);
+  }
+
+  &--body-color {
+    background-color: var(--body-color);
+  }
+
+  &--gray-06 {
+    background-color: var(--gray-06);
+  }
+
+  &--gray-05 {
+    background-color: var(--neutral-color);
+  }
+
+  &--gray-04 {
+    background-color: var(--gray-04);
+  }
+
+  &--gray-03 {
+    background-color: var(--gray-03);
+  }
+
+  &--gray-02 {
+    background-color: var(--gray-02);
+  }
+
+  &--gray-01 {
+    background-color: var(--gray-01);
+  }
+
+  &--black {
+    background-color: var(--black);
+  }
+
+  &--success {
+    background-color: var(--success);
+  }
+
+  &--warning {
+    background-color: var(--warning);
+  }
+
+  &--danger {
+    background-color: var(--danger);
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: var(--body-color);
+  }
+
+  &__color--gray {
+    color: var(--body-color);
+  }
+
+  &__color--delete {
+    color: var(--danger-color);
+  }
+
+  &--product-form-repeater {
+    @extend %type-body-medium;
+
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,18 @@
+<fieldset class="rlr-product-form--hide start" data-attr="js-step-4">
+  {{> '@section-heading--product-form' copyText="Add FAQ's and Answers" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+  <div class="rlr-fieldrow">
+    <div class="rlr-fieldrow__form-element">
+      <div class="rlr-fieldrow__item rlr-fieldrow__item--multiple">
+        <div class="rlr-fieldrow__options js-fieldrow__item">
+          {{> '@form-label' formLabel="FAQ Question Title" type="dark"}}
+          {{> '@form-control' isRequired="required" placeholderText="Short description of inclusion item"}}
+        </div>
+        <div class="rlr-fieldrow__options js-fieldrow__item">
+          {{> '@form-label' formLabel="FAQ's Answer" type="dark"}}
+          {{> '@form-control--text-area' isRequired="required" textAreaPlaceholder="Answer to the above FAQ in 2 to 3 small paragraphs."}}
+        </div>
+      </div>
+      {{> '@button' modifier="text-button rlr-button--product-form-repeater js-repeater" shape="rounded" size="small" btnBgColor="transparent" btnTextColor="gray" btnText="+ Add another FAQ"}}
+    </div>
+  </div>
+</fieldset>

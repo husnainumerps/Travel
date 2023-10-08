@@ -1,0 +1,63 @@
+.rlr-overview-detail {
+  &__description {
+    margin-bottom: var(--spacing-11);
+  }
+
+  &__icon-groupset {
+    display: flex;
+    width: 100%;
+    flex: 1 1 0px;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & .rlr-icon-font {
+      color: var(--brand);
+      font-size: 1.5rem;
+    }
+  }
+
+  &__icon-group {
+    display: flex;
+    width: calc(100% / 2);
+    flex-direction: column;
+    margin-bottom: var(--spacing-7);
+    row-gap: 1.25rem;
+
+    @include media-breakpoint-up(md) {
+      width: calc(100% / 3);
+    }
+  }
+
+  &__label {
+    @extend %type-body;
+
+    color: var(--body-color);
+    letter-spacing: 0.5px;
+  }
+
+  &__set {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2);
+    margin: 0;
+    margin-right: var(--spacing-2);
+  }
+
+  &__icon-name {
+    @extend %type-body-medium;
+
+    color: var(--heading-color);
+  }
+}

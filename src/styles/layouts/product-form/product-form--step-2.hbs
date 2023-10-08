@@ -1,0 +1,43 @@
+<fieldset class="rlr-product-form--hide rlr-js-product-form-fieldset"
+    data-attr="js-step-1">
+    {{> '@section-heading--product-form' copyText="Select product category" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                <div class="row">
+                    <div class="col-xl-10">
+                        {{> '@form-label' formLabel="Product Category" type="dark" forLabel="rlr-product-form-product-category"}}
+                        {{> '@form-select' id="rlr-product-form-product-category" isRequired="required" optionSelected="Select" option1="Snow and Ice Activities" option2="Water Activities" option3="Dining Experiences" }}
+                    </div>
+                    <div class="col-xl-2">
+                        {{> '@button--tooltip' dataTippyContent='<span class="type-lead-semibold">Product Title</span> <p>are used to describe the product your are about to add to Emprise</p>' }}
+                    </div>
+                </div>
+            </div>
+            <div
+                class="rlr-fieldrow__item js-fieldrow__item rlr-fieldrow__item--multiple">
+                <div class="row">
+                    <div class="col-xl-10">
+                        {{> '@form-label' formLabel="Product Sub Category" type="dark" forLabel="rlr-product-form-product-sub-category"}}
+                        {{> '@form-select' isRequired="required" id="rlr-product-form-product-sub-category" optionSelected="Select" option1="Paragliding" option2="Walking and Trekking" option3="Jungle Safari" }}
+                    </div>
+                    <div class="col-xl-2">
+                        {{> '@button--tooltip' dataTippyContent='<span class="type-lead-semibold">Product Title</span> <p>are used to describe the product your are about to add to Emprise</p>' }}
+                    </div>
+                </div>
+            </div>
+            <div
+                class="rlr-fieldrow__item js-fieldrow__item rlr-fieldrow__item--multiple">
+                <div class="row">
+                    <div class="col-xl-10">
+                        {{> '@form-label' formLabel="Product Overview" type="dark" forLabel="rlr-product-form-product-overview"}}
+                        {{> '@form-control--text-area' id="rlr-product-form-product-overview" isRequired="required" textAreaPlaceholder="Provide one to two paragraph overview of you product."}}
+                    </div>
+                    <div class="col-xl-2">
+                        {{> '@button--tooltip' dataTippyContent='<span class="type-lead-semibold">Product Title</span> <p>are used to describe the product your are about to add to Emprise</p>' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>

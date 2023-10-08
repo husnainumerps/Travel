@@ -1,0 +1,152 @@
+/* stylelint-disable */
+/* NAVIGATION BODY
+================================ */
+.navigation-body {
+  position: fixed;
+  z-index: 20000;
+  top: 0;
+  left: -100%;
+  width: $navigation-offcanvas-width;
+  height: 100%;
+  background-color: $navigation-body-background-color;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @include transition(left 0.8s cubic-bezier(0.1, 0.1, 0.1, 0.1), right 0.8s cubic-bezier(0.1, 0.1, 0.1, 0.1));
+
+  @media (min-width: $navigation-offcanvas-medium-large-breakpoint) {
+    width: $navigation-offcanvas-medium-large-width;
+  }
+
+  @media (min-width: $landscape-width) {
+    @include flex;
+    @include flexAlignCenterVertically;
+
+    position: relative;
+    z-index: auto;
+    left: auto;
+    overflow: visible;
+    width: 100%;
+    background-color: transparent;
+
+    @include transition(all 0s ease 0s);
+  }
+
+  &.offcanvas-right {
+    right: -100%;
+    left: auto;
+
+    @media (min-width: $landscape-width) {
+      right: auto;
+    }
+  }
+
+  &.is-visible {
+    left: 0;
+
+    @include transition(left 0.8s, right 0.8s);
+  }
+
+  &.offcanvas-right.is-visible {
+    right: 0;
+    left: auto;
+
+    @media (min-width: $landscape-width) {
+      right: auto;
+    }
+  }
+
+  &.is-invisible {
+    left: -100%;
+  }
+
+  &.offcanvas-right.is-invisible {
+    right: -100%;
+  }
+
+  &.scroll-momentum {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @media (min-width: $landscape-width) {
+    // Centered navigation
+    .navigation-centered & {
+      @include flexAlignCenter;
+    }
+
+    // Justified navigation
+    .navigation-justified & {
+      @include flexAlignBetween;
+    }
+
+    // Navigation with logo on top
+    .navigation-logo-top & {
+      @include flexColumn;
+    }
+  }
+}
+
+// Navigation body header
+.navigation-body-header {
+  @include flex;
+  @include flexAlignCenterVertically;
+  @include flexAlignBetween;
+
+  padding: $navigation-body-header-padding;
+  border-bottom: solid 1px $navigation-body-header-border;
+
+  @media (min-width: $landscape-width) {
+    border: none;
+
+    .navigation-centered & {
+      padding: 0;
+    }
+
+    .navigation-logo-top & {
+      padding-top: 20px;
+    }
+  }
+}
+
+// Close button
+.navigation-body-close-button {
+  @include flex;
+  @include flexAlignCenter;
+  @include flexAlignCenterVertically;
+
+  width: 30px;
+  height: 30px;
+  padding-bottom: 2px;
+  margin-left: auto;
+  color: $navigation-body-close-button-color;
+  cursor: pointer;
+  font-size: $navigation-body-close-button-font-size;
+  line-height: initial;
+  text-align: center;
+
+  @media (min-width: $landscape-width) {
+    display: none;
+  }
+}
+
+// Navigation body section
+.navigation-body-section {
+  display: inline-flex;
+  width: 100%;
+  padding: $navigation-body-section-padding;
+
+  @include flexColumn;
+
+  @media (min-width: $landscape-width) {
+    display: inline-block;
+    width: auto;
+  }
+
+  & + & {
+    padding-top: 0;
+
+    @media (min-width: $landscape-width) {
+      padding-top: $navigation-body-section-padding;
+    }
+  }
+}

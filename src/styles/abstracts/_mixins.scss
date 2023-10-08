@@ -1,0 +1,78 @@
+/** ==============================================================
+<!-- transition ==== -->
+============================================================== **/
+@mixin transition($property...) {
+  transition: $property;
+}
+
+@mixin rlr-button-link($font-size, $font-weight, $color) {
+  padding: 0;
+  background-color: transparent;
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-decoration: underline;
+}
+
+/** ==============================================================
+<!-- mixin for navigation li items hover effect with dots ==== -->
+============================================================== **/
+@mixin rlr-list-items($content, $opacity) {
+  position: absolute;
+  left: 12px;
+  content: $content;
+  opacity: $opacity;
+}
+
+@mixin rlr-list-item-before($opacity) {
+  width: 8px;
+  height: 8px;
+  background: var(--brand);
+  border-radius: 8px;
+  opacity: $opacity;
+  transition: width 0.2s linear, margin-left 0.2s linear, opacity 0.2s linear, color 0.2s linear;
+}
+
+@mixin rlr-list__item-after($padding, $color, $opacity) {
+  /** ==============================================================
+  <!-- remove bullet point from first item in horizontal list ==== -->
+  ============================================================== **/
+  list-style: none;
+
+  &:not(:last-child)::after {
+    padding: $padding;
+    color: $color;
+    content: url(../../../assets/svg/dot.svg);
+    opacity: $opacity;
+  }
+}
+
+@mixin icon-wrapper($bgColor: var(--body-color), $border: 50%) {
+  display: flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: $bgColor;
+  border-radius: $border;
+}
+
+%listreset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin gridChildCenter {
+  display: grid;
+  place-items: center;
+}
+
+@mixin borderRadius($br: 0.5rem) {
+  border-radius: $br;
+}
+
+@mixin boxShadow($shadow: 0 20px 24px -4px rgba(16, 24, 40, 0.08)) {
+  box-shadow: $shadow;
+}

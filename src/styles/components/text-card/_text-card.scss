@@ -1,0 +1,39 @@
+.rlr-text-card {
+  $self: &;
+
+  padding: var(--spacing-8);
+  background-color: var(--white);
+  border-radius: var(--spacing-5);
+  box-shadow: 0 43px 66px 0 rgb(0 0 0 / 6%);
+
+  &__title {
+    @extend %type-h5-semibold !optional;
+
+    margin-bottom: var(--spacing-5);
+    color: var(--brand-09);
+    letter-spacing: 0;
+  }
+
+  &__desc {
+    @extend %type-lead !optional;
+
+    margin-bottom: 0;
+    color: var(--body-color);
+  }
+
+  &--numbered {
+    #{ $self }__title {
+      @extend %type-lead !optional;
+
+      display: grid;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-bottom: var(--spacing-7);
+      background-color: var(--brand);
+      border-radius: 50%;
+      color: var(--white);
+      letter-spacing: 0;
+      place-items: center;
+    }
+  }
+}

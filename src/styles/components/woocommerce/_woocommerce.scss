@@ -1,0 +1,39 @@
+.rlr-order-dashboard-nav {
+  &__link {
+    @extend %type-body !optional;
+
+    display: grid;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+    color: var(--gray-07);
+    grid-gap: 0.8125rem;
+    grid-template-columns: 3rem auto;
+    text-decoration: none;
+
+    &-icon {
+      //@include flexChildCenter;
+
+      width: 3rem;
+      height: 3rem;
+      font-size: 24px;
+    }
+
+    &:hover {
+      color: var(--brand-09);
+
+      span {
+        background-color: var(--brand-02);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .active {
+    color: var(--brand-09);
+
+    span {
+      background-color: var(--brand-02);
+      border-radius: 50%;
+    }
+  }
+}

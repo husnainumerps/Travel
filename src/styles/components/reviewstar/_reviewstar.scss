@@ -1,0 +1,28 @@
+.rlr-review-stars {
+  @extend %type-body-medium;
+
+  display: inline-flex;
+  align-items: center;
+  color: var(--neutral-color);
+  column-gap: var(--spacing-2);
+
+  & .rlr-icon-font {
+    color: var(--warning-color);
+  }
+
+  &__group {
+    display: inline-flex;
+
+    &--small {
+      & .rlr-icon-font {
+        font-size: 1rem;
+      }
+    }
+
+    &--large {
+      & .rlr-icon-font {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+.rlr-pagination {
+  $self: &;
+
+  &__list.pagination {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__child-list {
+    gap: var(--spacing-1);
+  }
+
+  &__page-item {
+    &--form {
+      &:first-child,
+      &:last-child {
+        .page-link {
+          border-radius: 3rem;
+        }
+      }
+
+      &.disabled {
+        pointer-events: none;
+
+        .page-link {
+          border: solid 1px var(--gray-04);
+          background: var(--white);
+          color: var(--gray-04);
+        }
+        #{$self}__page-link {
+          &--form {
+            &:focus {
+              border: 1px solid var(--gray-04);
+              background: var(--white);
+              color: var(--gray-04);
+            }
+          }
+        }
+      }
+    }
+
+    &:first-child,
+    &:last-child {
+      .page-link {
+        border-radius: 50%;
+      }
+    }
+
+    &.active {
+      .page-link {
+        background-color: var(--brand-00);
+        color: var(--brand);
+      }
+    }
+
+    &.disabled {
+      .page-link {
+        color: var(--neutral-color);
+
+        & svg path {
+          stroke: var(--neutral-color);
+        }
+      }
+    }
+  }
+
+  &__page-link {
+    color: var(--body-color);
+
+    &--form {
+      @extend %type-lead-medium;
+
+      padding: 0.875rem 2rem;
+      border: solid 1px var(--brand);
+      background: var(--brand-00);
+      border-radius: 3rem;
+      color: var(--brand);
+      text-align: center;
+
+      &:hover,
+      &.page-link:focus {
+        border: solid 1px var(--brand);
+        background: var(--brand-00);
+        color: var(--brand);
+      }
+
+      &.page-link:focus {
+        box-shadow: none;
+      }
+    }
+
+    &.page-link:focus {
+      box-shadow: none;
+    }
+
+    &--counter {
+      @extend %type-small;
+
+      display: flex;
+      width: 2.5rem;
+      height: 2.5rem;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 50%;
+      font-weight: 400;
+
+      &:hover,
+      &:focus {
+        background-color: var(--brand-00);
+        color: var(--brand);
+      }
+    }
+
+    &--prev,
+    &--next {
+      @extend %type-small;
+
+      padding: 0;
+      border: none;
+      background: transparent;
+      background: none;
+      color: var(--neutral-color);
+      font-weight: 400;
+      line-height: normal;
+
+      &:hover,
+      &:focus {
+        background: none;
+        color: var(--body-color);
+
+        svg path {
+          stroke: var(--body-color);
+        }
+      }
+
+      span {
+        display: none;
+
+        @include media-breakpoint-up(sm) {
+          display: inline-block;
+        }
+      }
+
+      svg path {
+        stroke: var(--neutral-color);
+      }
+    }
+
+    &--prev {
+      span {
+        margin-left: var(--spacing-3);
+      }
+    }
+
+    &--next {
+      span {
+        margin-right: var(--spacing-3);
+      }
+    }
+  }
+}

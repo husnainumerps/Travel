@@ -1,0 +1,17 @@
+.rlr-page-header {
+  padding: var(--spacing-15) var(--spacing-8);
+  background-color: var(--brand-01);
+
+  .rlr-breadcrumb__innerpages {
+    margin-bottom: var(--spacing-4);
+  }
+
+  &__title {
+    margin-bottom: var(--spacing-7);
+    color: var(--brand-10);
+  }
+
+  &__subtitle {
+    color: var(--brand-08);
+  }
+}

@@ -1,0 +1,53 @@
+<!-- Hero Banner -->
+<aside>
+    <div class="container">
+        {{> "@banner--yellow"}}
+    </div>
+    <div class="container">
+        {{> "@banner-search--home" bannerModifier="rlr-banner-search--hero-half-mast"}}
+    </div>
+</aside>
+<!-- Category Carousel -->
+<section class="rlr-section rlr-section__mb">
+    <div class="container">
+        {{> '@carousel--category-card' copyText="Select Category"}}
+    </div>
+</section>
+<!-- Product Carousel -->
+<section class="rlr-section rlr-section__mb">
+    <div class="container">
+        {{> '@carousel--product-v3' copyText="Trending 2022"}}
+    </div>
+</section>
+<!-- Destination Masonary Grid -->
+<section class="rlr-section rlr-section__mb">
+    <div class="container">
+        {{> '@section-heading--default' copyText="Top Destinations"}}
+        {{> '@masonary--destination'}}
+    </div>
+</section>
+<!-- Best Sellers -->
+<section class="rlr-section rlr-section__mb rlr-section__cards">
+    <div class="container">
+        {{> '@section-heading--single-button' copyText="Best Seller" buttonText="Check All"}}
+        {{> '@product-card-featured'}}
+    </div>
+</section>
+<!-- Sales and Support -->
+<section class="rlr-section">
+    <div class="container">
+        {{> '@section-heading--centered' copyText="Still have a question?"}}
+        <div class="row">
+            <div class="offset-lg-1 col-lg-5" data-aos="fade-down-right"
+                data-aos-duration="800" data-aos-once="true">
+                {{> '@support--default' modifier='sale' title='For Sales' svgIcon="../../assets/svg/headset.svg"  }}
+            </div>
+            <div class="col-lg-5" data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-duration="1000"
+                data-aos-once="true">
+                {{> '@support--help' modifier='help' title='Help & Support' svgIcon="../../assets/svg/help-circle.svg"  }}
+            </div>
+        </div>
+    </div>
+</section>

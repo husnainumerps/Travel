@@ -1,0 +1,24 @@
+.rlr-icon-font-page {
+  &__list {
+    display: grid;
+    padding-left: 0;
+    gap: 32px 32px;
+    grid-template-columns: 1fr;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    & .rlr-icon-text__card-title {
+      white-space: unset;
+    }
+
+    & .rlr-icon-font {
+      font-size: 2rem;
+    }
+  }
+}

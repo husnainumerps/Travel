@@ -1,0 +1,69 @@
+.rlr-product-detail-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: var(--spacing-5);
+  border-bottom: 1px solid var(--gray-01);
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__actions {
+    position: relative;
+    display: inline-flex;
+    column-gap: var(--spacing-3);
+
+    & .rlr-icon-font {
+      font-size: 2rem;
+    }
+
+    & .rlr-popover-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--neutral-color);
+
+      &:hover {
+        color: var(--brand);
+      }
+    }
+  }
+
+  &__title {
+    @extend %type-h5-bold;
+
+    margin-bottom: var(--spacing-5);
+  }
+
+  &__button-wrapper {
+    position: relative;
+  }
+
+  &__helptext {
+    @include transition(0.3s opacity ease-in-out);
+
+    position: absolute;
+    bottom: 52px;
+    display: inline;
+    width: fit-content;
+    padding: 0 0.5rem;
+
+    // background: var(--white);
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap;
+
+    &:hover,
+    &:active {
+      box-shadow: 1px 2px 2px 1px hsl(0deg 0% 69% / 35%);
+    }
+
+    &--featured {
+      color: var(--white);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Your vacation, tours and travel theme needs are all met at emprise." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Travel Website Template | Emprise</title>
+    <link rel="shortcut icon" type="image/png"
+        href="{{path '/assets/favicon.ico'}}">
+    <link rel="stylesheet" href="{{path '/styles/plugins.css'}}">
+    <link rel="stylesheet" href="{{path '/styles/main.css'}}">
+</head>
+
+<body class="rlr-body--yellow">
+    <!-- Header and Navigation -->
+    <header>
+        {{> "@navigation" navID="navigation" modifier="fixed-top" menuItemsAll="true"}}
+    </header>
+    <main id="rlr-main" class="rlr-main--fixed-top">
+        {{{ yield }}}
+    </main>
+    <!-- Footer -->
+    {{> '@footer'}}
+    <!-- Scripts -->
+    <script src="{{path '/vendors/navx/js/navigation.min.js'}}"></script>
+    <script src="{{path '/js/main.js'}}"></script>
+</body>
+
+</html>

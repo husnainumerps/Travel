@@ -1,0 +1,53 @@
+.rlr-product-filters {
+  &__filters-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-8) var(--spacing-10);
+    border: solid 1px var(--gray-03);
+    background-color: var(--white);
+    border-radius: var(--spacing-5);
+    row-gap: var(--spacing-9);
+  }
+
+  &__label {
+    @extend %type-body-medium;
+
+    color: var(--body-color);
+  }
+
+  &__checkbox-label {
+    color: var(--heading-color);
+    letter-spacing: 0.5px;
+  }
+
+  & .form-input {
+    &::placeholder {
+      color: var(--neutral-color);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__checkbox.form-check-input {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid 2px var(--gray-04);
+    border-radius: 8px;
+
+    &:checked {
+      border-color: var(--brand);
+    }
+
+    & + label {
+      padding: var(--spacing-2) 0 0 var(--spacing-5);
+    }
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__range-slider {
+    margin-top: var(--spacing-8);
+  }
+}

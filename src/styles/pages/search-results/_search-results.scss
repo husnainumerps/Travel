@@ -1,0 +1,79 @@
+.rlr-search-results-page {
+  $self: &;
+
+  &__breadcrumb-section {
+    margin: var(--spacing-5) 0;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    & .rlr-icon-font,
+    #{ $self }__phone {
+      color: var(--brand-09);
+    }
+  }
+
+  &__dynamic-filter-section {
+    margin-top: var(--spacing-9);
+  }
+
+  &__dynamic-filter-list {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: var(--spacing-5);
+    padding-left: 0;
+    column-gap: var(--spacing-8);
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      /* WebKit */
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__dynamic-filter-item {
+    list-style: none;
+  }
+
+  &__anchor {
+    text-decoration: none;
+
+    & .rlr-icon-font {
+      font-size: 2rem;
+    }
+  }
+
+  &__product-details {
+    padding-top: var(--spacing-10);
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__card-wrapper {
+    margin-bottom: var(--spacing-12);
+    row-gap: var(--spacing-8);
+  }
+
+  &__sidebar {
+    margin-bottom: var(--spacing-8);
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__divider {
+    margin: 0;
+    background-color: var(--gray-04);
+  }
+
+  & .rlr-pagination {
+    margin-top: var(--spacing-6);
+  }
+}

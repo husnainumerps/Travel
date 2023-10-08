@@ -1,0 +1,46 @@
+.rlr-search-results-header {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-8) var(--spacing-7);
+    border: solid 1px var(--gray-03);
+    background-color: var(--white);
+    border-radius: var(--spacing-6);
+    row-gap: var(--spacing-5);
+  }
+
+  &__value {
+    @extend %type-lead-medium;
+
+    color: var(--heading-color);
+    font-weight: 400;
+    line-height: 1.5;
+
+    & strong {
+      color: var(--brand);
+      text-decoration: underline;
+    }
+  }
+
+  &__sorting-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: var(--spacing-7);
+  }
+
+  &__label {
+    @extend %type-lead;
+
+    margin-bottom: 0;
+    color: var(--body-color);
+    font-weight: 300;
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

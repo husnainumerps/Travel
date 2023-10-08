@@ -1,0 +1,48 @@
+.rlr-logo {
+  &__img {
+    display: inline-block;
+    max-width: 11rem;
+    height: 2rem;
+    vertical-align: top;
+  }
+
+  &__text {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &__navbar-brand {
+    @include media-breakpoint-up(md) {
+      padding: 0;
+    }
+  }
+}
+
+.navigation-transparent {
+  & .rlr-logo--default {
+    display: none;
+  }
+}
+
+.navigation-animated {
+  & .rlr-logo--transparent-bg {
+    display: none;
+  }
+}
+
+/** ==============================================================
+<!-- Display dark logo only on mobile menu toggle ==== -->
+============================================================== **/
+@include media-breakpoint-down(lg) {
+  .navigation-transparent {
+    .navigation-body.is-visible {
+      & .rlr-logo--transparent-bg {
+        display: none;
+      }
+
+      & .rlr-logo--default {
+        display: block;
+      }
+    }
+  }
+}

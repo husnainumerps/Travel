@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row rlr-search-results-page__product-details rlr-section__py">
+        <aside class="col-xl-3 rlr-search-results-page__sidebar">
+            {{> "@sidebar"}}
+        </aside>
+        <section class="col-xl-9 rlr-search-results-page__product-list">
+            <div class="row rlr-listings__header">
+                {{render '@breadcrumb'}}
+                {{> '@typography--heading-h1' modifier="rlr-section__heading--main" tagname="h1" copyText="Blog List - Left Sidebar"}}
+            </div>
+            <div class="row rlr-search-results-page__card-wrapper">
+                <div class="col-md-6 col-lg-4">
+                    {{> '@blog-card' postTitle="MT. Everest trekking theme" postImgSrc="../../assets/images/blog/blog-listing01.jpg"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> '@blog-card' postTitle="Annapurna himal blog posts" postImgSrc="../../assets/images/blog/blog-listing02.jpg"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> '@blog-card' postTitle="Best seasons to travel 2022" postImgSrc="../../assets/images/blog/blog-listing03.jpg"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> '@blog-card' postTitle="Cultural highlights in Nepal" postImgSrc="../../assets/images/blog/blog-listing04.jpg"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> '@blog-card' postTitle="MT. Everest trekking theme" postImgSrc="../../assets/images/blog/blog-listing05.jpg"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> '@blog-card' postTitle="Annapurna himal blog posts" postImgSrc="../../assets/images/blog/blog-listing06.jpg"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> '@blog-card' postTitle="Cultural highlights round" postImgSrc="../../assets/images/blog/blog-listing07.jpg"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> '@blog-card' postTitle="Cultural highlights round" postImgSrc="../../assets/images/blog/blog-listing08.jpg"}}
+                </div>
+            </div>
+            <hr class="rlr-search-results-page__divider">
+            {{> "@pagination--list-page"}}
+        </section>
+    </div>
+</div>

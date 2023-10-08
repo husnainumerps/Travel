@@ -1,0 +1,106 @@
+.rlr-navigation {
+  --nav-header-padding-xl: var(--spacing-4) var(--spacing-4);
+  --nav-header-padding-sm: var(--spacing-4) var(--spacing-4);
+  --navigation-list-background-color-hover: var(--white);
+
+  & .navigation-menu {
+    @include media-breakpoint-up(xl) {
+      margin-left: 6rem;
+    }
+  }
+
+  & .navigation-body-header {
+    @include media-breakpoint-up(xl) {
+      padding: rfs-fluid-value(var(--nav-header-padding-xl));
+    }
+
+    @include media-breakpoint-up(sm) {
+      padding: rfs-fluid-value(var(--nav-header-padding-sm));
+    }
+  }
+
+  & .navigation-link {
+    @extend %type-sub-title;
+  }
+
+  & .navigation-row > [class^="navigation-col"] {
+    padding: 1rem;
+  }
+
+  // & .navigation-megamenu {
+  //   @include media-breakpoint-up(xl) {
+  //     border-radius: 0 0 2rem 2rem;
+  //   }
+  // }
+
+  // & .rlr-button {
+  //   padding: 0.4rem 1rem;
+  //   margin-top: 1rem;
+  // }
+
+  & .rlr-button--small {
+    font-weight: 500;
+  }
+
+  & .navigation-tabs-nav > li a {
+    @extend %type-sub-title;
+  }
+
+  & .navigation-list-heading {
+    text-transform: none;
+  }
+
+  & .navigation-list > li,
+  navigation-dropdown > li {
+    &:not(.navigation-list-heading) > a::before {
+      @include rlr-list-items("", 0);
+    }
+
+    > a:hover::before {
+      @include rlr-list-item-before(1);
+    }
+  }
+
+  & .navigation-list > li > a {
+    @extend %type-lead-light;
+
+    padding: 1rem;
+    backface-visibility: hidden;
+    transition: all 0.2s linear;
+
+    &:hover {
+      padding: 1rem 2rem;
+      backface-visibility: hidden;
+      background-color: var(--navigation-list-background-color-hover);
+      transition: all 0.2s linear;
+    }
+  }
+
+  & .navigation-dropdown-horizontal > li > a {
+    line-height: 26px;
+  }
+
+  & .navigation-dropdown-link {
+    letter-spacing: 0.08em;
+  }
+
+  & .navigation-icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & .navigation-dropdown-horizontal.is-visible {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    & .navigation-dropdown-item {
+      padding: 0 2rem;
+    }
+
+    & .navigation-icon-text {
+      padding: 2rem;
+    }
+  }
+}

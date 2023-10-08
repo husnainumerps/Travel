@@ -1,0 +1,36 @@
+.rlr-icon-text {
+  &__card {
+    padding: var(--spacing-5);
+    border: solid 1px var(--gray-03);
+    background-color: var(--white);
+    border-radius: var(--spacing-5);
+    column-gap: var(--spacing-5);
+
+    &:hover,
+    &--active {
+      border: solid 1px var(--brand-03);
+      background-color: var(--brand-0);
+    }
+
+    &:active,
+    &:target,
+    &.active {
+      background-color: var(--brand-03);
+    }
+
+    & .rlr-icon-font {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__card-title {
+    @extend %type-body-medium;
+
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  &.is-active {
+    background-color: var(--brand-00);
+  }
+}

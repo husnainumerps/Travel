@@ -1,0 +1,51 @@
+<fieldset class="rlr-product-form--hide rlr-js-product-form-fieldset"
+    data-attr="js-step-2">
+    {{> '@section-heading--product-form' copyText="Age and health restrictions" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item">
+                <div class="rlr-fieldrow__options js-fieldrow__item">
+                    {{> '@form-label' formLabel="Select all suitable age groups that apply" type="dark"}}
+                    <ul class="rlr-checkboxes">
+                        <li class="form-check form-check-inline">
+                            {{> '@checkbox' checkboxName="rlr-age-groups" checkboxID="rlr_check1" min="1" isRequired="required"  dataPristineMessage="Atleast 1 age group must be selected." }}
+                            {{> '@form-label' type="checkbox" formLabel="Adult (18+)" forLabel="rlr_check1"}}
+                        </li>
+                        <li class="form-check form-check-inline">
+                            {{> '@checkbox' checkboxName="rlr-age-groups" checkboxID="rlr_check2" min="1" isRequired="required"  dataPristineMessage="Atleast 1 age group must be selected." }}
+                            {{> '@form-label' type="checkbox" formLabel="Child (7-17)" forLabel="rlr_check2"}}
+                        </li>
+                        <li class="form-check form-check-inline">
+                            {{> '@checkbox' checkboxName="rlr-age-groups" checkboxID="rlr_check3" min="1" isRequired="required"  dataPristineMessage="Atleast 1 age group must be selected." }}
+                            {{> '@form-label' type="checkbox" formLabel="Infant (0-7)" forLabel="rlr_check3"}}
+                        </li>
+                        <li class="form-check form-check-inline">
+                            {{> '@checkbox' checkboxName="rlr-age-groups" checkboxID="rlr_check4" min="1" isRequired="required"  dataPristineMessage="Atleast 1 age group must be selected." }}
+                            {{> '@form-label' type="checkbox" formLabel="Senior Citizens (65+)" forLabel="rlr_check4"}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Physical Level" type="dark"}}
+                <ul class="rlr-radios">
+                    <li class="form-check">
+                        {{> '@radio' isRequired="required" inputType="radio" radioName="physical_level" value="Easy" radioId="easy"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Easy" forLabel="easy"}}
+                    <li class="form-check">
+                        {{> '@radio' isRequired="required" inputType="radio" radioName="physical_level" value="Moderate" radioId="moderate"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Moderate" forLabel="moderate"}}
+                    </li>
+                    <li class="form-check">
+                        {{> '@radio' isRequired="required" inputType="radio" radioName="physical_level" value="Strenous" radioId="strenous"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Strenous" forLabel="strenous"}}
+                    </li>
+                    <li class="form-check">
+                        {{> '@radio' isRequired="required" inputType="radio" radioName="physical_level" value="Extreme" radioId="extreme"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Extreme" forLabel="extreme"}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</fieldset>

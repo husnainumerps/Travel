@@ -1,0 +1,166 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  //Grays
+
+  --gray-00: hsl(240, 20%, 99%);
+  --gray-01: hsl(210, 20%, 98%);
+  --gray-02: hsl(220, 69%, 97%);
+  --gray-03: hsl(210, 16%, 93%);
+  --gray-04: hsl(204, 27%, 89%);
+  --gray-05: hsl(218, 15%, 65%);
+  --gray-06: hsl(221, 13%, 46%);
+  --gray-07: hsl(219, 18%, 40%);
+  --gray-08: hsl(218, 24%, 27%);
+  --gray-09: hsl(219, 37%, 18%);
+  --gray-10: hsl(220, 43%, 11%);
+
+  //Brand
+  --brand-00: hsl(180, 60%, 98%);
+  --brand-01: hsl(175, 62%, 96%);
+  --brand-02: hsl(175, 61%, 88%);
+  --brand-03: hsl(175, 61%, 76%);
+  --brand-04: hsl(175, 61%, 68%);
+  --brand-05: hsl(175, 61%, 60%);
+  --brand-06: hsl(175, 61%, 52%);
+  --brand-07: hsl(185, 84%, 38%);
+  --brand-08: hsl(176, 63%, 36%);
+  --brand-09: hsl(175, 61%, 32%);
+  --brand-10: hsl(175, 61%, 20%);
+
+  //Error
+  --error-00: hsl(12, 100%, 99%);
+  --error-01: hsl(5, 86%, 97%);
+  --error-02: hsl(4, 93%, 94%);
+  --error-03: hsl(3, 96%, 89%);
+  --error-04: hsl(4, 96%, 80%);
+  --error-05: hsl(4, 92%, 69%);
+  --error-06: hsl(4, 86%, 58%);
+  --error-07: hsl(4, 74%, 49%);
+  --error-08: hsl(4, 76%, 40%);
+  --error-09: hsl(4, 72%, 33%);
+  --error-10: hsl(8, 65%, 29%);
+
+  //Warning
+  --warning-00: hsl(42, 100%, 98%);
+  --warning-01: hsl(37, 94%, 93%);
+  --warning-02: hsl(45, 96%, 89%);
+  --warning-03: hsl(44, 98%, 77%);
+  --warning-04: hsl(42, 99%, 65%);
+  --warning-05: hsl(37, 91%, 55%);
+  --warning-06: hsl(34, 94%, 50%);
+  --warning-07: hsl(28, 97%, 44%);
+  --warning-08: hsl(22, 92%, 37%);
+  --warning-09: hsl(19, 84%, 31%);
+  --warning-10: hsl(18, 79%, 27%);
+
+  // Success
+  --success-00: hsl(142, 80%, 98%);
+  --success-01: hsl(145, 81%, 96%);
+  --success-02: hsl(140, 80%, 90%);
+  --success-03: hsl(144, 78%, 80%);
+  --success-04: hsl(148, 74%, 67%);
+  --success-05: hsl(150, 66%, 52%);
+  --success-06: hsl(152, 82%, 39%);
+  --success-07: hsl(153, 96%, 30%);
+  --success-08: hsl(155, 97%, 24%);
+  --success-09: hsl(155, 90%, 20%);
+  --success-10: hsl(156, 88%, 16%);
+
+  //Red Crayola
+  --red-00: hsl(347, 80%, 92%);
+  --red-01: hsl(347, 83%, 84%);
+  --red-02: hsl(347, 82%, 76%);
+  --red-03: hsl(347, 82%, 68%);
+  --red-04: hsl(347, 82%, 60%);
+  --red-05: hsl(347, 82%, 51%);
+  --red-06: hsl(347, 82%, 44%);
+  --red-07: hsl(347, 82%, 36%);
+  --red-08: hsl(347, 82%, 28%);
+  --red-09: hsl(347, 82%, 20%);
+  --red-10: hsl(347, 82%, 10%);
+
+  // accent colors
+  --accent-blue: hsl(228, 74%, 53%);
+  --accent-red: hsl(347, 100%, 61%);
+  --accent-black: hsl(300, 7%, 3%);
+  --accent-magenta: hsl(330, 62%, 45%);
+
+  // main colors
+  --brand: var(--brand-07);
+  --body-color: var(--gray-07);
+  --heading-color: var(--gray-09);
+  --neutral-color: var(--gray-05);
+  --success-color: var(--success-05);
+  --warning-color: var(--warning-06);
+  --danger-color: var(--red-05);
+  --danger-color-00: var(--red-00);
+  --danger-color-03: var(--red-00);
+  --danger-color-04: var(--red-00);
+  --brand-bg: hsl(176, 63%, 42%, 0.08);
+  --form-border-color: var(--body-color);
+  --form-border-color-light: var(--greay-04);
+
+  /*!  ==============================================================
+    Spacing variables
+    ============================================================== **/
+  @include rfs(0.125rem, --spacing-1); //2px
+  @include rfs(0.25rem, --spacing-2); //4px
+  @include rfs(0.5rem, --spacing-3); //8px
+  @include rfs(0.75rem, --spacing-4); //12px;
+  @include rfs(1rem, --spacing-5); //16px;
+  @include rfs(1.25rem, --spacing-6); //20px;
+  @include rfs(1.5rem, --spacing-7); //24px;
+  @include rfs(2rem, --spacing-8); //32px
+  @include rfs(2.5rem, --spacing-9); //40px;
+  @include rfs(3rem, --spacing-10); //48px;
+  @include rfs(3.5rem, --spacing-11); //56px;
+  @include rfs(4rem, --spacing-12); //64px;
+  @include rfs(4.5rem, --spacing-13); //72px;
+  @include rfs(5rem, --spacing-14); //80px;
+  @include rfs(6rem, --spacing-15); //96px;
+  @include rfs(7rem, --spacing-16); //112px;
+  @include rfs(8rem, --spacing-17); //128px;
+  @include rfs(8.5rem, --spacing-18); //136px;
+  @include rfs(9rem, --spacing-19); //144px;
+  @include rfs(15rem, --spacing-20); //240px;
+
+  /*!  ==============================================================
+  <!-- Global spacing ==== -->
+  ============================================================== **/
+  --global-section-spacing-top: var(--spacing-17);
+  --global-section-heading-spacing-bottom: var(--spacing-12); //24 on VP 576 & Down
+}
+
+.rlr-body {
+  &--yellow {
+    --brand: var(--warning-color);
+    --brand-00: hsl(42deg 100% 98%);
+    --brand-01: hsl(37deg 94% 93%);
+    --brand-02: hsl(45deg 96% 89%);
+    --brand-03: hsl(44deg 98% 77%);
+    --brand-04: hsl(42deg 99% 65%);
+    --brand-05: hsl(37deg 91% 55%);
+    --brand-06: hsl(34deg 94% 50%);
+    --brand-07: hsl(28deg 97% 44%);
+    --brand-08: hsl(22deg 92% 37%);
+    --brand-09: hsl(19deg 84% 31%);
+    --brand-10: hsl(18deg 79% 27%);
+  }
+
+  &--red {
+    --brand: var(--danger-color);
+    --brand-00: hsl(347deg 80% 92%);
+    --brand-01: hsl(347deg 83% 84%);
+    --brand-02: hsl(347deg 82% 76%);
+    --brand-03: hsl(347deg 82% 68%);
+    --brand-04: hsl(347deg 82% 60%);
+    --brand-05: hsl(347deg 82% 51%);
+    --brand-06: hsl(347deg 82% 44%);
+    --brand-07: hsl(347deg 82% 36%);
+    --brand-08: hsl(347deg 82% 28%);
+    --brand-09: hsl(347deg 82% 20%);
+    --brand-10: hsl(347deg 82% 10%);
+  }
+}

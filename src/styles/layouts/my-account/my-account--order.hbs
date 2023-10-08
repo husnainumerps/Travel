@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    {{> "@sidebar-menu--mobile"}}
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    {{> "@sidebar-menu--desktop"}}
+    <div class="content col-lg-9 col-xs-12">
+      <div class="rlr-data-container woocommerce-MyAccount-content">
+        {{>"@typography--heading-h1" modifier="type-h3 rlr-data-table__title" tagname="h1" copyText="Your Orders"}}
+        <div class="table">
+          {{render '@data-table'}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.rlr-icon-text {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0;
+  column-gap: var(--spacing-3);
+  list-style: none;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+
+    span {
+      @extend %type-body-medium;
+
+      font-weight: 400;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend %type-small;
+
+    line-height: 1.43;
+  }
+
+  &__subtext {
+    @extend %type-small;
+
+    font-weight: normal;
+    line-height: 1.43;
+  }
+
+  &--anchor,
+  a {
+    @extend %type-small;
+
+    color: var(--body-color);
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--brand);
+    }
+  }
+}

@@ -1,0 +1,114 @@
+<!-- Hero Banner -->
+<section class="rlr-about-hero">
+    <div class="container">
+        {{> '@about-hero'}}
+    </div>
+</section>
+<!-- Our Vision -->
+<section class="rlr-about rlr-section rlr-section__my">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                {{> '@section-heading' copyText="Our Vision"}}
+                <div class="row gy-5">
+                    <div class="col-xl-6" data-aos="fade-up"
+                        data-aos-offset="250"
+                        data-aos-duration="500">
+                        {{> '@text-card--numbered' modifier="rlr-text-card--numbered" title="1" desc="Etiam elementum ex vel tortor laoreet auctor. Aenean iaculis, ipsum eget
+                            eleifend ornare, arcu ante efficitur urna, id faucibus leo nunc sit amet elit." }}
+                    </div>
+                    <div class="col-xl-6" data-aos="fade-up"
+                        data-aos-offset="275"
+                        data-aos-duration="600">
+                        {{> '@text-card--numbered' modifier="rlr-text-card--numbered" title="2" desc="Etiam elementum ex vel tortor laoreet auctor. Aenean iaculis, ipsum eget
+                                        eleifend ornare, arcu ante efficitur urna, id faucibus leo nunc sit amet elit." }}
+                    </div>
+                    <div class="col-xl-6" data-aos="fade-up"
+                        data-aos-offset="300"
+                        data-aos-duration="700">
+                        {{> '@text-card--numbered' modifier="rlr-text-card--numbered" title="3" desc="Etiam elementum ex vel tortor laoreet auctor. Aenean iaculis, ipsum eget
+                                                    eleifend ornare, arcu ante efficitur urna, id faucibus leo nunc sit amet elit." }}
+                    </div>
+                    <div class="col-xl-6" class="col-xl-6" data-aos="fade-up"
+                        data-aos-offset="325"
+                        data-aos-duration="800">
+                        {{> '@text-card--numbered' modifier="rlr-text-card--numbered" title="4" desc="Etiam elementum ex vel tortor laoreet auctor. Aenean iaculis, ipsum eget
+                                                                eleifend ornare, arcu ante efficitur urna, id faucibus leo nunc sit amet elit." }}
+                    </div>
+                </div>
+            </div>
+            <div
+                class="offset-xl-1 col-lg-5">
+                {{> '@image--dotted' imgModifier="img-fluid" modifier="dotted img-fluid" imgModifier="float-xl-end" src="../../assets/images/about-01.jpg" alt="image our vision"   }}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our Values -->
+<section class="rlr-about rlr-section rlr-section__my">
+    <div class="container">
+        <div class="row">
+            <div
+                class="offset-xl-1 col-lg-5 flex-sm-column-reverse rlr-dotted-image">
+                {{> '@image--dotted' imgModifier="img-fluid" modifier="dotted-reversed" src="../../assets/images/about-02.jpg" alt="image our values"   }}
+            </div>
+            <div class="col-lg-6">
+                {{> '@section-heading' copyText="Our Values"}}
+                <div class="row gy-5">
+                    <div class="col-xl-6" data-aos="fade-up"
+                        data-aos-offset="250"
+                        data-aos-duration="500">
+                        {{> '@text-card--numbered' modifier="rlr-text-card--numbered" title="1" desc="Etiam elementum ex vel tortor laoreet auctor. Aenean iaculis, ipsum eget
+                                                eleifend ornare, arcu ante efficitur urna, id faucibus leo nunc sit amet elit." }}
+                    </div>
+                    <div class="col-xl-6" data-aos="fade-up"
+                        data-aos-offset="275"
+                        data-aos-duration="600">
+                        {{> '@text-card--numbered' modifier="rlr-text-card--numbered" title="2" desc="Etiam elementum ex vel tortor laoreet auctor. Aenean iaculis, ipsum eget
+                                                            eleifend ornare, arcu ante efficitur urna, id faucibus leo nunc sit amet elit." }}
+                    </div>
+                    <div class="col-xl-6" data-aos="fade-up"
+                        data-aos-offset="300"
+                        data-aos-duration="700">
+                        {{> '@text-card--numbered' modifier="rlr-text-card--numbered" title="3" desc="Etiam elementum ex vel tortor laoreet auctor. Aenean iaculis, ipsum eget
+                                                                        eleifend ornare, arcu ante efficitur urna, id faucibus leo nunc sit amet elit." }}
+                    </div>
+                    <div class="col-xl-6" class="col-xl-6" data-aos="fade-up"
+                        data-aos-offset="325"
+                        data-aos-duration="800">
+                        {{> '@text-card--numbered' modifier="rlr-text-card--numbered" title="4" desc="Etiam elementum ex vel tortor laoreet auctor. Aenean iaculis, ipsum eget
+                                                                                    eleifend ornare, arcu ante efficitur urna, id faucibus leo nunc sit amet elit." }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our Team -->
+<section class="rlr-section">
+    <div class="container">
+        <div class="row">
+            {{> '@section-heading--centered' copyText="Our Team"}}
+            <div class="col-xl-3 col-md-6" data-aos="fade-up"
+                data-aos-offset="250"
+                data-aos-duration="500">
+                {{> "@team--v2" modifier="rlr-team-card--v2" memberFirstName="Devon" memberLastNames="Lane" memberDesignation="Founder" desc="ed non iaculis sem" memberImgSrc="../../assets/images/team/team-03.jpg"  }}
+            </div>
+            <div class="col-xl-3 col-md-6" data-aos="fade-up"
+                data-aos-offset="300"
+                data-aos-duration="600">
+                {{> "@team--v2" modifier="rlr-team-card--v2" memberFirstName="Cleona" memberLastNames="Mathur" memberDesignation="Co-Founder" desc="ed non iaculis sem" memberImgSrc="../../assets/images/team/team-05.jpg"   }}
+            </div>
+            <div class="col-xl-3 col-md-6" data-aos="fade-up"
+                data-aos-offset="350"
+                data-aos-duration="700">
+                {{> "@team--v2" modifier="rlr-team-card--v2" memberFirstName="Darren" memberLastNames="Spratt" memberDesignation="Tour Manager" desc="ed non iaculis sem" memberImgSrc="../../assets/images/team/team-06.jpg"  }}
+            </div>
+            <div class="col-xl-3 col-md-6" data-aos="fade-up"
+                data-aos-offset="400"
+                data-aos-duration="800">
+                {{> "@team--v2" modifier="rlr-team-card--v2" memberFirstName="Lejla" memberLastNames="Fizovic" memberDesignation="Administrator" desc="ed non iaculis sem" memberImgSrc="../../assets/images/team/team-04.jpg"  }}
+            </div>
+        </div>
+    </div>
+</section>

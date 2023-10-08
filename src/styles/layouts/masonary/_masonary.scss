@@ -1,0 +1,72 @@
+/*!  ==============================================================
+<!-- Masonary Grid ==== -->
+============================================================== **/
+/*stylelint-disable*/
+.rlr-masonary-grid {
+  &__container {
+    display: grid;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    @include media-breakpoint-up(md) {
+      grid-template-areas:
+        "one one three three three"
+        "two two three three three"
+        "four four four four four"
+        "five five six six six";
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @media (min-width: 992px) {
+      grid-template-areas:
+        "one one three three three three"
+        "two two three three three three"
+        "four four four four four four"
+        "five five six six six six";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-areas:
+        "one one one three three three three four four four four four"
+        "two two two three three three three five five six six six";
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  // .grid-container
+  &__one {
+    grid-area: one;
+  }
+
+  &__two {
+    grid-area: two;
+  }
+
+  &__three {
+    grid-area: three;
+  }
+
+  &__four {
+    grid-area: four;
+  }
+
+  &__five {
+    grid-area: five;
+  }
+
+  &__six {
+    grid-area: six;
+  }
+}

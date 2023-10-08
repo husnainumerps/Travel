@@ -1,0 +1,32 @@
+<fieldset class="rlr-product-form--hide stop" data-attr="js-step-2">
+    {{> '@section-heading--product-form' copyText="Add itinerary details" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Title of attraction" type="dark" forLabel="rlr-product-form-itinerary-title"}}
+                {{> '@form-control' id="rlr-product-form-itinerary-title" isRequired="required" formControlLabel="Title of attraction" placeholderText="Enter landmark or attraction point name"}}
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Brief detail of days itinerary" type="dark" forLabel="rlr-product-form-itinerary-brief"}}
+                {{> '@form-control--text-area' id="rlr-product-form-itinerary-brief" isRequired="required" formControlLabel="Brief detail of days itinerary" textAreaPlaceholder="Provide more information for travelers to find your starting point easily, for example, opposite to the xyz landmark building"}}
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Accommodation details" type="dark" forLabel="rlr-product-form-itinerary-accomodation"}}
+                {{> '@form-control--text-area' id="rlr-product-form-itinerary-accomodation" textAreaPlaceholder="Provide more information for travelers to find your starting point easily, for example, opposite to the xyz landmark building"}}
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Meals of the day" type="dark" forLabel="rlr-product-form-itinerary-meal"}}
+                {{> '@form-control--text-area' id="rlr-product-form-itinerary-meal" textAreaPlaceholder="Provide more information for travelers to find your starting point easily, for example, opposite to the xyz landmark building"}}
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Inclusions of the day" type="dark" forLabel="rlr-product-form-itinerary-inclusion"}}
+                {{> '@form-control--text-area' id="rlr-product-form-itinerary-inclusion" textAreaPlaceholder="One inclusion per line"}}
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Exclusions of the day" type="dark" forLabel="rlr-product-form-itinerary-exclusion"}}
+                {{> '@form-control--text-area' id="rlr-product-form-itinerary-exclusion" textAreaPlaceholder="One exclusion per line"}}
+            </div>
+        </div>
+        {{> '@button' modifier="text-button rlr-button--product-form-repeater js-repeater" shape="rounded" size="small" btnBgColor="transparent" btnTextColor="gray" btnText="+ Add another theme"}}
+    </div>
+</fieldset>

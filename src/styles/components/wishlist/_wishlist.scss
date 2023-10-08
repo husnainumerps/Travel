@@ -1,0 +1,57 @@
+.rlr-wishlist {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+
+  &-button {
+    background: var(--gray-01);
+    color: var(--neutral-color);
+
+    &.is-active,
+    &:hover,
+    &:active {
+      box-shadow: 1px 2px 2px 1px rgb(176 176 176 / 35%);
+      color: var(--brand);
+      transition: 0.3s all ease-in-out;
+    }
+
+    &--no-bg {
+      background: transparent;
+      color: var(--white);
+    }
+
+    &--light {
+      background: transparent;
+      color: var(--gray-04);
+
+      &.is-active,
+      &:hover,
+      &:active {
+        background: transparent;
+        box-shadow: none;
+        color: var(--brand);
+        transition: 0.3s all ease-in-out;
+      }
+    }
+  }
+
+  &--no-bg {
+    &-button {
+      background: transparent;
+      color: var(--white);
+
+      &.is-active,
+      &:hover,
+      &:active {
+        background: transparent;
+        box-shadow: 1px 2px 2px 1px rgb(176 176 176 / 35%);
+        color: var(--brand);
+        transition: 0.3s all ease-in-out;
+      }
+    }
+  }
+
+  & .rlr-icon-font {
+    line-height: 0.5;
+  }
+}

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    {{> "@sidebar-menu--mobile"}}
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    {{> "@sidebar-menu--desktop"}}
+    <div class="content col-lg-9 col-xs-12">
+      <div
+        class="woocommerce-MyAccount-content">
+        {{>"@typography--heading-h1" modifier="type-h3 rlr-data-table__title" tagname="h1" copyText="Your Subscriptions"}}
+        <div class="rlr-myaccount__wrapper">
+          <div class="woocommerce-MyAccount-content">
+            <div class="woocommerce-notices-wrapper"></div>
+            <div class="woocommerce_account_subscriptions">
+              <p
+                class="no_subscriptions woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info">
+                You have no active subscriptions. <a
+                  class="woocommerce-Button button"
+                  href="https://ui.emprise.tours/">
+                  Browse products </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

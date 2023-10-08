@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        {{> "@sidebar-menu--mobile"}}
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {{> "@sidebar-menu--desktop"}}
+        <div class="content col-lg-9 col-xs-12">
+            <div
+                class="woocommerce-MyAccount-content">
+                {{>"@typography--heading-h1" modifier="type-h3 rlr-data-table__title" tagname="h1" copyText="Your Account"}}
+                <div class="rlr-myaccount__wrapper">
+                    <div class="woocommerce-MyAccount-content">
+                        <div class="woocommerce-notices-wrapper"></div>
+                        <p>
+                            The following addresses will be used on the checkout
+                            page by default.
+                        </p>
+                        <div
+                            class="u-columns woocommerce-Addresses col2-set addresses">
+                            <div class="u-column1 col-1 woocommerce-Address">
+                                <header class="woocommerce-Address-title title">
+                                    <h3>Billing address</h3>
+                                    <a href="{{path './home-page' }}"
+                                        class="edit">Edit</a>
+                                </header>
+                                <address>
+                                    SANJEEV JHA<br>Milan
+                                    Marg<br>Teku<br>Kathmandu<br>Bagmati<br>44600<br>Nepal
+                                </address>
+                            </div>
+                            <div class="u-column2 col-2 woocommerce-Address">
+                                <header class="woocommerce-Address-title title">
+                                    <h3>Shipping address</h3>
+                                    <a href="{{path './home-page' }}"
+                                        class="edit">Add</a>
+                                </header>
+                                <address>
+                                    You have not set up this type of address
+                                    yet. </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

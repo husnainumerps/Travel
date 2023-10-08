@@ -1,0 +1,7 @@
+.rlr-featured__cards {
+  & > div {
+    @include media-breakpoint-down(lg) {
+      margin-bottom: var(--spacing-8);
+    }
+  }
+}

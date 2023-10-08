@@ -1,0 +1,31 @@
+<fieldset class="rlr-product-form--hide start" data-attr="js-step-1">
+    {{> '@section-heading--product-form' copyText="Post a comment" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                <label class="rlr-form-label rlr-form-label--dark "
+                    for="rlr-product-form-itinerary-brief"> Your Comment
+                </label> <textarea required
+                    id="rlr-product-form-itinerary-brief"
+                    class="form-control form-control--text-area"
+                    placeholder="Provide more information for travelers to find your starting point easily, for example, opposite to the xyz landmark building"
+                    rows="12"></textarea>
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Full Name" type="dark" forLabel="rlr-product-form-product-title"}}
+                {{> '@form-control' placeholderText="e.g. John Doe" maxLength="70" modifiers="js-form-title" id="rlr-product-form-product-title"}}
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Email" type="dark" forLabel="rlr-product-form-product-title"}}
+                {{> '@form-control' placeholderText="e.g. John Doe" maxLength="70" modifiers="js-form-title" id="rlr-product-form-product-title"}}
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@checkbox' checkboxName="rlr-age-groups" checkboxID="rlr_check3" }}
+                {{> '@form-label' type="checkbox" formLabel="Save my name, email, and website in this browser for the next time I comment." forLabel="rlr_check3"}}
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@button--rounded-small' size="small" shape="rounded" btnBgColor="brand" btnTextColor="white" btnText="Submit"}}
+            </div>
+        </div>
+    </div>
+</fieldset>

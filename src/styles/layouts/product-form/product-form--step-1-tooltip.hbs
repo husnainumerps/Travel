@@ -1,0 +1,46 @@
+<fieldset class="rlr-product-form--hide start" data-attr="js-step-1">
+    {{> '@section-heading--product-form' copyText="Add your product title and type" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                <div class="row">
+                    <div class="col-xl-10">
+                        {{> '@form-label' formLabel="Product Title" type="dark" forLabel="rlr-product-form-product-title"}}
+                        {{> '@form-control' placeholderText="Enter title here" maxLength="70" modifiers="js-form-title" id="rlr-product-form-product-title"}}
+                    </div>
+                    <div class="col-xl-2">
+                        {{> '@button--tooltip' dataTippyContent='<span class="type-lead-semibold">Product Title</span> <p>are used to describe the product your are about to add to Emprise</p>' }}
+                    </div>
+                </div>
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                <div class="row">
+                    <div class="col-xl-10">
+                        {{> '@form-label' formLabel="Product Type" type="dark"}}
+                        <ul class="rlr-radios">
+                            <li class="form-check">
+                                {{> '@radio' isRequired="required" inputType="radio" radioName="product_type" value="Tour Package" radioId="tour_package"}}
+                                {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Tour Package" forLabel="tour_package"}}
+                            </li>
+                            <li class="form-check">
+                                {{> '@radio' isRequired="required" inputType="radio" radioName="product_type" value="Activity" radioId="activity"}}
+                                {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Activity" forLabel="activity"}}
+                            </li>
+                            <li class="form-check">
+                                {{> '@radio' isRequired="required" inputType="radio" radioName="product_type" value="Accommodation" radioId="accommodation"}}
+                                {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Accommodation" forLabel="accommodation"}}
+                            </li>
+                            <li class="form-check">
+                                {{> '@radio' isRequired="required" inputType="radio" radioName="product_type" value="Transportation" radioId="transportation"}}
+                                {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Transportation" forLabel="transportation"}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2">
+                        {{> '@button--tooltip' dataTippyContent='<span class="type-lead-semibold">Product Title</span> <p>are used to describe the product your are about to add to Emprise</p>' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>

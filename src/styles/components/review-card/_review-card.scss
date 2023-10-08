@@ -1,0 +1,43 @@
+.rlr-review-card {
+  border: 2px solid var(--gray-02);
+  background: var(--white);
+  border-radius: var(--spacing-5);
+
+  &__contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-4) var(--spacing-5);
+    border-bottom: 1px solid var(--gray-03);
+    background: var(--gray-00);
+    border-top-left-radius: var(--spacing-5);
+    border-top-right-radius: var(--spacing-5);
+  }
+
+  &__details {
+    padding: var(--spacing-10) var(--spacing-5);
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: var(--spacing-5);
+    border-bottom: 1px solid var(--gray-03);
+    margin-bottom: var(--spacing-7);
+  }
+
+  &__title-review {
+    @extend %type-lead-semibold;
+
+    color: var(--heading-color);
+  }
+
+  &__review-date {
+    @extend %type-body;
+
+    color: var(--body-color);
+    letter-spacing: 0.5px;
+  }
+}

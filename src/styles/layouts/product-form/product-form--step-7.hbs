@@ -1,0 +1,29 @@
+<fieldset class="rlr-product-form--hide rlr-js-product-form-fieldset"
+    data-attr="js-step-2">
+    {{> '@section-heading--product-form' copyText="Tour Duration details" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Tour Duration" type="dark"}}
+                <ul class="rlr-radios">
+                    <li class="form-check">
+                        {{> '@radio' isRequired="required" inputType="radio" radioName="tour_duration" value="1 Day or less" radioId="1_day_or_less"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="1 Day or less" forLabel="1_day_or_less"}}
+                    </li>
+                    <li class="form-check">
+                        {{> '@radio' isRequired="required" inputType="radio" radioName="tour_duration" value="2 to 3 days" radioId="2_to_3_days"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="2 to 3 days" forLabel="2_to_3_days"}}
+                    </li>
+                    <li class="form-check">
+                        {{> '@radio' isRequired="required" inputType="radio" radioName="tour_duration" value="4 or more days" radioId="4_or_more_days"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="4 or more days" forLabel="4_or_more_days"}}
+                    </li>
+                </ul>
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Duration in days" type="dark" forLabel="rlr-product-form-tour-select"}}
+                {{> '@form-select' id="rlr-product-form-tour-select" isRequired="required" optionSelected="Select" option1="1" option2="2" option3="3" }}
+            </div>
+        </div>
+    </div>
+</fieldset>

@@ -1,0 +1,76 @@
+.rlr-badge {
+  @extend %type-body-medium;
+
+  --badge-color: var(--warning-color);
+  --badge-bg-color: var(--warning-01);
+  --badge-padding-y: ($spacer * 0.25);
+  --badge-padding-x: ($spacer * 1);
+  --badge-border-radius: 1rem;
+  --badge-bg-color-sale: var(--danger-color-03);
+  --badge-color-sale: var(--danger-color);
+
+  z-index: 2;
+  display: inline-block;
+  padding: 0.375rem 0.825rem;
+  background-color: var(--badge-bg-color);
+  border-radius: var(--badge-border-radius);
+  color: var(--badge-color);
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+
+  &--right {
+    float: right;
+  }
+
+  &--sale {
+    background-color: var(--badge-bg-color-sale);
+    color: var(--badge-color-sale);
+  }
+
+  &--accent-blue {
+    background-color: var(--accent-blue);
+    color: var(--white);
+  }
+
+  &--accent-red {
+    background-color: var(--accent-red);
+    color: var(--white);
+  }
+
+  &--accent-magenta {
+    background-color: var(--accent-magenta);
+    color: var(--white);
+  }
+
+  &--accent-black {
+    background-color: var(--accent-black);
+    color: var(--white);
+  }
+
+  &--brand {
+    background-color: var(--brand);
+    color: var(--white);
+  }
+
+  &--abs {
+    position: absolute;
+    top: var(--spacing-8);
+
+    &-left {
+      left: var(--spacing-8);
+    }
+
+    &-right {
+      right: var(--spacing-8);
+    }
+
+    &-dest {
+      --badge-color: var(--brand);
+      --badge-bg-color: var(--white);
+      --badge-border-radius: 0.25rem;
+
+      right: var(--spacing-8);
+    }
+  }
+}

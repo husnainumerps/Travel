@@ -1,0 +1,47 @@
+<div class="rlr-search-results-page container">
+    <div class="rlr-search-results-page__breadcrumb-section">
+        {{> '@breadcrumb'}}
+        {{> '@icon-text--default' tagName="div" titleClass="rlr-search-results-page__phone" innerTagName="span" iconText="Questions? +977 (985) 110-8896" iconClass="flaticon-phone-receiver-silhouette"}}
+    </div>
+    <aside class="row">
+        {{> "@search-results-header" category="London, United Kingdom" results="1 - 10 of 2037"}}
+    </aside>
+    <aside class="row rlr-search-results-page__dynamic-filter-section">
+        {{render "@dynamic-swiper-filter"}}
+    </aside>
+    <div class="row rlr-search-results-page__product-details">
+        <aside class="col-xl-4 rlr-search-results-page__sidebar">
+            {{> "@product-filter"}}
+        </aside>
+        <div class="rlr-search-results-page__product-list col-xl-8">
+            <div class="row rlr-search-results-page__card-wrapper">
+                <div class="col-md-6">
+                    {{> "@product-card--loader"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card--loader"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card--loader"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card--loader"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card--loader"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card--loader"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card--loader"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card--loader"}}
+                </div>
+            </div>
+            <hr class="rlr-search-results-page__divider">
+            {{> "@pagination--list-page"}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="rlr-authforms">
+    <div class="rlr-authforms__header">
+        <img class="mb-2" src="../../assets/images/logos/Logomark.svg"
+            alt="Logo" />
+        <h2>Create an account</h2>
+        <p>Helps to access all features of the site.</p>
+    </div>
+    <div class="rlr-authforms__form">
+        <div class="rlr-authforms__inputgroup">
+            {{> "@form-label" formLabel="Name" type="light" labelModifier="required"}}
+            {{> "@input" modifiers="form-control--light" inputType="text" autocomplete="off" class="form-control"
+                                    placeholder="Enter your name" }}
+        </div>
+        <div class="rlr-authforms__inputgroup">
+            {{> "@form-label" formLabel="Email" type="light" labelModifier="required"}}
+            {{> "@input" modifiers="form-control--light" inputType="text" autocomplete="off" class="form-control"
+                                            placeholder="Enter your email" }}
+        </div>
+        <div class="rlr-authforms__inputgroup">
+            {{> "@form-label" formLabel="Password" type="light" labelModifier="required"}}
+            {{> "@input" modifiers="form-control--light" inputType="password" autocomplete="off" maxlength="70" class="form-control"
+                        placeholder="Create a password" }}
+            <p class="help-text">Must be 8 characters or more.</p>
+        </div>
+        <button type="button"
+            class="btn rlr-button rlr-button--fullwidth rlr-button--primary">Sign
+            in</button>
+        <button type="button"
+            class="btn rlr-button rlr-button--fullwidth rlr-button--google">Sign
+            up with Google</button>
+    </div>
+    <div class="rlr-authforms__notes">
+        <p>Already have an account? <a href="account-pages--login">Log in</a>
+        </p>
+    </div>
+</div>

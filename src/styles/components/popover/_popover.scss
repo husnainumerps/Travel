@@ -1,0 +1,139 @@
+.rlr-popover {
+  &--hide {
+    display: none;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .rlr-icon-font {
+      color: var(--success-color);
+      font-size: 2rem;
+      line-height: 0;
+
+      &:hover {
+        color: var(--success-07);
+      }
+    }
+
+    & button {
+      padding: 1rem 0;
+    }
+  }
+
+  &__checkbox-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-button {
+    background: var(--gray-01);
+
+    &.is-active,
+    &:hover,
+    &:active {
+      background: var(--white);
+      box-shadow: 1px 2px 2px 1px rgb(176 176 176 / 35%);
+      color: var(--brand);
+      transition: 0.3s all ease-in-out;
+    }
+  }
+
+  &--travellers {
+    .rlr-input-groups {
+      .rlr-popover__numberfield.rlr-input-group {
+        flex: 1 0 100%;
+        align-items: center;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--gray-02);
+        }
+      }
+    }
+
+    .rlr-form-label {
+      margin-bottom: 0;
+    }
+
+    .form-label--light {
+      margin-bottom: 0;
+      color: var(--body-color);
+    }
+
+    .rlr-booking-card__counter {
+      text-align: center;
+    }
+
+    .rlr-input-group {
+      justify-content: space-between;
+    }
+
+    .rlr-input-group__iconset {
+      justify-content: flex-end;
+    }
+
+    & .form-input {
+      width: 37px;
+      padding: 0;
+      border: 0;
+      margin: 0;
+      color: var(--heading-color);
+      text-align: center;
+
+      &::placeholder {
+        color: var(--neutral-color);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    gap: var(--spacing-8);
+
+    .rlr-input-groups {
+      gap: var(--spacing-3);
+    }
+  }
+}
+
+.tippy-box[data-theme="rlr-custom-tippy"] {
+  min-width: 22.5rem;
+  border-radius: var(--spacing-8);
+
+  & .tippy-content {
+    padding: 0;
+  }
+
+  & .tippy-arrow {
+    box-shadow: 0 6px 6px 4px hsl(0deg 0% 71% / 25%);
+    color: var(--white);
+  }
+}
+
+.tippy-box[data-theme="rlr-booking-tippy"] {
+  min-width: 22.5rem;
+  padding: var(--spacing-8) var(--spacing-7);
+  background: var(--white);
+  border-radius: var(--spacing-5);
+  box-shadow: 0 6px 6px 4px hsl(0deg 0% 71% / 25%);
+  color: var(--heading-color);
+
+  & .tippy-arrow {
+    color: var(--white);
+  }
+}
+
+.tippy-box[data-theme="rlr-autocomplete-tippy"] {
+  padding: var(--spacing-9) var(--spacing-13);
+  background: var(--white);
+  border-radius: var(--spacing-5);
+  box-shadow: 0 6px 6px 4px hsl(0deg 0% 71% / 25%);
+  color: var(--heading-color);
+}

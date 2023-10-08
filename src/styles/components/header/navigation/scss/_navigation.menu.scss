@@ -1,0 +1,174 @@
+/* NAVIGATION MENU
+================================*/
+.navigation-menu {
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  font-size: 0rem;
+  list-style: none;
+
+  @media (min-width: $landscape-width) {
+    width: auto;
+    @include flex();
+    @include flexAlignCenterVertically();
+
+    .navigation & {
+      @include flexSelfStretch();
+      @include flexStretch();
+    }
+
+    .navigation-logo-top & {
+      @include flexAlignCenter();
+    }
+  }
+}
+
+/* Navbar item */
+.navigation-item {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  float: left;
+
+  @media (min-width: $landscape-width) {
+    width: auto;
+  }
+}
+
+/* Navbar link */
+.navigation-link {
+  position: relative;
+  width: 100%;
+  padding: $navigation-link-padding;
+  border-bottom: solid 1px $navigation-link-border-color;
+  color: $navigation-link-font-color;
+  font-size: $navigation-link-font-size;
+  letter-spacing: $navigation-link-letter-spacing;
+  @include flex();
+  @include flexAlignCenterVertically();
+  @include transition(color 0.3s);
+
+  &:visited {
+    color: $navigation-link-font-color;
+  }
+
+  .navigation-item:last-child & {
+    @media (min-width: $landscape-width) {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+
+  .navigation-item:not(.navigation-brand-text):hover &,
+  .navigation-item:not(.navigation-brand-text):focus &,
+  .navigation-item:not(.navigation-brand-text).is-active & {
+    background-color: $navigation-link-background-color-hover;
+    color: $navigation-link-font-color-hover;
+    text-decoration: none !important;
+  }
+
+  @media (min-width: $landscape-width) {
+    height: 100%;
+    padding: $navigation-link-padding-landscape;
+    border: none;
+    line-height: $navigation-height;
+  }
+
+  .navigation-menu.navigation-social-menu + .navigation-menu:not(.navigation-social-menu) .navigation-item:first-child & {
+    border-top: solid 1px $navigation-link-border-color;
+
+    @media (min-width: $landscape-width) {
+      border-top: none;
+    }
+  }
+
+  // Link with icons and text
+  i {
+    width: $navigation-link-text-icon-width;
+    float: left;
+    font-size: $navigation-link-text-icon-font-size;
+    line-height: 0;
+    text-align: center;
+
+    // Font Awesome 5 icons
+    &[class*="fa"] {
+      font-size: $navigation-link-text-icon-font-awesome-size;
+    }
+
+    @media (min-width: $landscape-width) {
+      width: auto;
+    }
+
+    + span {
+      padding-left: 8px;
+    }
+  }
+
+  // Icon item
+  .navigation-icon-item & {
+    padding: $navigation-link-icon-item-padding;
+
+    @media (min-width: $landscape-width) {
+      width: 100%;
+      padding: $navigation-link-icon-item-padding-landscape;
+      border-left: solid 1px $navigation-link-border-color;
+      margin: 0;
+    }
+
+    span:not(.submenu-indicator) {
+      @media (min-width: $landscape-width) {
+        display: none;
+      }
+    }
+
+    .navigation-badge {
+      @media (min-width: $landscape-width) {
+        right: 10px;
+      }
+    }
+
+    i {
+      @media (min-width: $landscape-width) {
+        width: $navigation-link-icon-item-icon-width;
+        height: $navigation-link-icon-item-icon-height;
+        margin: 0;
+        float: left;
+        font-size: $navigation-link-icon-item-font-size;
+        line-height: 26px;
+        text-align: center;
+
+        // Font Awesome 5 icons
+        &[class*="fa"] {
+          width: auto;
+          font-size: $navigation-link-icon-item-font-awesome-size;
+        }
+      }
+    }
+  }
+
+  // Avatar item
+  .navigation-avatar-item & {
+    font-size: $navigation-link-avatar-font-size;
+    font-weight: $navigation-link-avatar-font-weight;
+
+    img {
+      width: $navigation-link-avatar-image-width;
+      border: solid 2px $navigation-link-avatar-border-color;
+      border-radius: $navigation-link-avatar-border-radius;
+    }
+
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  .navigation-body-section + .navigation-menu:not(.navigation-social-menu) > .navigation-item:first-child > & {
+    border-top: solid 1px $navigation-link-border-color;
+
+    @media (min-width: $landscape-width) {
+      border-top: none;
+    }
+  }
+}

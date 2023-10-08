@@ -1,0 +1,66 @@
+.rlr-recommendation-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__label {
+    @extend %type-lead-semibold;
+
+    color: var(--heading-color);
+    font-weight: 500;
+  }
+
+  &__buttons {
+    display: inline-flex;
+    column-gap: var(--spacing-4);
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__button {
+    padding: 1rem 1.2rem 0.6rem;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+
+    &--approve {
+      border: 2px solid var(--brand-02);
+
+      & .rlr-icon-font {
+        color: var(--brand);
+      }
+
+      &:hover,
+      &--active {
+        background-color: var(--brand-02);
+      }
+
+      &:active,
+      &:target,
+      &.active {
+        background-color: var(--brand-03);
+      }
+    }
+
+    &--disapprove {
+      border: 2px solid var(--error-02);
+
+      & .rlr-icon-font {
+        color: var(--error-06);
+      }
+
+      &:hover,
+      &--active {
+        background-color: var(--error-02);
+      }
+
+      &:active,
+      &:target,
+      &.active {
+        background-color: var(--error-04);
+      }
+    }
+  }
+}

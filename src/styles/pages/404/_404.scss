@@ -1,0 +1,17 @@
+.rlr-error {
+  background-image: url("../assets/svg/error-bg.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+
+  & .type-lead-semibold {
+    color: var(--brand);
+  }
+
+  &__content {
+    margin: var(--spacing-18) 0 var(--spacing-19);
+  }
+
+  &__search {
+    margin-top: var(--spacing-9);
+  }
+}

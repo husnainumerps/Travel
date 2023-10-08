@@ -1,0 +1,61 @@
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap");
+
+// $poppins: "Poppins", sans-serif;
+$noto-sans: "Noto Sans", sans-serif;
+$font-family-base: $noto-sans;
+$enable-responsive-font-sizes: true;
+
+/**  ==============================================================
+Display Font Sizes
+============================================================== **/
+$display-font-sizes: (
+  1: 8rem,
+  2: 5rem,
+  3: 4.5rem,
+  4: 4rem,
+  5: 3.5rem,
+  6: 3rem
+);
+
+/**  ==============================================================
+Grid Overrides
+============================================================== **/
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1680px
+) !default;
+
+/**  ==============================================================
+Container
+============================================================== **/
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1600px
+);
+
+/**  ==============================================================
+Gutter
+============================================================== **/
+$grid-gutter-width: 2rem !default; // Override bootstraps default 1.5rem gutter
+$form-select-color: var(--body-color);
+$input-placeholder-color: var(--body-color);
+$popover-max-width: 375px;
+$popover-body-padding-y: 0;
+$popover-body-padding-x: 0;
+$popover-border-radius: var(--spacing-8);
+$popover-border-color: transparent;
+$popover-arrow-outer-color: transparent;
+$popover-arrow-width: 2rem;
+$popover-arrow-height: 2rem;
+$dp-cell-size-base: 2.5rem;
+$dp-font-weight-bold: 500;

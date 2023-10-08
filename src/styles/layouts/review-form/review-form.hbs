@@ -1,0 +1,31 @@
+<fieldset class="rlr-review-form__fieldset">
+    <legend class="rlr-review-form__hidden-legend">Write a review</legend>
+    {{> '@section-heading--review-form' copyText="Write a review" bodyText="Review helps other travelers so please be mindful while reviewing."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item">
+                {{> '@form-label' forLabel="rlr_review_form_title" formLabel="Set a title" type="dark"}}
+                {{> '@form-control' id="rlr_review_form_title" placeholderText="Bungee jumping trip in Kathmandu" maxLength="70"}}
+            </div>
+            <div class="rlr-fieldrow__item">
+                {{> '@form-label' forLabel="rlr_review_form_desc" formLabel="What did you like or dislike?" type="dark"}}
+                {{> '@form-control--text-area' id="rlr_review_form_desc" textAreaPlaceholder="Provide more information for travelers to find your starting point easily, for example, opposite to the xyz landmark building"}}
+            </div>
+            <div class="rlr-fieldrow__item">
+                {{> "@recommended-button"}}
+            </div>
+            <div class="rlr-fieldrow__item">
+                {{> "@rating-star"}}
+            </div>
+            <div class="rlr-fieldrow__item">
+                {{> '@form-label' forLabel="rlr_review_form_uploader" formLabel="Add photos from your experiences."}}
+                {{> '@photo-uploader' uploadId="rlr_review_form_uploader" id="rlr_js_splide_photouploader" isRequired="required"}}
+            </div>
+        </div>
+    </div>
+    <div class="rlr-review-form__buttons">
+        {{> "@button" modifier="rlr-review-form__cancel" size="small" shape="rounded" btnBgColor="white" btnText="Cancel"}}
+        {{> "@button" modifier="rlr-review-form__submit" size="small" shape="rounded"
+        btnBgColor="brand" btnText="Submit"}}
+    </div>
+</fieldset>

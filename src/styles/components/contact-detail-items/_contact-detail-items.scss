@@ -1,0 +1,39 @@
+.rlr-contact-detail-item {
+  display: grid;
+  padding: var(--spacing-7);
+  background-color: var(--white);
+  border-radius: var(--spacing-5);
+  box-shadow: 0 43px 66px 0 rgb(0 0 0 / 7%);
+  grid-column-gap: var(--spacing-7);
+  grid-template-columns: 4.5rem auto;
+
+  &__icon {
+    @include gridChildCenter;
+
+    height: 4.5rem;
+    background-color: var(--brand-01);
+    font-size: 2rem;
+
+    i {
+      @include gridChildCenter;
+
+      color: var(--brand);
+    }
+  }
+
+  &__title {
+    @extend %type-body-semibold;
+
+    margin-bottom: var(--spacing-5);
+    color: var(--gray-05);
+    line-height: var(--spacing-6);
+  }
+
+  &__desc {
+    @extend %type-lead;
+
+    margin-bottom: 0;
+    color: var(--gray-09);
+    line-height: 1.875rem;
+  }
+}

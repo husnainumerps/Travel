@@ -1,0 +1,59 @@
+.rlr-itinerary {
+  &__media-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-11);
+    gap: var(--spacing-8);
+  }
+
+  &__media {
+    display: flex;
+    width: calc(100% / 3 - var(--spacing-8));
+    max-width: 11rem;
+    flex-direction: column;
+
+    & img {
+      border-radius: var(--spacing-3);
+    }
+  }
+
+  &__media-title {
+    color: var(--neutral-color);
+    letter-spacing: 0.5px;
+
+    &--active {
+      color: var(--brand);
+    }
+  }
+
+  &__title {
+    @extend %type-body-semibold;
+
+    color: var(--heading-color);
+  }
+
+  &__tabbed-content {
+    margin-top: var(--spacing-9);
+  }
+
+  &__room-details {
+    margin-top: var(--spacing-9);
+  }
+
+  &__room-type {
+    @extend %type-body;
+
+    width: 30%;
+    color: var(--neutral-color);
+    font-weight: normal;
+  }
+
+  &__room-price {
+    display: flex;
+
+    & span {
+      letter-spacing: 0.5px;
+    }
+  }
+}

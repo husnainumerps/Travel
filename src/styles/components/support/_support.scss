@@ -1,0 +1,61 @@
+.rlr-support-card {
+  $self: &;
+
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-13) var(--spacing-11);
+  border-radius: 12px;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    width: 104px;
+    height: 104px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-11);
+    background-color: var(--white);
+    border-radius: 50%;
+
+    img {
+      width: 56px;
+    }
+  }
+
+  &__title {
+    @extend %type-h4-medium;
+
+    margin-bottom: var(--spacing-5);
+    color: white;
+  }
+
+  &__text {
+    @extend %type-h6-light;
+
+    color: var(--white);
+  }
+
+  &__subtitle {
+    @extend %type-h6-light;
+
+    color: var(--brand-01);
+  }
+
+  &--sale {
+    background-color: var(--brand);
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &--help {
+    background-color: var(--heading-color);
+    #{ $self }__subtitle {
+      color: var(--neutral-color);
+    }
+  }
+}

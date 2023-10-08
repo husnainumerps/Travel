@@ -1,0 +1,70 @@
+.rlr-fieldrow {
+  $self: &;
+
+  position: relative;
+  margin-top: var(--spacing-8);
+  transition: height 0.3s ease-in;
+
+  &__form-element {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: var(--spacing-14);
+    }
+  }
+
+  &__options {
+    &:not(:last-child) {
+      margin-bottom: var(--spacing-9);
+    }
+
+    &--lg-spacer {
+      &:not(:last-child) {
+        margin-bottom: var(--spacing-14);
+      }
+    }
+  }
+
+  &__item--multiple {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item--inline {
+    display: flex;
+    gap: var(--spacing-8);
+  }
+
+  &__tooltip {
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    background: url("../assets/images/help.png") no-repeat 50% 50%;
+  }
+
+  &__map {
+    height: 332px;
+    margin-top: var(--spacing-8);
+
+    > * {
+      width: 100%;
+      height: 20rem;
+    }
+  }
+
+  &__clone--expand {
+    margin-top: var(--spacing-9);
+
+    .rlr-fieldrow__options {
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<div class="rlr-contact-form">
+    <div class="rlr-contact-form__header">
+        {{> "@page-title--icon" iconClass="flaticon-fluent-hand-left-20-regular" title= 'Hi, we’re happy to help you!' desc= 'Please enter detials so we can reach out to you'}}
+    </div>
+    <div class="rlr-contact-form__body">
+        <form action="/">
+            <div class="rlr-contact-form__input-group">
+                {{> '@typography--type-body-medium' modifier="type-body-medium rlr-contact-form__label" tagname="label" copyText="First Name"}}
+                {{> "@input" modifier="form-control" inputType="text" placeholderText="John" }}
+            </div>
+            <div class="rlr-contact-form__input-group">
+                {{> '@typography--type-body-medium' modifier="type-body-medium rlr-contact-form__label" tagname="label" copyText="Last Name"}}
+                {{> "@input" modifier="form-control" inputType="text" placeholderText="doe" }}
+            </div>
+            <div class="rlr-contact-form__input-group">
+                {{> '@typography--type-body-medium' modifier="type-body-medium rlr-contact-form__label" tagname="label" copyText="Phone"}}
+                {{> "@input" modifier="form-control" inputType="tel" placeholderText="XXXXXXXXXX" }}
+            </div>
+            <div class="rlr-contact-form__input-group">
+                {{> '@typography--type-body-medium' modifier="type-body-medium rlr-contact-form__label" tagname="label" copyText="Message"}}
+                {{> "@form-control--text-area" modifier="form-control" inputType="text" textAreaPlaceholder="Please explain the issue your are facing." }}
+            </div>
+            <div class="rlr-contact-form__input-group">
+                {{> '@typography--type-body-medium' modifier="type-body-medium rlr-contact-form__label" tagname="label" copyText="Email"}}
+                {{> "@input" modifier="form-control" inputType="email" placeholderText="johndoe@email.com" }}
+            </div>
+            {{> "@button--submit" modifier="btn rlr-button custom-class rlr-button--medium rlr-button--rounded rlr-button__color--white rlr-button--brand"  btnText="Submit"}}
+        </form>
+    </div>
+</div>

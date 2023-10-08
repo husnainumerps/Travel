@@ -1,0 +1,55 @@
+.rlr-fieldrow__item {
+  .rlr-js-tool-tip {
+    display: none;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &:hover {
+      .rlr-js-tool-tip {
+        display: block;
+      }
+    }
+  }
+
+  & .rlr-icon-font.flaticon-help {
+    color: var(--neutral-color);
+  }
+}
+
+.tippy-box[data-theme~="light"] {
+  padding: var(--spacing-5);
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 24px -4px rgb(16 24 40 / 10%), 0 8px 8px -4px rgb(16 24 40 / 4%);
+  color: var(--heading-color);
+  letter-spacing: 0.0125rem;
+  line-height: 1.4;
+
+  & .type-lead-semibold {
+    color: var(--brand);
+  }
+}
+
+.tippy-box[data-theme~="light"][data-placement^="top"] > .tippy-arrow::before {
+  border-top-color: var(--white);
+}
+
+.tippy-box[data-theme~="light"][data-placement^="bottom"] > .tippy-arrow::before {
+  border-bottom-color: var(--white);
+}
+
+.tippy-box[data-theme~="light"][data-placement^="left"] > .tippy-arrow::before {
+  border-left-color: var(--white);
+}
+
+.tippy-box[data-theme~="light"][data-placement^="right"] > .tippy-arrow::before {
+  border-right-color: var(--white);
+}
+
+.tippy-box[data-theme~="light"] > .tippy-backdrop {
+  background-color: var(--white);
+}
+
+.tippy-box[data-theme~="light"] > .tippy-svg-arrow {
+  fill: var(--white);
+}

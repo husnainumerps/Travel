@@ -1,0 +1,24 @@
+<!-- Main Content -->
+<div class="container">
+    <!-- Media Slider -->
+    <aside class="row">
+        {{> '@media'}}
+    </aside>
+    <!-- Product Detail Sextion -->
+    <section class="row rlr-product-detail-section">
+        <div class="rlr-product-detail-section__details col-xl-8">
+            {{> '@product-details'}}
+        </div>
+        <!-- Booking Form -->
+        <aside
+            class="col-xl-4 col-xxxl-3 d-xl-block offset-xxxl-1 mt-5 mt-lg-0">
+            {{> "@booking-form--found"}}
+        </aside>
+    </section>
+    <!-- Similar Products -->
+    <section
+        class="rlr-section rlr-section__mt rlr-related-product-wrapper">
+        {{> '@section-heading--single-button' copyText="Similar Product" buttonText="Check All"}}
+        {{> '@product-card-featured'}}
+    </section>
+</div>

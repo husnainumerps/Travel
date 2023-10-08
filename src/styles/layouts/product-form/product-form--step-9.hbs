@@ -1,0 +1,130 @@
+<fieldset class="rlr-product-form--hide start" data-attr="js-step-3">
+    {{> '@section-heading--product-form' copyText="Dates and Prices" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="How do you price this activity?" type="dark"}}
+                <ul class="rlr-radios">
+                    <li class="form-check">
+                        {{> '@radio' inputType="radio" isRequired="required" radioName="rlr_price_activity" value="Individual Seats" radioId="rlr_price_activity_individual_seats"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Individual Seats" forLabel="rlr_price_activity_individual_seats"}}
+                    </li>
+                    <li class="form-check">
+                        {{> '@radio' inputType="radio" isRequired="required" radioName="rlr_price_activity" value="Small Group" radioId="rlr_price_activity_small_group"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Small Group" forLabel="rlr_price_activity_small_group"}}
+                    </li>
+                    <li class="form-check">
+                        {{> '@radio' inputType="radio" isRequired="required" radioName="rlr_price_activity" value="Private Group" radioId="rlr_price_activity_private_group"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Private Group" forLabel="rlr_price_activity_private_group"}}
+                    </li>
+                </ul>
+                {{> '@form-label' formLabel="Maximun capacity" type="light"}}
+                {{> "@form-select" optionSelected="Enter Maximum Capacity" option1="1" option2="2" option3="3"}}
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="How often does this tour take place?" type="dark"}}
+                <ul class="rlr-radios">
+                    <li class="form-check">
+                        {{> '@radio' inputType="radio" isRequired="required" radioName="rlr_tour_occurance" value="All Year Round" radioId="rlr_tour_occurance_1"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="All Year Round" forLabel="rlr_tour_occurance_1"}}
+                    </li>
+                    <li class="form-check">
+                        {{> '@radio' inputType="radio" isRequired="required" radioName="rlr_tour_occurance" value="All Week Days" radioId="rlr_tour_occurance_2"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="All Week Days" forLabel="rlr_tour_occurance_2"}}
+                    </li>
+                    <li class="form-check">
+                        {{> '@radio' inputType="radio" isRequired="required" radioName="rlr_tour_occurance" value="Specific Start Dates" radioId="rlr_tour_occurance_3"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Specific Start Dates" forLabel="rlr_tour_occurance_3"}}
+                    </li>
+                </ul>
+                <div class="rlr-date-selection">
+                    {{> '@form-label' formLabel="Blockout specific dates" type="light"}}
+                    {{> '@input-group' modifier="rlr-input-group__datefield" inputType="text" placeholderText="Specific dates only" id="rlr_js_product_form_date_multiple"}}
+                </div>
+                <div class="rlr-date-selection rlr-product-form--hide">
+                    {{> '@form-label' formLabel="Select available dates" type="light"}}
+                    {{> '@input-group' modifier="rlr-input-group__datefield" inputType="text" placeholderText="Specific dates only" id="rlr_js_product_form_date_multiple_no_weekends"}}
+                </div>
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Are the prices based on age groups?" type="dark"}}
+                <ul class="rlr-radios">
+                    <li class="form-check">
+                        {{> '@radio' inputType="radio" isRequired="required" radioName="age_groups" value="No" radioId="rlr-age-groups-no"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="No" forLabel="rlr-age-groups-no"}}
+                    </li>
+                    <li class="form-check">
+                        {{> '@radio' inputType="radio" isRequired="required" radioName="age_groups" value="Yes" radioId="rlr-age-groups-yes"}}
+                        {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Yes" forLabel="rlr-age-groups-yes"}}
+                    </li>
+                </ul>
+                <div class="rlr-input-groups">
+                    <div class="rlr-input-wrapper">
+                        {{> '@form-label' formLabel="Adult" type="light"}}
+                        {{> '@input-group' inputType="number" modifier="rlr-input-group__numberfield rlr-js-linked" icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20.572a8.572 8.572 0 1 0 0-17.143 8.572 8.572 0 0 0 0 17.143z" stroke="#546179" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.809 9.342a2.235 2.235 0 0 1 4.343.745c0 1.49-2.235 2.235-2.235 2.235M11.979 16.343h.007" stroke="#546179" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>' inputType="number" placeholderText="Price per Adult 18+"}}
+                    </div>
+                    <div class="rlr-input-wrapper">
+                        {{> '@form-label' formLabel="Children" type="light"}}
+                        {{> '@input-group' inputType="number" modifier="rlr-input-group__numberfield rlr-js-linked" icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20.572a8.572 8.572 0 1 0 0-17.143 8.572 8.572 0 0 0 0 17.143z" stroke="#546179" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.809 9.342a2.235 2.235 0 0 1 4.343.745c0 1.49-2.235 2.235-2.235 2.235M11.979 16.343h.007" stroke="#546179" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>' inputType="number" placeholderText="Price per Child 7-17"}}
+                    </div>
+                    <div class="rlr-input-wrapper">
+                        {{> '@form-label' formLabel="Infants" type="light"}}
+                        {{> '@input-group' inputType="number" modifier="rlr-input-group__numberfield rlr-js-linked" icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20.572a8.572 8.572 0 1 0 0-17.143 8.572 8.572 0 0 0 0 17.143z" stroke="#546179" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.809 9.342a2.235 2.235 0 0 1 4.343.745c0 1.49-2.235 2.235-2.235 2.235M11.979 16.343h.007" stroke="#546179" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>' inputType="number" placeholderText="Price per Infant 0-3"}}
+                    </div>
+                    <div class="rlr-input-wrapper">
+                        {{> '@form-label' formLabel="Senior citizens" type="light"}}
+                        {{> '@input-group' inputType="number" modifier="rlr-input-group__numberfield rlr-js-linked" icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20.572a8.572 8.572 0 1 0 0-17.143 8.572 8.572 0 0 0 0 17.143z" stroke="#546179" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.809 9.342a2.235 2.235 0 0 1 4.343.745c0 1.49-2.235 2.235-2.235 2.235M11.979 16.343h.007" stroke="#546179" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>' inputType="number" placeholderText="Price per Senior 65+"}}
+                    </div>
+                </div>
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                <div class="rlr-fieldrow__item rlr-fieldrow__item--multiple">
+                    {{> '@form-label' formLabel="Are there discounts based on date range?" type="dark"}}
+                    <ul class="rlr-radios">
+                        <li class="form-check">
+                            {{> '@radio' inputType="radio" isRequired="required" radioName="rlr_product_form_daterange" value="No" radioId="rlr_product_form_daterange_no"}}
+                            {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="No" forLabel="rlr_product_form_daterange_no"}}
+                        </li>
+                        <li class="form-check">
+                            {{> '@radio' inputType="radio" isRequired="required" radioName="rlr_product_form_daterange" value="Yes" radioId="rlr_product_form_daterange_yes"}}
+                            {{> '@form-label' modifier="rlr-form-label" type="radio" formLabel="Yes" forLabel="rlr_product_form_daterange_yes"}}
+                        </li>
+                    </ul>
+                    <div class="rlr-input-groups rlr-custom-inputs">
+                        <div class="rlr-input-wrapper">
+                            {{> '@form-label' formLabel="Dicounted Date Range" type="light"}}
+                            {{> '@input-group--dateranges' id="rlr-js-test-dateranges" modifier="rlr-input-group__datefield rlr-fieldrow__clone lr-custom-input rlr-custom-input--numberfield rlr-custom-input--option" inputType="text" placeholderText="Select Date Range for Diccount"}}
+                            {{!-- {{> '@input-group' id="rlr-js-test-dateranges" modifier="rlr-input-group__datefield rlr-custom-input rlr-custom-input--numberfield rlr-custom-input--option" inputType="text" placeholderText="Select Date Range for Diccount"}} --}}
+                        </div>
+                        <div class="rlr-input-wrapper">
+                            {{> '@form-label' formLabel="Add discount" type="light"}}
+                            {{> '@input-group' inputType="number" modifier="rlr-input-group__numberfield rlr-custom-input-option" icon='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="24" height="24" rx="12" fill="#28B0A6"/>
+                                                        <path d="M11.6974 9.27766C11.6974 7.94332 10.6117 6.85742 9.2773 6.85742C7.94293 6.85742 6.85742 7.94332 6.85742 9.27766C6.85742 10.6117 7.94293 11.6972 9.2773 11.6972C10.6117 11.6972 11.6974 10.6117 11.6974 9.27766ZM8.05954 9.27766C8.05954 8.6058 8.6058 8.05954 9.2773 8.05954C9.94876 8.05954 10.4952 8.6058 10.4952 9.27766C10.4952 9.94876 9.94876 10.495 9.2773 10.495C8.6058 10.495 8.05954 9.94879 8.05954 9.27766Z" fill="white"/>
+                                                        <path d="M14.6872 12.6676C13.3528 12.6676 12.2673 13.7531 12.2673 15.0871C12.2673 16.4215 13.3528 17.5074 14.6872 17.5074C16.0216 17.5074 17.1071 16.4215 17.1071 15.0871C17.1071 13.7531 16.0216 12.6676 14.6872 12.6676ZM14.6872 16.3052C14.0157 16.3052 13.4694 15.759 13.4694 15.0871C13.4694 14.416 14.0157 13.8697 14.6872 13.8697C15.3587 13.8697 15.9049 14.416 15.9049 15.0871C15.9049 15.759 15.3586 16.3052 14.6872 16.3052Z" fill="white"/>
+                                                        <path d="M14.7615 7.16767C14.4475 6.99352 14.0505 7.10588 13.8754 7.42011L8.93541 16.2904C8.76031 16.6046 8.87324 17.0014 9.18761 17.1767C9.28798 17.2323 9.39679 17.2589 9.504 17.2589C9.73272 17.2589 9.95462 17.1384 10.0738 16.9243L15.0137 8.05402C15.1888 7.73976 15.076 7.343 14.7615 7.16767Z" fill="white"/>
+                                                        </svg>
+                                                    ' placeholderText="10"}}
+                        </div>
+                    </div>
+                    {{> '@button' modifier="text-button rlr-button--product-form-repeater js-repeater" shape="rounded" size="small" btnBgColor="transparent" btnTextColor="gray" btnText="+ Add another date range based discount"}}
+                </div>
+            </div>
+            <div class="rlr-fieldrow__item">
+                <div class="rlr-fieldrow__item rlr-fieldrow__item--multiple">
+                    {{> '@form-label' formLabel="Product Addons" type="dark"}}
+                    <div class="rlr-input-groups rlr-custom-inputs">
+                        <div class="rlr-custom-input rlr-custom-input--option">
+                            {{> '@form-select' optionSelected="Single Room" option1="Health and Fitness" option2="Outdoor and Adventure" option3="Religion" option4="Food and Drink" }}
+                        </div>
+                        {{> '@input-group' inputType="number" modifier="rlr-input-group__numberfield rlr-custom-input-option" icon='<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.394 11.123a.698.698 0 0 1-.99 0L.45 7.17a1.05 1.05 0 0 1 0-1.485l.495-.495a1.05 1.05 0 0 1 1.486 0l2.468 2.468 6.67-6.67a1.05 1.05 0 0 1 1.485 0l.495.496c.41.41.41 1.075 0 1.485l-8.155 8.155z" fill="#fff"/>
+                        </svg>
+                        ' placeholderText="Price"}}
+                    </div>
+                    {{> '@button' modifier="text-button rlr-button--product-form-repeater js-repeater" shape="rounded" size="small" btnBgColor="transparent" btnTextColor="gray" btnText="+ Add another addon item"}}
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>

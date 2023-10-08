@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        {{> "@sidebar-menu--mobile"}}
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {{> "@sidebar-menu--desktop"}}
+        <div class="content col-lg-9 col-xs-12">
+            <div class="table">
+                {{render '@data-table'}}
+            </div>
+        </div>
+    </div>
+</div>

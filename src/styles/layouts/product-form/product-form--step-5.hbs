@@ -1,0 +1,41 @@
+<fieldset class="rlr-product-form--hide start" data-attr="js-step-2">
+    {{> '@section-heading--product-form' copyText="Pickup and meeting point" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item">
+                <div class="rlr-fieldrow__options">
+                    {{> '@form-label' formLabel="Select all options that apply" type="dark"}}
+                    <ul class="rlr-checkboxes">
+                        <li class="form-check form-check-inline">
+                            {{> '@checkbox' checkboxID="rlr-product-form-loc-point"}}
+                            {{> '@form-label'  type="checkbox" formLabel="Meet at starting point" forLabel="rlr-product-form-loc-point"}}
+                        </li>
+                        <li class="form-check form-check-inline">
+                            {{> '@checkbox' checkboxID="rlr-product-form-loc-pickup"}}
+                            {{> '@form-label' type="checkbox" formLabel="Pickup from hotel" forLabel="rlr-product-form-loc-pickup"}}
+                        </li>
+                        <li class="form-check form-check-inline">
+                            {{> '@checkbox' checkboxID="rlr-product-form-loc-bus"}}
+                            {{> '@form-label' type="checkbox" formLabel="Pickup from bus/train station" forLabel="rlr-product-form-loc-bus"}}
+                        </li>
+                        <li class="form-check form-check-inline">
+                            {{> '@checkbox' checkboxID="rlr-product-form-loc-airport"}}
+                            {{> '@form-label' type="checkbox" formLabel="Pickup from airport" forLabel="rlr-product-form-loc-airport"}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Set the starting point" type="dark" forLabel="rlr-product-form-start-point"}}
+                {{> '@form-control' isRequired="required" id="rlr-product-form-start-point" placeholderText="Type Address or Landmark"}}
+                <div class="rlr-fieldrow__map">
+                    <img src="../../assets/images/google-map.jpg" alt="#">
+                </div>
+            </div>
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Getting to starting point" type="dark" forLabel="rlr-product-form-start-point-textarea"}}
+                {{> '@form-control--text-area' id="rlr-product-form-start-point-textarea" textAreaPlaceholder="Provide more information for travelers to find your starting point easily, for example, opposite to the xyz landmark building"}}
+            </div>
+        </div>
+    </div>
+</fieldset>

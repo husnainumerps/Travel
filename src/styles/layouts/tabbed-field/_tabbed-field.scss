@@ -1,0 +1,27 @@
+.rlr-nav-tabs {
+  &__items {
+    border-bottom-color: var(--gray-03);
+  }
+
+  &__link.nav-link {
+    padding-left: 0;
+    color: var(--heading-color);
+    font-weight: 500;
+
+    &.active {
+      border-color: transparent;
+      border-bottom-color: var(--gray-03);
+      color: var(--neutral-color);
+    }
+
+    &:hover {
+      border-color: transparent;
+      border-bottom-color: var(--gray-03);
+      color: var(--neutral-color);
+    }
+  }
+}
+
+.rlr-tab-content {
+  margin-top: var(--spacing-7);
+}

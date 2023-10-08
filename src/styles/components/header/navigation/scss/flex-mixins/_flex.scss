@@ -1,0 +1,100 @@
+// Flex
+@mixin flex {
+  display: flexbox;
+  display: flex;
+}
+
+// Inline Flex
+@mixin inlineFlex {
+  display: inline-flexbox;
+  display: inline-flex;
+}
+
+// Flex horizontal row
+@mixin flexRow {
+  flex-direction: row;
+  flex-direction: row;
+}
+
+// Flex column
+@mixin flexColumn {
+  flex-direction: column;
+  flex-direction: column;
+}
+
+// Flex column reverse
+@mixin flexColumnReverse {
+  flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important;
+}
+
+// HORIZONTAL ALIGNMENT ---
+
+// Align to LEFT
+@mixin flexAlignLeft {
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+}
+
+// Align to RIGHT
+@mixin flexAlignRight {
+  justify-content: flex-end;
+  -ms-flex-pack: end;
+}
+
+// Align to CENTER
+@mixin flexAlignCenter {
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+
+// Align with space BETWEEN
+@mixin flexAlignBetween {
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+
+// Align with space AROUND
+@mixin flexAlignAround {
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+}
+
+// VERTICAL ALIGNMENT ---
+
+// Align vertically to top
+@mixin flexAlignTop {
+  align-items: flex-start;
+}
+
+// Align vertically to bottom
+@mixin flexAlignBottom {
+  align-items: flex-end;
+  -ms-flex-align: end;
+}
+
+// Align vertically to center
+@mixin flexAlignCenterVertically {
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+// Vertically stretch
+@mixin flexStretch {
+  align-items: stretch;
+  -ms-flex-align: stretch;
+}
+
+// SELF ALIGNMENT ---
+
+// Self stretch
+@mixin flexSelfStretch {
+  align-self: stretch;
+  -ms-flex-item-align: stretch;
+}
+
+// Self vertically center align
+@mixin flexSelfCenterVertically {
+  align-self: center;
+  -ms-flex-item-align: center;
+}

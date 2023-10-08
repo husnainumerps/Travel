@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Your vacation, tours and travel theme needs are all met at emprise." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Travel Website Template | Emprise</title>
+    <link rel="shortcut icon" type="image/png"
+        href="{{path '/assets/favicon.ico'}}">
+    <link rel="stylesheet" href="{{path '/styles/plugins.css'}}">
+    <link rel="stylesheet" href="{{path '/styles/main.css'}}">
+</head>
+
+<body class="rlr-body rlr-js-banner-search">
+    <!-- Main Content -->
+    <main id="rlr-main" class="rlr-main">
+        {{{ yield }}}
+    </main>
+    <!-- Footer -->
+    {{> '@footer'}}
+    <!-- Scripts -->
+    <script src="{{path '/vendors/navx/js/navigation.min.js'}}"></script>
+    <script src="{{path '/js/main.js'}}"></script>
+    <!-- Start of ChatBot (www.chatbot.com) code -->
+    <script type="text/javascript">
+        window.__be = window.__be || {};
+        window.__be.id = "6298be609a882b00076f0347";
+        (function () {
+            var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+            be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+        })();
+    </script>
+    <!-- End of ChatBot code -->
+</body>
+
+</html>

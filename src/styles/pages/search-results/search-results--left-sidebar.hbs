@@ -1,0 +1,53 @@
+<div class="rlr-search-results-page container">
+    <div class="rlr-search-results-page__breadcrumb-section">
+        {{> '@breadcrumb'}}
+        {{> '@icon-text--default' tagName="div" titleClass="rlr-search-results-page__phone" innerTagName="span" iconText="Questions? +977 (985) 110-8896" iconClass="flaticon-phone-receiver-silhouette"}}
+    </div>
+    <aside class="row">
+        {{> "@search-results-header" category="London, United Kingdom" results="1 - 10 of 2037"}}
+    </aside>
+    <!-- Dynamic filter -->
+    <aside class="row rlr-search-results-page__dynamic-filter-section">
+        {{render "@dynamic-swiper-filter"}}
+    </aside>
+    <!-- Product cards -->
+    <div class="row rlr-search-results-page__product-details">
+        <aside class="col-xl-3 rlr-search-results-page__sidebar">
+            {{> "@product-filter"}}
+        </aside>
+        <div class="rlr-search-results-page__product-list col-lg-9">
+            <div class="row rlr-search-results-page__card-wrapper">
+                <div class="col-md-6 col-lg-4">
+                    {{> '@product-card--v4' modifier="rlr-product-card--v3" swiperModifier="rlr-js-product-multi-image-swiper" productTitle="Full-Day Catamaran Cruise to Hvar & Pakleni Islands" productCat="Beach Tours" productSubCat="Dubronik" productImgSrc1="../../assets/images/product-images/small/01.jpg" productImgSrc2="../../assets/images/product-images/small/02.jpg" productImgSrc3="../../assets/images/product-images/small/03.jpg" productPrice="895" productRating="4.7 (577)" badgeLabel="-20% Today" badgeModifier="accent-red" }}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> '@product-card--v4' modifier="rlr-product-card--v3" swiperModifier="rlr-js-product-multi-image-swiper" productTitle="Full-Day Catamaran Cruise to Hvar & Pakleni Islands" productCat="Beach Tours" productSubCat="Dubronik" productImgSrc1="../../assets/images/item-listing/02.jpg" productImgSrc2="../../assets/images/item-listing/03.jpg" productImgSrc3="../../assets/images/item-listing/04.jpg" productPrice="895" productRating="4.7 (577)" badgeLabel="-20% Today" badgeModifier="accent-red" }}
+                    {{!-- {{> "@product-card--v3" modifier="rlr-product-card--v3" productCat='Cultural Tour' badgeLabel='Sale' productSubCat='Stoke on Trent' productImgSrc="../../assets/images/item-listing/02.jpg" productTitle="Ancient temple tour in Goa" productPrice="895.00" productRating="4.7 (108)"}} --}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> "@product-card--v3" modifier="rlr-product-card--v3" productCat='Hiking Tour' badgeLabel='-15%' modifier='sale' productSubCat='Stoke on Trent' productImgSrc="../../assets/images/item-listing/03.jpg" productTitle="Hot air baloon right with view" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> "@product-card--v3" modifier="rlr-product-card--v3" productCat='Hiking Tour' badgeLabel='Sale' productSubCat='Stoke on Trent' productImgSrc="../../assets/images/item-listing/04.jpg" productTitle="White water rafting in Trishuli" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> "@product-card--v3" modifier="rlr-product-card--v3" productCat='Hiking Tour' badgeLabel='30%' modifier='sale' productSubCat='Stoke on Trent' productImgSrc="../../assets/images/item-listing/05.jpg" productTitle="Jungle safari trip with family" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> "@product-card--v3" modifier="rlr-product-card--v3" productCat='Hiking Tour' badgeLabel='50%' modifier='sale' productSubCat='Stoke on Trent' productImgSrc="../../assets/images/item-listing/06.jpg" productTitle="Cycling tour around Europe" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> "@product-card--v3" modifier="rlr-product-card--v3" productCat='Hiking Tour' badgeLabel='Sale' productSubCat='Stoke on Trent' productImgSrc="../../assets/images/item-listing/07.jpg" productTitle="Off road driving around Dubai" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> "@product-card--v3" modifier="rlr-product-card--v3" productCat='Hiking Tour' badgeLabel='10%' modifier='sale' productSubCat='Stoke on Trent' productImgSrc="../../assets/images/item-listing/08.jpg" productTitle="Motor sports activity in India" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    {{> "@product-card--v3" modifier="rlr-product-card--v3" productCat='Hiking Tour' badgeLabel='30%' modifier='sale' productSubCat='Stoke on Trent' productImgSrc="../../assets/images/item-listing/09.jpg" productTitle="Paragliding in amazing Kenya" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+            </div>
+            <hr class="rlr-search-results-page__divider" />
+            {{> "@pagination--list-page"}}
+        </div>
+    </div>
+</div>

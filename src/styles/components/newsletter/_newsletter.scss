@@ -1,0 +1,38 @@
+.rlr-newsletter {
+  $self: &;
+
+  &__content {
+    flex: 1;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0 32px;
+    }
+    #{$self}__subtitle {
+      @extend %type-h6-light;
+
+      margin-bottom: 20px;
+      color: var(--brand);
+    }
+    #{$self}__title {
+      @extend %type-h1;
+
+      margin-bottom: var(--spacing-8);
+      font-weight: 600;
+    }
+
+    p {
+      @extend %type-h6-light;
+
+      margin-bottom: 40px;
+
+      @media (max-width: 1200px) {
+        margin-bottom: 20px;
+      }
+    }
+    #{$self}__ps {
+      @extend %type-body;
+
+      margin-top: 48px;
+    }
+  }
+}

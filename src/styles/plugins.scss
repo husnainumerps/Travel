@@ -1,0 +1,88 @@
+/*!  ==============================================================
+<!-- Table of contents ==== -->
+
+1. Bootstrap
+2. Bootstrap customization
+3. Bootstrap to set the changes
+4. Flatpickr Calendar Plugin
+5. Flatpickr Shortcut Button
+6. Splidejs
+7. Swiper
+8. Animate CSS
+9. Navx Navigation
+10. PH-Picture Placehoder Loading
+11. Tippy JS
+
+============================================================== **/
+/*stylelint-disable*/
+
+/*!  ==============================================================
+<!-- 1. Bootstrap ==== -->
+============================================================== **/
+@import "../../node_modules/bootstrap/scss/functions";
+
+/*!  ==============================================================
+<!-- 2. Bootstrap customization ==== -->
+============================================================== **/
+@import "./abstracts/variables";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+/*!  ==============================================================
+<!-- 3. Bootstrap to set the changes! ==== -->
+============================================================== **/
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/*!  ==============================================================
+<!-- 4. Flatpickr Calendar Plugin ==== -->
+============================================================== **/
+@import "../vendors/flatpickr/vars";
+@import "../vendors/flatpickr/custom";
+@import "../vendors/flatpickr/flatpickr";
+
+/*!  ==============================================================
+<!-- 5. Flatpickr Shortcut Button ==== -->
+============================================================== **/
+@import "../../node_modules/shortcut-buttons-flatpickr/dist/themes/light";
+
+/*!  ==============================================================
+<!-- 6. Splidejs ==== -->
+============================================================== **/
+// @import "../vendors/splidejs.scss";
+// Default theme
+// import '@splidejs/splide/css';
+
+// // or other themes
+// import '@splidejs/splide/css/skyblue';
+// import '@splidejs/splide/css/sea-green';
+
+// or only core styles
+@import "../../node_modules/@splidejs/splide/src/css/template/default/index.scss";
+
+/*!  ==============================================================
+<!-- 7. Swiper ==== -->
+============================================================== **/
+// @import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/swiper-bundle";
+
+/*!  ==============================================================
+<!-- 8. Animate CSS ==== -->
+============================================================== **/
+@import "../../node_modules/animate.css/animate";
+
+/*!  ==============================================================
+<!-- 9. Navx Navigation ==== -->
+============================================================== **/
+@import "../vendors/navx/scss/navigation";
+
+/*!  ==============================================================
+<!-- 10. PH-Picture Placehoder Loading ==== -->
+============================================================== **/
+@import "../../node_modules/placeholder-loading/dist/css/placeholder-loading";
+
+/*!  ==============================================================
+<!-- 11. Tippy JS ==== -->
+============================================================== **/
+@import "../../node_modules/tippy.js/dist/tippy";
+@import "../../node_modules/tippy.js/themes/light";
+@import "../../node_modules/tippy.js/animations/scale";

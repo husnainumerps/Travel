@@ -1,0 +1,44 @@
+.rlr-img {
+  position: relative;
+  max-width: fit-content;
+
+  img {
+    border-radius: var(--spacing-5);
+  }
+
+  &--dotted {
+    &::after {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: 64px;
+      height: 344px;
+      background-image: url("../assets/images/dotted.png");
+      content: "";
+      transform: translate(75%, -10%);
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    &-reversed {
+      &::after {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 88px;
+        height: 319px;
+        background-image: url("../assets/images/dotted-2.png");
+        content: "";
+        transform: translate(-60%, 10%);
+
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
+      }
+    }
+  }
+}

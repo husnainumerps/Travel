@@ -1,0 +1,50 @@
+<form class="rlr-booking-card">
+    <fieldset class="rlr-fieldrow">
+        <Legend class="rlr-booking-card__legend--hide">Booking form</Legend>
+        <article itemscope
+            itemtype="https://schema.org/Offer"
+            class="rlr-booking-card__price-details rlr-fieldrow__form-element">
+            <del class="rlr-booking-card__del-price"
+                itemscope
+                itemtype="https://schema.org/AggregateOffer">
+                <span itemprop="priceCurrency">£</span><span
+                    itemprop="highPrice">2469</span>
+            </del>
+            <header class="
+                    rlr-booking-card__offer">
+                <h2 class="rlr-booking-card__price"
+                    itemscope
+                    itemtype="https://schema.org/AggregateOffer">
+                    <span
+                        class="rlr-booking-card__current-price rlr-booking-card--currency"
+                        itemprop="priceCurrency">£</span>
+                    <span itemprop="lowPrice"
+                        class="rlr-booking-card__current-price rlr-booking-card--low-price">1759</span>
+                    <span itemprop="category"
+                        class="rlr-booking-card__price-type">per person</span>
+                </h2>
+                {{> "@badge" badgeLabel="20% OFF"}}
+            </header>
+            <span class="rlr-booking-card__info">*Price based on selections
+                bellow.</span>
+        </article>
+        <div class="rlr-fieldrow__item rlr-booking-card__form-item">
+            {{> '@form-label' labelModifier="rlr-booking-card__label" formLabel="Dates" type="dark" forLabel="rlr-booking-dateranges-input"}}
+            {{> '@input-group' id="rlr-booking-dateranges-input" inputGroupId="rlr-booking-startRange" itemprop="startDate" modifier="rlr-input-group__datefield rlr-js-booking-form-daterange" placeholderText="Select preferred dates" inputType="text" }}
+        </div>
+        <div class="rlr-fieldrow__item rlr-booking-card__form-item">
+            {{> '@form-label' labelModifier="rlr-booking-card__label" formLabel="Travellers" type="dark" forLabel="rlr-booking-travellers-input"}}
+            {{> "@popover--travellers"}}
+        </div>
+        <div class="rlr-fieldrow__item rlr-booking-card__form-item">
+            {{> '@form-label' labelModifier="rlr-booking-card__label" formLabel="Selections" type="dark" forLabel="rlr-booking-selection-input"}}
+            {{> "@popover--selections"}}
+        </div>
+    </fieldset>
+    <fieldset class="rlr-booking-card__results">
+        <span class="rlr-booking-card__result-title"> No matches found </span>
+        <span class="rlr-booking-card__result-desc"> Sorry, there's nothing
+            available for that date and participant combination. </span>
+    </fieldset>
+    {{> "@button" modifier="rlr-booking-card__button" btnText="Check Availability"}}
+</form>

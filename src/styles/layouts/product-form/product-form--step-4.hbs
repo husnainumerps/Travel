@@ -1,0 +1,11 @@
+<fieldset class="rlr-product-form--hide stop" data-attr="js-step-1">
+    {{> '@section-heading--product-form' copyText="Upload product photos" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                {{> '@form-label' formLabel="Product Photos" forLabel="rlr_input_splide_photouploader"}}
+                {{> '@photo-uploader' id="rlr_js_splide_photouploader" isRequired="required" uploadId="rlr_input_splide_photouploader"}}
+            </div>
+        </div>
+    </div>
+</fieldset>

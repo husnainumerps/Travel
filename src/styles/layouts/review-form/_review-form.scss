@@ -1,0 +1,34 @@
+.rlr-review-form {
+  &__submit,
+  &__cancel {
+    @extend %type-lead-semibold;
+
+    padding: 0.875rem var(--spacing-10);
+    margin-top: var(--spacing-14);
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__cancel {
+    border: solid 1px var(--gray-04);
+    color: var(--neutral-color);
+    float: left;
+
+    &:hover {
+      color: var(--neutral-color);
+    }
+  }
+
+  &__submit {
+    color: var(--white);
+    float: right;
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+
+  &__hidden-legend {
+    display: none;
+  }
+}

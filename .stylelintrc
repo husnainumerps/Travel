@@ -1,0 +1,30 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-idiomatic-order"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/order": [
+      {
+        "type": "at-rule"
+      },
+      "custom-properties",
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": true
+      },
+      {
+        "type": "at-rule",
+        "name": "media",
+        "hasBlock": true
+      }
+    ]
+  },
+  "rule-empty-line-before": "always-multi-line",
+  "declaration-empty-line-before": [
+    "always",
+    {
+      "ignore": ["after-comment", "after-declaration", "first-nested", "inside-single-line-block"]
+    }
+  ]
+}

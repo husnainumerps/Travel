@@ -1,0 +1,15 @@
+{
+  "presets": ["@babel/preset-env"],
+  "ignore": [
+    "node_modules",
+    "assets",
+    "view",
+    "public",
+    "export",
+    "test",
+    "spec",
+    "logs",
+    "lib/jasmine_examples",
+    "db"
+  ]
+}

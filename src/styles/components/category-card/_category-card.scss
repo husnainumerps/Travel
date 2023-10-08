@@ -1,0 +1,62 @@
+.rlr-category-card {
+  @include transition(box-shadow linear 0.2s);
+
+  padding: var(--spacing-8);
+  border: solid 1px var(--gray-04);
+  background-color: var(--white);
+  border-radius: var(--spacing-3);
+  box-shadow: 0 2px 4px 0 hsl(201deg 80% 27% / 16%);
+  box-shadow: 0 2px 4px rgb(14 86 124 / 16%);
+
+  &:hover {
+    box-shadow: 0 1px 2px -2px rgb(14 85 124 / 46%);
+  }
+
+  &__badge {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--spacing-10);
+  }
+
+  &__icon {
+    margin-bottom: var(--spacing-5);
+    color: var(--brand);
+    line-height: 0;
+
+    & .rlr-icon-font {
+      font-size: 3.5rem;
+    }
+
+    & svg {
+      fill: var(--brand);
+    }
+  }
+
+  &__title {
+    color: var(--heading-color);
+    text-decoration: none;
+
+    & h4 {
+      @extend %type-h6;
+
+      font-weight: 400;
+
+      &:hover {
+        color: var(--brand-08);
+      }
+    }
+  }
+
+  &__sub-title {
+    @extend %type-body;
+
+    color: var(--neutral-color);
+    letter-spacing: 0.5px;
+    text-align: left;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--neutral-color);
+    }
+  }
+}

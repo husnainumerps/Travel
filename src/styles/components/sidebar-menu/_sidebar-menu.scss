@@ -1,0 +1,75 @@
+.rlr-sidebar-menu {
+  &__sub-menu {
+    width: 100%;
+    border: 1px solid var(--gray-03);
+    appearance: none;
+    background: url("../assets/svg/icon-down-arrow.svg") right no-repeat;
+    color: var(--body-color);
+    text-overflow: "";
+  }
+
+  &__link {
+    @extend %type-body;
+
+    display: grid;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+    color: var(--gray-07);
+    grid-gap: 0.8125rem;
+    grid-template-columns: 3rem auto;
+    text-decoration: none;
+
+    &-icon {
+      @include flex;
+      @include flexAlignCenter;
+      @include flexAlignCenterVertically;
+
+      width: 3rem;
+      height: 3rem;
+      font-size: 24px;
+      line-height: 0;
+    }
+
+    &:hover {
+      color: var(--brand-09);
+
+      span {
+        background-color: var(--brand-02);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .active {
+    color: var(--brand-09);
+
+    span {
+      background-color: var(--brand-02);
+      border-radius: 50%;
+    }
+  }
+
+  &__wrapper {
+    max-width: 295px;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      max-width: 992px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__mobile {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    list-style: none;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}

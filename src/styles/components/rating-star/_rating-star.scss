@@ -1,0 +1,23 @@
+.rlr-rating-stars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__label {
+    @extend %type-lead-semibold;
+
+    color: var(--heading-color);
+    font-weight: 500;
+  }
+
+  &__iconset {
+    display: inline-flex;
+    column-gap: var(--spacing-3);
+    cursor: pointer;
+
+    & .rlr-icon-font {
+      color: var(--warning-color);
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.rlr-banner-input-group {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 var(--spacing-5) 0 0;
+
+  @include media-breakpoint-up(xl) {
+    padding: 0 var(--spacing-12) 0 0;
+  }
+
+  &__label {
+    & mark {
+      @extend %type-h5;
+
+      display: inline-block;
+      padding: 0;
+      background: transparent;
+
+      // background-image: linear-gradient(transparent 80%, var(--warning-04) 20%);
+      // background-size: 10% 75%;
+      color: var(--heading-color);
+      letter-spacing: 0.56px;
+      transition: color 0.3s ease-in-out, background-image 0.3s ease-in-out;
+    }
+  }
+
+  & ul.rlr-autocomplete {
+    padding-left: 0;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing-5);
+    column-gap: var(--spacing-3);
+
+    & .rlr-icon-font {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__input {
+    @extend %type-lead;
+
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+    font-weight: 300;
+    line-height: 1.11;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.eee_home_search_flatpickr.form-control {
+      height: auto;
+    }
+
+    &::placeholder {
+      color: var(--neutral-color);
+      text-decoration: underline;
+    }
+
+    &:focus {
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+  }
+
+  &--location-dropdown {
+    top: 92px;
+    width: 100%;
+    min-width: 0;
+    max-height: 512px;
+    background-color: var(--white);
+    border-radius: 0 0 1rem 1rem;
+    overflow-y: scroll;
+  }
+
+  &--activity-dropdown {
+    top: 92px;
+    width: 100%;
+    min-width: 0;
+    max-height: 512px;
+    background-color: var(--white);
+    border-radius: 0 0 1rem 1rem;
+    overflow-y: scroll;
+
+    li {
+      margin: 0;
+    }
+  }
+}

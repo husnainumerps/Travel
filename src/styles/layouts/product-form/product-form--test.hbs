@@ -1,0 +1,37 @@
+<fieldset class="rlr-product-form--hide stop" data-attr="js-step-3">
+  {{> '@section-heading--product-form' copyText="Add Inclusion and exclusions" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+  <div class="rlr-fieldrow">
+    <div class="rlr-fieldrow__form-element">
+      <div class="rlr-fieldrow__item">
+        {{> '@form-label' formLabel="Brief description of inclusions and exclusions. 2 to 3 sentences" type="dark"}}
+        {{> '@form-control--text-area' textAreaPlaceholder="One inclusion per line"}}
+      </div>
+      <div class="rlr-fieldrow__item">
+        <div class="rlr-fieldrow__item--multiple">
+          <div class="rlr-fieldrow__options">
+            {{> '@form-label' formLabel="Select an inclusion item" type="dark"}}
+            {{> '@form-select' optionSelected="Select" option1="Breakfast" option2="Lunch" option3="Dinner" }}
+          </div>
+          <div class="rlr-fieldrow__options">
+            {{> '@form-label' formLabel="Breakfast" type="dark"}}
+            {{> '@form-control' placeholderText="Short description of inclusion item"}}
+          </div>
+        </div>
+        {{> '@button' modifier="text-button rlr-button--product-form-repeater js-repeater" shape="rounded" size="small" btnBgColor="transparent" btnTextColor="gray" btnText="+ Add another inclusion"}}
+      </div>
+      <div class="rlr-fieldrow__item">
+        <div class="rlr-fieldrow__item--multiple">
+          <div class="rlr-fieldrow__options">
+            {{> '@form-label' formLabel="Select an exclusion item" type="dark"}}
+            {{> '@form-select' optionSelected="Select" option1="Equipment" option2="Lunch" option3="Dinner" }}
+          </div>
+          <div class="rlr-fieldrow__options">
+            {{> '@form-label' formLabel="Equipment" type="dark"}}
+            {{> '@form-control' placeholderText="Short description of exclusion item"}}
+          </div>
+        </div>
+        {{> '@button' modifier="text-button rlr-button--product-form-repeater js-repeater" shape="rounded" size="small" btnBgColor="transparent" btnTextColor="gray" btnText="+ Add another exclusion"}}
+      </div>
+    </div>
+  </div>
+</fieldset>

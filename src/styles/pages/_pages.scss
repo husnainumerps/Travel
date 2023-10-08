@@ -1,0 +1,8 @@
+.rlr-main {
+  $self: &;
+
+  // if the page has rlr-main--fixed-top class add 100px to the top of the main content
+  &--fixed-top {
+    margin-top: 100px;
+  }
+}

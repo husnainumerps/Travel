@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g>
+        <path d="M20.727 0H3.273A3.277 3.277 0 0 0 0 3.273v17.454A3.277 3.277 0 0 0 3.273 24h17.454A3.278 3.278 0 0 0 24 20.727V3.273A3.277 3.277 0 0 0 20.727 0zm2.182 20.727a2.189 2.189 0 0 1-2.182 2.182H3.273a2.189 2.189 0 0 1-2.182-2.182V3.273a2.189 2.189 0 0 1 2.182-2.182h17.454a2.189 2.189 0 0 1 2.182 2.182z"/>
+        <circle cx="1.042" cy="1.042" r="1.042" transform="translate(5.741 2.864)"/>
+        <circle cx="1.042" cy="1.042" r="1.042" transform="translate(10.958 2.864)"/>
+        <circle cx="1.042" cy="1.042" r="1.042" transform="translate(16.176 2.864)"/>
+        <path d="M0 0H3.76V3.345H0z" transform="translate(7.934 9.217)"/>
+        <path d="M0 0H3.76V3.345H0z" transform="translate(12.307 9.217)"/>
+        <path d="M0 0H3.76V3.345H0z" transform="translate(16.677 9.217)"/>
+        <path d="M0 0H3.76V3.343H0z" transform="translate(3.563 13.116)"/>
+        <path d="M0 0H3.76V3.343H0z" transform="translate(7.934 13.116)"/>
+        <path d="M0 0H3.76V3.343H0z" transform="translate(12.307 13.116)"/>
+        <path d="M0 0H3.76V3.343H0z" transform="translate(16.677 13.116)"/>
+        <path d="M0 0H3.76V3.343H0z" transform="translate(3.563 17.015)"/>
+        <path d="M0 0H3.76V3.343H0z" transform="translate(7.934 17.015)"/>
+        <path d="M0 0H3.76V3.343H0z" transform="translate(12.307 17.015)"/>
+        <path d="M0 0H3.76V3.343H0z" transform="translate(16.677 17.015)"/>
+    </g>
+</svg>

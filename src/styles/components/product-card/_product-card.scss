@@ -1,0 +1,325 @@
+.rlr-product-card {
+  @include transition(0.3s box-shadow ease-in-out);
+  @include borderRadius;
+
+  position: relative;
+  background-color: var(--white);
+  box-shadow: 0 2px 4px 0 hsl(201deg 80% 27% / 16%);
+
+  $self: &;
+
+  &__image-wrapper {
+    @include borderRadius;
+
+    position: relative;
+    width: 100%;
+    padding: var(--spacing-5);
+    margin-bottom: 0;
+
+    img,
+    .ph-picture {
+      @include borderRadius;
+
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: var(--spacing-8);
+    left: var(--spacing-8);
+  }
+
+  &__detail-wrapper {
+    padding: var(--spacing-4) var(--spacing-5);
+  }
+
+  &__header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-8);
+    column-gap: 0.5rem;
+  }
+
+  &__title {
+    @extend %type-h6-semi-bold;
+    @include transition(0.3s color ease-in-out);
+
+    margin-bottom: var(--spacing-3);
+    color: var(--heading-color);
+    line-height: 1.5;
+  }
+
+  &__anchor-title,
+  &__anchor-cat,
+  &__anchor-sub-cat,
+  &__anchor {
+    text-decoration: none;
+  }
+
+  &__anchor {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    &--featured {
+      bottom: 4rem;
+    }
+  }
+
+  &__sub-title {
+    @extend %type-body;
+    @include transition(0.3s color ease-in-out);
+
+    color: var(--neutral-color);
+    letter-spacing: 0.5px;
+
+    &:hover {
+      color: var(--body-color);
+    }
+  }
+
+  &__from,
+  &__relates,
+  &__rating-text {
+    @extend %type-small;
+
+    color: var(--neutral-color);
+  }
+
+  &__price {
+    @extend %type-h5;
+
+    margin-bottom: 0;
+    letter-spacing: -0.48px;
+
+    & mark {
+      display: inline-block;
+      padding: 0;
+      background: transparent;
+      background-image: linear-gradient(transparent 80%, var(--maximum-yellow-red-bg) 20%);
+      background-size: 10% 86%;
+      color: var(--heading-color);
+      transition: color 0.3s ease-in-out, background-image 0.3s ease-in-out;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-9);
+  }
+
+  &__ratings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--spacing-3);
+  }
+
+  &__footer {
+    & .rlr-icon-font {
+      color: var(--brand);
+    }
+  }
+
+  &__icon-text-list {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin-top: var(--spacing-3);
+    column-gap: var(--spacing-7);
+    & #{$self}__icon-text {
+      font-weight: normal;
+    }
+  }
+
+  &__icon-text {
+    @extend %type-body-medium;
+
+    color: var(--body-color);
+    line-height: 1.25;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 8px 2px hsl(201deg 80% 27% / 16%);
+    #{$self}__title,
+    #{$self}__price mark {
+      color: var(--brand);
+    }
+
+    #{$self}__price mark {
+      background-image: none;
+    }
+  }
+
+  & .ph-item {
+    min-height: 618px;
+  }
+
+  &--featured {
+    .rlr-product-detail-header__helptext {
+      color: var(--white);
+    }
+
+    & #{$self}__image-wrapper {
+      padding: 0;
+    }
+
+    &__inner {
+      opacity: 0;
+      transition: all 0.4s;
+    }
+
+    &:hover #{$self}--featured__inner {
+      opacity: 1;
+    }
+
+    &__body {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      & .rlr-product-detail-header__actions {
+        display: flex;
+        column-gap: 0;
+      }
+    }
+
+    & .rlr-button {
+      margin-left: var(--spacing-5);
+
+      @include media-breakpoint-between(md, xl) {
+        margin-left: var(--spacing-2);
+      }
+
+      &--brand {
+        padding: 0.5rem 1rem;
+        background-color: var(--brand);
+      }
+    }
+
+    & #{$self}__image-wrapper {
+      padding: 0;
+
+      & img {
+        height: auto;
+      }
+    }
+
+    &__summary {
+      padding: var(--spacing-8) var(--spacing-10) 0;
+      text-align: center;
+
+      & .type-h6-semi-bold {
+        padding-bottom: var(--spacing-4);
+      }
+    }
+  }
+
+  & .card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: var(--spacing-5);
+    border-radius: calc(0.25rem - 1px);
+  }
+
+  & .rlr-product-card--featured__duration {
+    & .body,
+    .type-h4 {
+      color: var(--white);
+    }
+
+    & .type-h4 {
+      text-decoration: underline;
+    }
+  }
+
+  &--v3 {
+    box-shadow: none;
+
+    #{$self}__header,
+    #{$self}__details {
+      margin-bottom: var(--spacing-5);
+    }
+
+    #{$self}__title {
+      line-height: 1.5;
+    }
+
+    #{$self}__price,
+    #{$self}__title {
+      @extend %type-sub-title-medium;
+    }
+
+    & .rlr-button--circle {
+      font-size: 1.5rem;
+    }
+
+    & .rlr-review-stars {
+      font-size: 0.75rem;
+    }
+
+    & .rlr-product-detail-header__button-wrapper {
+      position: absolute;
+      z-index: 2;
+      top: var(--spacing-7);
+      right: var(--spacing-8);
+    }
+
+    & .rlr-wishlist-button--light {
+      color: var(--white);
+    }
+
+    & .rlr-wishlist-button--light.is-active,
+    .rlr-wishlist-button--light:active,
+    .rlr-wishlist-button--light:hover {
+      color: var(--accent-red);
+    }
+
+    & .rlr-product-detail-header__helptext {
+      top: 60%;
+      color: var(--white);
+    }
+
+    .splide__arrow {
+      background-color: var(--white);
+      border-radius: 2rem;
+      color: var(--body-color);
+    }
+
+    & .swiper-button-disabled {
+      opacity: 0;
+    }
+  }
+}
+
+/** ==============================================================
+<!-- //show box shadow on swiper cards ==== -->
+============================================================== **/
+.rlr-js-product-card-swiper {
+  &.swiper {
+    padding: 13px !important;
+    margin: -13px !important;
+  }
+}

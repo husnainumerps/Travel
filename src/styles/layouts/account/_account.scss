@@ -1,0 +1,109 @@
+.rlr-authforms {
+  font-size: 14px;
+
+  &__header {
+    padding: 20px;
+    text-align: center;
+
+    h3 {
+      font-family: Poppins;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 38px;
+    }
+
+    p {
+      margin: 0;
+      color: #667085;
+
+      a {
+        display: block;
+        color: #323d54;
+        text-decoration: none;
+      }
+    }
+
+    img {
+      height: var(--spacing-15);
+      margin-bottom: var(--spacing-8);
+    }
+  }
+
+  &__inputgroup {
+    margin-bottom: 20px;
+  }
+
+  &__forgotpassword {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-weight: 500;
+
+    a {
+      color: #22968e;
+      text-decoration: none;
+    }
+  }
+
+  &__back {
+    padding: 10px 0;
+    text-align: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #667085;
+      text-decoration: none;
+
+      img {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  & .rlr-button {
+    margin-bottom: var(--spacing-5);
+  }
+
+  &__notes {
+    color: #667085;
+    font-size: 14px;
+    text-align: center;
+
+    a {
+      color: #22968e;
+      text-decoration: none;
+    }
+  }
+}
+
+// components
+
+.rlr-form-label {
+  &--font-inherit {
+    font-size: inherit;
+  }
+
+  &--bold {
+    font-weight: 500;
+  }
+}
+
+.rlr-form-input {
+  // &--light {
+  //   border: 1px solid #d0d5dd;
+  // }
+
+  &--shadow {
+    box-shadow: 0 1px 2px rgb(16 24 40 / 5%);
+  }
+}
+
+.help-text {
+  margin-top: 2px;
+  color: #667085;
+  font-size: 14px;
+}

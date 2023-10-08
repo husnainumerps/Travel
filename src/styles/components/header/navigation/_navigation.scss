@@ -1,0 +1,523 @@
+/*stylelint-disable*/
+
+// Mixins
+@import "./scss/mixins";
+
+// Variables
+@import "./scss/variables";
+
+// navigation
+@import "./scss/_navigation.core";
+@import "./scss/_navigation.brand.text";
+@import "./scss/_navigation.logo";
+@import "./scss/_navigation.toggler.button";
+@import "./scss/_navigation.body";
+@import "./scss/_navigation.menu";
+@import "./scss/_navigation.menu.social";
+@import "./scss/_navigation.submenu.indicator";
+@import "./scss/_navigation.button";
+@import "./scss/_navigation.text";
+@import "./scss/_navigation.badge";
+@import "./scss/_navigation.inline.form";
+@import "./scss/_navigation.dropdown";
+@import "./scss/_navigation.dropdown.horizontal";
+@import "./scss/_navigation.megamenu";
+@import "./scss/_navigation.megamenu.grid";
+@import "./scss/_navigation.megamenu.list";
+@import "./scss/_navigation.tabs";
+@import "./scss/_navigation.transparent";
+@import "./scss/_navigation.fullscreen";
+
+// Skins
+// Uncomment one of the lines below to include a skin in the final CSS file (navigation.css)
+
+//@import 'navigation/skins/_navigation.border.top';
+//@import 'navigation/skins/_navigation.border.bottom';
+//@import 'navigation/skins/_navigation.border.top.bottom';
+//@import 'navigation/skins/_navigation.boxed';
+//@import 'navigation/skins/_navigation.rounded.boxed';
+//@import 'navigation/skins/_navigation.colored';
+//@import 'navigation/skins/_navigation.gradient';
+//@import 'navigation/skins/_navigation.mini.circle';
+//@import 'navigation/skins/_navigation.bottom.arrow';
+//@import 'navigation/skins/_navigation.dark';
+
+// Utilities
+@import "./scss/utilities";
+
+.rlr-navigation {
+  transition: all 300ms ease-in-out;
+
+  &__body-header {
+    padding: 0;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.875rem;
+    transition: all 300ms ease-in-out;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      padding: 1.875rem 0;
+    }
+  }
+
+  &__button-login {
+    margin-right: calc(2.562rem - var(--spacing-4));
+    color: var(--heading-color);
+  }
+
+  &__button-signup {
+    color: var(--white);
+    font-weight: 300;
+
+    @include media-breakpoint-down(lg) {
+      min-width: 100%;
+    }
+  }
+
+  &__link {
+    @extend %type-sub-title-medium;
+
+    height: auto;
+    padding: 0;
+    color: var(--heading-color);
+    line-height: normal;
+  }
+
+  &__menu.navigation-menu {
+    align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      gap: 1rem;
+    }
+  }
+
+  &__menu--main-links {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      gap: var(--spacing-5);
+    }
+  }
+
+  .rlr-logo__navbar-brand {
+    margin-right: var(--spacing-8);
+  }
+
+  .rlr-svg-icon__header-search {
+    fill: var(--body-color);
+    stroke: var(--body-color);
+  }
+
+  &--wp {
+    & .navigation-col > ul {
+      padding-top: var(--spacing-7); // only for WordPress Menu
+    }
+  }
+
+  .sign-up-in {
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+
+    a {
+      width: 100%;
+    }
+
+    .sign-up {
+      margin-bottom: 15px;
+      background-color: #28b0a6;
+      color: #fff;
+
+      &:hover {
+        border: 2px solid #28b0a6;
+      }
+    }
+
+    .sign-in {
+      background-color: #eefbfa;
+      color: #22968e;
+
+      &:hover {
+        border: 2px solid #eefbfa;
+      }
+    }
+  }
+
+  .navigation-list-heading a {
+    color: var(--body-color);
+    font-size: 14px;
+  }
+
+  .navigation-col div > span > a {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  .navigation-list .navigation-list-heading > a {
+    @extend %type-lead-medium;
+
+    color: var(--gray-07);
+    padding: 0 0 13px !important;
+  }
+
+  .navigation-list > li a:hover {
+    background-color: transparent;
+  }
+
+  .navigation-list :not(.navigation-list-heading) > a::before {
+    content: "";
+  }
+
+  .navigation-body {
+    padding: var(--spacing-5);
+
+    .navigation-col > ul > li > a {
+      padding: var(--spacing-5) var(--spacing-4);
+    }
+
+    .navigation-link {
+      padding: 0.5rem;
+      font-size: 1.125rem;
+      font-weight: 400;
+
+      & .avatar {
+        width: 2rem;
+      }
+    }
+  }
+
+  .rlr-navigation--wp {
+    & .navigation-megamenu-container {
+      padding: $megamenu-container-padding !important;
+    }
+  }
+
+  & .navigation-row {
+    & > [class^="navigation-col"] {
+      position: relative;
+      width: 100%;
+      min-height: 20px;
+      margin-bottom: 1rem;
+    }
+
+    &:last-of-type [class^="navigation-col"] {
+      list-style: none;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+    }
+  }
+
+  .rlr-icon-text {
+    padding-bottom: 1.5rem;
+    column-gap: var(--spacing-5);
+
+    &__subtext {
+      color: #667085;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+  }
+
+  .rlr-navigation-list-heading {
+    &--tall {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .rlr-step__icon {
+    width: 3rem;
+    height: 3rem;
+    background: var(--brand-01);
+
+    svg {
+      fill: var(--brand);
+      stroke: var(--white);
+    }
+  }
+
+  & .rlr-svg-icon__header-language {
+    svg {
+      fill: none;
+      stroke: var(--body-color);
+    }
+  }
+
+  .align-to-right {
+    gap: var(--spacing-5);
+
+    @media screen and (max-width: 991px) {
+      margin-top: 3rem;
+    }
+
+    .navigation-link {
+      column-gap: 0.5rem;
+
+      @extend %type-lead-light;
+
+      line-height: $navigation-height;
+
+      @media (min-width: 992px) {
+        padding: 0.5rem;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .rlr-navigation__link--so {
+    color: var(--brand);
+    font-weight: 500 !important;
+  }
+
+  .navigation-button-toggler {
+    width: auto;
+    height: auto;
+
+    span i {
+      padding: 0.5rem 0;
+      font-size: 2rem;
+    }
+  }
+
+  .navigation-megamenu {
+    position: static;
+    width: 100%;
+    max-height: 0;
+    padding-left: 0;
+    border-radius: 0 0 var(--spacing-7) var(--spacing-7);
+
+    @include transition(max-height 0.2s cubic-bezier(0, 1, 0, 1));
+
+    &.is-visible {
+      max-height: $megamenu-max-height;
+      border-bottom: solid 1px $megamenu-border-color;
+
+      @include transition(max-height 1s ease-out);
+    }
+
+    @media (min-width: $landscape-width) {
+      position: absolute;
+      border-top: solid 0 transparent;
+      box-shadow: $megamenu-box-shadow-landscape;
+      opacity: 0;
+
+      @include transition(opacity 0.3s linear, max-height 0s linear 0.4s);
+
+      // Megamenu container
+      &-container {
+        display: table;
+        padding: 0;
+      }
+
+      &-container,
+      .navigation-dropdown {
+        padding-top: 0.5rem;
+
+        @include media-breakpoint-up(lg) {
+          transition: opacity -0.1s linear, max-height 0s linear -0.1s;
+        }
+      }
+
+      &.is-visible {
+        border-bottom: none;
+        opacity: 1;
+
+        @include transition(opacity 0.3s linear, max-height 0s linear);
+      }
+
+      // Widths
+      &.navigation-megamenu-3-quarter {
+        width: 75%;
+      }
+
+      &.navigation-megamenu-half {
+        width: 50%;
+      }
+
+      &.navigation-megamenu-quarter {
+        width: 25%;
+      }
+    }
+
+    .scroll-momentum & {
+      @include transform(translateZ(0));
+
+      @media (min-width: $landscape-width) {
+        @include transform(none);
+      }
+    }
+
+    // Fix for bootstrap grid
+    [class*="container"] {
+      width: 100%;
+    }
+
+    [class*="container"] [class*="col-"] {
+      padding: 0;
+    }
+  }
+
+  .navigation-submenu {
+    @include borderRadius;
+  }
+
+  & .navigation-col > ul {
+    margin-top: 1.5rem;
+  }
+
+  &.navigation-transparent {
+    & .navigation-dropdown-item:first-child {
+      padding-top: 0.875rem;
+    }
+  }
+
+  &__tabbed-list {
+    list-style: none;
+  }
+
+  @include media-breakpoint-up(lg) {
+    & .rlr-currency-dropdown {
+      width: 120px;
+    }
+  }
+}
+
+.rlr-sVGIcon {
+  cursor: pointer;
+}
+
+.rlr-header-search {
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-5px, -50%);
+  }
+
+  &__wrapper {
+    padding: 10px 5px;
+
+    .rlr-header-search__results {
+      margin-left: unset;
+    }
+  }
+
+  &__wrapper .rlr-header-search.open .rlr-banner-input-group__input {
+    padding-right: 34px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .rlr-header-search__wrapper .rlr-header-search.open .rlr-banner-input-group__input {
+    min-width: 175px;
+  }
+
+  .container {
+    min-width: 98%;
+  }
+}
+
+@media (max-width: 991px) {
+  .navigation-body {
+    padding: 0;
+  }
+
+  .rlr-navigation .navigation-list > li.navigation-list-heading > a {
+    font-size: 14px;
+  }
+
+  .rlr-navigation__body-header {
+    padding: var(--spacing-5) var(--spacing-3);
+  }
+
+  .navigation-header {
+    padding: var(--spacing-5) var(--spacing-3);
+  }
+
+  .rlr-header-search__wrapper {
+    width: 100%;
+
+    ul {
+      width: 100%;
+
+      i {
+        > span {
+          position: absolute;
+          top: 50%;
+          left: 30px;
+          display: block;
+          content: "Search";
+          font-size: 1.125rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .avatar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .rlr-header-search__button {
+    padding-right: 10px;
+    transform: translate(5px, -50%);
+  }
+}
+
+.rlr-icon-font {
+  &--megamenu {
+    color: var(--brand);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+}
+
+.navigation {
+  height: 100px;
+  transition: background 0.3s, height 0.3s;
+}
+.navigation-animated {
+  height: 70px;
+}
+
+.navigation-tabs {
+  padding-left: var(--spacing-2);
+  display: flex;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+    padding-left: 0;
+  }
+}
+
+.navigation-tabs-pane {
+  & .navigation-col > ul {
+    margin-top: 0;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navigation-item {
+    .rlr-button--brand {
+      margin-top: 1rem;
+    }
+  }
+}
+
+// on mobile, show border on bottom of the navigation
+@include media-breakpoint-down(lg) {
+  .navigation-link {
+    border-bottom: solid 1px var(--gray-03);
+  }
+}

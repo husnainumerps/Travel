@@ -1,0 +1,134 @@
+.rlr-step {
+  $self: &;
+
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-down(xl) {
+    width: 7.75rem;
+  }
+
+  &__bullet {
+    width: 0.5rem;
+    height: 0.5rem;
+    border: solid 1px var(--gray-04);
+    margin-left: var(--spacing-7);
+    background-color: var(--white);
+    border-radius: 50%;
+
+    &--active {
+      border: solid 1px var(--brand);
+      background: var(--brand);
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: var(--spacing-5);
+    }
+  }
+
+  &__icon {
+    @include icon-wrapper(var(--body-color), 50%);
+
+    &--active {
+      background: var(--brand);
+
+      svg > rect {
+        fill: var(--brand);
+      }
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: var(--spacing-3);
+    }
+  }
+
+  &__text {
+    display: inline-block;
+
+    span {
+      display: block;
+    }
+
+    @include media-breakpoint-down(xl) {
+      visibility: hidden;
+    }
+
+    & .type-sub-title {
+      @extend %type-lead-semibold;
+
+      margin-bottom: var(--spacing-3);
+      color: var(--body-color);
+
+      @include media-breakpoint-down(xl) {
+        overflow: hidden;
+        font-size: var(--spacing-5);
+        text-overflow: ellipsis;
+        visibility: visible;
+        white-space: nowrap;
+      }
+
+      @include media-breakpoint-down(sm) {
+        visibility: hidden;
+      }
+    }
+
+    &--active {
+      color: var(--brand);
+
+      &.type-sub-title {
+        @extend %type-sub-title;
+
+        color: var(--brand);
+
+        @include media-breakpoint-down(sm) {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    &__bullet {
+      margin-left: var(--spacing-7);
+    }
+
+    &__text {
+      margin-right: var(--spacing-8);
+      text-align: right;
+      visibility: visible;
+
+      &--active {
+        visibility: visible;
+      }
+    }
+  }
+
+  &--dashboard-nav {
+    @include media-breakpoint-up(xl) {
+      flex-direction: row;
+    }
+    #{$self}__icon {
+      @include icon-wrapper(var(--white), 50%);
+
+      font-size: 1.5rem;
+      line-height: 0;
+
+      &--active {
+        background: var(--brand);
+        color: var(--white);
+      }
+    }
+    #{ $self }__text {
+      margin-left: var(--spacing-3);
+
+      & .type-sub-title {
+        margin-bottom: 0;
+        font-weight: 400;
+      }
+    }
+  }
+}

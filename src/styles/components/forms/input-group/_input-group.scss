@@ -1,0 +1,96 @@
+.rlr-input-group {
+  position: relative;
+  display: flex;
+
+  &__datefield {
+    & .form-input {
+      padding-right: var(--spacing-15);
+      background: url("../assets/svg/icon-calendar.svg") no-repeat calc(100% - 1rem) center;
+
+      &:invalid::-webkit-datetime-edit {
+        color: var(--neutral-color);
+      }
+
+      &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__numberfield {
+    & .form-input {
+      &::placeholder {
+        color: var(--body-color);
+      }
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        appearance: none;
+      }
+    }
+  }
+
+  &__iconset {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding: var(--spacing-1);
+  }
+
+  &__iconset--absolute {
+    position: absolute;
+    top: var(--spacing-4);
+    right: var(--spacing-4);
+  }
+
+  &__button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    line-height: 1.25rem;
+    line-height: 0;
+
+    & .rlr-svg-icon {
+      fill: #5bd7cd;
+
+      &:hover,
+      &:focus,
+      &:active {
+        &:not([disabled]) {
+          fill: var(--brand-08);
+        }
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+
+      & .rlr-svg-icon {
+        fill: var(--neutral-color);
+      }
+    }
+  }
+}
+
+.rlr-input-groups {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  gap: var(--spacing-8);
+
+  &--daterange {
+    width: 100%;
+    gap: 0;
+
+    & .rlr-input-group {
+      &__datefield {
+        width: 100%;
+      }
+    }
+  }
+
+  & rlr-input-group__numberfield[data-name="Adults"] {
+    display: none;
+  }
+}

@@ -1,0 +1,62 @@
+<form class="rlr-booking-card">
+    <fieldset class="rlr-fieldrow">
+        <Legend class="rlr-booking-card__legend--hide">Booking form</Legend>
+        <article itemscope itemtype="https://schema.org/Offer"
+            class="rlr-booking-card__price-details rlr-fieldrow__form-element">
+            <span class="rlr-booking-card__total-price">Total price</span>
+            <header class="
+                    rlr-booking-card__offer">
+                <h2 class="rlr-booking-card__price" itemscope
+                    itemtype="https://schema.org/AggregateOffer">
+                    <span
+                        class="rlr-booking-card__current-price rlr-booking-card--currency"
+                        itemprop="priceCurrency">£</span>
+                    <span itemprop="lowPrice"
+                        class="rlr-booking-card__current-price rlr-booking-card--low-price">1759</span>
+                    <span itemprop="category"
+                        class="rlr-booking-card__price-type rlr-booking-card__price-type--result">inc.
+                        taxes</span>
+                </h2>
+                <svg width="56" height="57" viewBox="0 0 56 57" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#a)">
+                        <rect y=".411" width="56" height="56" rx="28"
+                            fill="#28B0A6" />
+                        <path
+                            d="M24.253 40.365a1.629 1.629 0 0 1-2.31 0l-9.225-9.226a2.45 2.45 0 0 1 0-3.466l1.155-1.155a2.45 2.45 0 0 1 3.466 0l5.76 5.76L38.66 16.715a2.45 2.45 0 0 1 3.466 0l1.155 1.155a2.45 2.45 0 0 1 0 3.465l-19.029 19.03z"
+                            fill="#fff" />
+                    </g>
+                    <defs>
+                        <clipPath id="a">
+                            <path fill="#fff" transform="translate(0 .411)"
+                                d="M0 0h56v56H0z" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </header>
+            <span class="rlr-booking-card__info">*Price based on selections
+                bellow.</span>
+        </article>
+        <div class="rlr-fieldrow__item rlr-booking-card__form-item">
+            {{> '@form-label' labelModifier="rlr-booking-card__label" formLabel="Dates" type="dark" forLabel="rlr-booking-dateranges-input"}}
+            {{> '@input-group' id="rlr-booking-dateranges-input" inputGroupId="rlr-booking-startRange" modifier="rlr-input-group__datefield rlr-js-booking-form-daterange" placeholderText="Select preferred dates" inputType="text" }}
+        </div>
+        <div class="rlr-fieldrow__item rlr-booking-card__form-item">
+            {{> '@form-label' labelModifier="rlr-booking-card__label" formLabel="Travellers" type="dark" forLabel="rlr-booking-travellers-input"}}
+            {{> "@popover--travellers"}}
+        </div>
+        <div class="rlr-fieldrow__item rlr-booking-card__form-item">
+            {{> '@form-label' labelModifier="rlr-booking-card__label" formLabel="Selections" type="dark" forLabel="rlr-booking-selection-input"}}
+            {{> "@popover--selections"}}
+        </div>
+    </fieldset>
+    <fieldset
+        class="rlr-booking-card__results rlr-booking-card__results--found">
+        <ul class="rlr-booking-card__result-list">
+            {{> "@icon-text--subtext" tagName="li" iconText="10:00 AM" iconSubText="Starting Time" innerTagName='span' iconClass="flaticon-three-o-clock-clock"}}
+        </ul>
+        {{> "@icon-text--subtext" modifier="rlr-booking-card__message" tagName="div" innerTagName="span" iconText="Instant confirmation" iconSubText="Once you confirm booking, you'll receive details to print." iconClass="flaticon-carbon-result
+"}}
+    </fieldset>
+    {{> "@button--anchor" tagName="a" btnModifier="rlr-booking-card__button" buttonText="Proceed to Booking" ahref="./checkout-page" }}
+</form>

@@ -1,0 +1,13 @@
+.rlr-about {
+  & .rlr-img--dotted {
+    margin: 2rem 0;
+
+    // @include media-breakpoint-up(md) {
+    //   margin: 0;
+    // }
+  }
+
+  & .rlr-img--dotted-reversed {
+    margin-bottom: 2rem;
+  }
+}

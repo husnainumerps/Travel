@@ -1,0 +1,181 @@
+// %type-d1,
+// %type-h1,
+// %type-h2,
+// %type-h2-medium,
+// %type-h2-36-bold,
+// %type-h3,
+// %type-h4,
+// %type-h5,
+// %type-h5-semibold,
+// %type-h5-medium,
+// %type-h6,
+// %type-h6-medium {
+//   color: var(--heading-color);
+// }
+
+// %type-lead,
+// %type-lead-semibold,
+// %type-lead-medium,
+// %type-body,
+// %type-body-semibold,
+// %type-body-medium,
+// %type-subtitle {
+//   color: var(--body-color);
+// }
+
+%type-d1 {
+  @include font-size(8rem);
+
+  font-weight: 700;
+  letter-spacing: -2.05px;
+}
+
+%type-d2 {
+  @include font-size(3.5rem);
+
+  font-weight: 500;
+  letter-spacing: -2.05px;
+}
+
+%type-h1 {
+  @include font-size(3rem);
+
+  font-weight: 700;
+  letter-spacing: -2.05px;
+}
+
+%type-h2 {
+  @include font-size(2.5rem);
+
+  font-weight: 500;
+  letter-spacing: -0.64px;
+  line-height: 1.5;
+}
+
+%type-h2-medium {
+  @include font-size(2.5rem);
+
+  font-weight: 700;
+  letter-spacing: -0.38px;
+  line-height: 1.5;
+}
+
+%type-h2-36-bold {
+  @include font-size(2.25rem);
+
+  font-weight: bold;
+  line-height: 1.33;
+}
+
+%type-h3 {
+  @include font-size(2rem);
+
+  font-weight: 600;
+  letter-spacing: -0.51px;
+}
+
+%type-h4 {
+  @include font-size(1.75rem);
+
+  font-weight: 600;
+  letter-spacing: -0.45px;
+  line-height: 1.79;
+}
+
+%type-h5 {
+  @include font-size(1.5rem);
+
+  font-weight: 300;
+}
+
+%type-h5-medium {
+  @include font-size(1.5rem);
+
+  font-weight: 600;
+  letter-spacing: -0.38px;
+}
+
+%type-h5-semibold {
+  @include font-size(1.5rem);
+
+  font-weight: 500;
+  letter-spacing: -0.38px;
+  line-height: 1.5;
+}
+
+%type-h6 {
+  @include font-size(1.25rem);
+
+  font-weight: 400;
+  letter-spacing: -0.29px;
+  line-height: 1.5;
+}
+
+%type-h6-medium {
+  @include font-size(1.25rem);
+
+  font-weight: 500;
+  line-height: 1;
+}
+
+%type-lead {
+  @include font-size(1.125rem);
+
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+%type-lead-light {
+  @include font-size(1.125rem);
+
+  font-weight: 300;
+  letter-spacing: -0.29px;
+  line-height: 1.5;
+}
+
+%type-lead-semibold {
+  @include font-size(1.125rem);
+
+  font-weight: 600;
+  line-height: 1.11;
+}
+
+%type-lead-medium {
+  @include font-size(1.125rem);
+
+  font-weight: 500;
+}
+
+%type-sub-title {
+  @include font-size(1.125rem);
+
+  font-weight: 600;
+  line-height: 1.11;
+}
+
+%type-body {
+  @include font-size(1rem);
+
+  letter-spacing: -0.26px;
+}
+
+%type-body-semibold {
+  @include font-size(1rem);
+
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+%type-body-medium {
+  @include font-size(1rem);
+
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+%type-extra-small {
+  @include font-size(0.875rem);
+
+  font-weight: 500;
+  line-height: 1.25;
+}

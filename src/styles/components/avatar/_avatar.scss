@@ -1,0 +1,17 @@
+.rlr-avatar {
+  &__media {
+    max-height: var(--spacing-11);
+
+    &--rounded {
+      border-radius: 50%;
+    }
+  }
+
+  &__name {
+    @extend %type-lead-medium;
+
+    margin-left: var(--spacing-5);
+    color: var(--body-color);
+    font-weight: 300;
+  }
+}

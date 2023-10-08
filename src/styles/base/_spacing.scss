@@ -1,0 +1,9 @@
+.rlr-globalSection-spacing-top {
+  --global-section-spacing-top: var(--spacing-15); //36
+  margin-top: var(--global-section-spacing-top);
+
+  &__heading {
+    --global-section-heading-spacing-bottom: var(--spacing-5); //24 on VP 576 & Down
+    padding-bottom: var(--global-section-heading-spacing-bottom);
+  }
+}

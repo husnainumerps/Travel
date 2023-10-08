@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        {{> "@sidebar-menu--mobile"}}
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {{> "@sidebar-menu--desktop"}}
+        <div class="content col-lg-9 col-xs-12">
+            <div
+                class="woocommerce-MyAccount-content">
+                {{>"@typography--heading-h1" modifier="type-h3 rlr-data-table__title" tagname="h1" copyText="Your Account"}}
+                <div class="rlr-myaccount__wrapper">
+                    <div class="woocommerce-MyAccount-content">
+                        <p>
+                            Hello <strong>admin</strong> (not
+                            <strong>admin</strong>? <a
+                                href="https://ui.emprise.tours/">Log
+                                out</a>)
+                        </p>
+                        <p>
+                            From your account dashboard you can view your <a
+                                href="https://ui.emprise.tours/">recent
+                                orders</a>, manage your <a
+                                href="https://ui.emprise.tours/">shipping
+                                and billing addresses</a>, and <a
+                                href="https://ui.emprise.tours/">edit
+                                your password and account details</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

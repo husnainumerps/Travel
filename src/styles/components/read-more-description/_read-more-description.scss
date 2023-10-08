@@ -1,0 +1,29 @@
+.rlr-readmore-desc {
+  &__content {
+    @extend %type-body;
+    @include transition(0.3s all ease-in-out);
+
+    overflow: visible;
+    margin-bottom: 0;
+    color: var(--heading-color);
+    letter-spacing: 0.5px;
+
+    &.is-more {
+      overflow: hidden;
+      max-height: 6rem;
+    }
+  }
+
+  &__readmore {
+    @extend %type-body;
+
+    display: none;
+    margin-top: 16px;
+    color: var(--neutral-color);
+    cursor: pointer;
+
+    &.is-more {
+      display: block;
+    }
+  }
+}

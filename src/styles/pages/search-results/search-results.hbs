@@ -1,0 +1,53 @@
+<div class="rlr-search-results-page container-xxxl">
+    <div class="rlr-search-results-page__breadcrumb-section">
+        {{> '@breadcrumb'}}
+        {{> '@icon-text--default' tagName="div" titleClass="rlr-search-results-page__phone" innerTagName="span" iconText="Questions? +977 (985) 110-8896" iconClass="flaticon-phone-receiver-silhouette"}}
+    </div>
+    <aside class="row">
+        {{> "@search-results-header" category="London, United Kingdom" results="1 - 10 of 2037"}}
+    </aside>
+    <aside class="row rlr-search-results-page__dynamic-filter-section">
+        {{render "@dynamic-swiper-filter"}}
+    </aside>
+    <div class="row rlr-search-results-page__product-details">
+        <aside class="col-xl-4 rlr-search-results-page__sidebar">
+            {{> "@product-filter"}}
+        </aside>
+        <div class="rlr-search-results-page__product-list col-xl-8">
+            <div class="row rlr-search-results-page__card-wrapper">
+                <div class="col-md-6">
+                    {{> "@product-card" productCat= 'Hiking Tour ' productSubCat= 'Stoke on Trent' productImgSrc="../../assets/images/item-listing/item-listing01.jpg" productTitle="Hiking tour in Chisapani" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card" productCat= 'Cultural Tour ' productSubCat= 'Stoke on Trent' productImgSrc="../../assets/images/item-listing/item-listing02.jpg" productTitle="Ancient temple tour in Goa" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card" productCat= 'Hiking Tour ' productSubCat= 'Stoke on Trent' productImgSrc="../../assets/images/item-listing/item-listing03.jpg" productTitle="Hot air baloon right with view" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card" productCat= 'Hiking Tour ' productSubCat= 'Stoke on Trent' productImgSrc="../../assets/images/item-listing/item-listing04.jpg" productTitle="White water rafting in Trishuli" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card" productCat= 'Hiking Tour ' productSubCat= 'Stoke on Trent' productImgSrc="../../assets/images/item-listing/item-listing05.jpg" productTitle="Jungle safari trip with family" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card" productCat= 'Hiking Tour ' productSubCat= 'Stoke on Trent' productImgSrc="../../assets/images/item-listing/item-listing06.jpg" productTitle="Cycling tour around Europe" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card" productCat= 'Hiking Tour ' productSubCat= 'Stoke on Trent' productImgSrc="../../assets/images/item-listing/item-listing07.jpg" productTitle="Off road driving around Dubai" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card" productCat= 'Hiking Tour ' productSubCat= 'Stoke on Trent' productImgSrc="../../assets/images/item-listing/item-listing08.jpg" productTitle="Motor sports activity in India" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card" productCat= 'Hiking Tour ' productSubCat= 'Stoke on Trent' productImgSrc="../../assets/images/item-listing/item-listing09.jpg" productTitle="Paragliding in amazing Kenya" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+                <div class="col-md-6">
+                    {{> "@product-card" productCat= 'Hiking Tour ' productSubCat= 'Stoke on Trent' productImgSrc="../../assets/images/item-listing/item-listing10.jpg" productTitle="Hiking and Camping in Nepal" productPrice="895.00" productRating="4.7 (108)"}}
+                </div>
+            </div>
+            <hr class="rlr-search-results-page__divider" />
+            {{> "@pagination--list-page"}}
+        </div>
+    </div>
+</div>

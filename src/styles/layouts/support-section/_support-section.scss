@@ -1,0 +1,19 @@
+.rlr-support {
+  & .rlr-section__heading {
+    margin-bottom: 4.5rem;
+    text-align: center;
+  }
+
+  & .rlr-section__heading--sub {
+    @extend %type-h5 !optional;
+
+    color: var(--body-color);
+    line-height: 36px;
+  }
+
+  &-card {
+    @media (max-width: 1199.98px) {
+      margin: var(--spacing-8) 0;
+    }
+  }
+}

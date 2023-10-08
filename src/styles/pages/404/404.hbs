@@ -1,0 +1,20 @@
+<section class="rlr-section rlr-error">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 rlr-error__content">
+                <!-- Heading text -->
+                {{> '@typography--type-lead-semibold' copyText="404 Error" tagname="p" modifier="type-lead-semibold"}}
+                {{> '@typography--heading-h1' copyText="Page not found" tagname="h1" modifier="type-h1"}}
+                {{> '@typography--type-body' modifier="rlr-section__heading--sub" tagname="span" copyText="Sorry but the page you are looking for has been removed or had its name changed.
+                Please try your search again!"}}
+                <!-- Search field -->
+                <form class="rlr-error__search">
+                    {{> '@form-label' formLabel="Search emprise site" type="light"}}
+                    {{> '@input-group--default' inputType="search" modifier="rlr-input-group__search" formLabel="formLabel"}}
+                </form>
+            </div>
+            <div class="offset-lg-6">
+            </div>
+        </div>
+    </div>
+</section>

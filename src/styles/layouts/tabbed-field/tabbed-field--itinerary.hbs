@@ -1,0 +1,106 @@
+<nav class="rlr-nav-tabs">
+    <ul class="nav nav-tabs rlr-nav-tabs__items"
+        id="myTab"
+        role="tablist">
+        <li class="nav-item rlr-nav-tabs__item"
+            role="presentation">
+            <button class="nav-link rlr-nav-tabs__link active"
+                data-bs-toggle="tab"
+                data-bs-target="#rlr-itinerary-accomodation"
+                type="button"
+                role="tab"
+                aria-selected="true">Accommodation</button>
+        </li>
+        <li class="nav-item rlr-nav-tabs__item"
+            role="presentation">
+            <button class="nav-link rlr-nav-tabs__link"
+                data-bs-toggle="tab"
+                data-bs-target="#rlr-itinerary-meals"
+                type="button"
+                role="tab"
+                aria-selected="false">Meals</button>
+        </li>
+        <li class="nav-item rlr-nav-tabs__item"
+            role="presentation">
+            <button class="nav-link rlr-nav-tabs__link"
+                data-bs-toggle="tab"
+                data-bs-target="#rlr-itinerary-inclusions"
+                type="button"
+                role="tab"
+                aria-selected="false">Inclusions</button>
+        </li>
+        <li class="nav-item rlr-nav-tabs__item"
+            role="presentation">
+            <button class="nav-link rlr-nav-tabs__link"
+                data-bs-toggle="tab"
+                data-bs-target="#rlr-itinerary-special_info"
+                type="button"
+                role="tab"
+                aria-selected="false">Special Info</button>
+        </li>
+    </ul>
+</nav>
+<div class="tab-content rlr-tab-content"
+    id="myTabContent">
+    <div class="tab-pane fade show active"
+        id="rlr-itinerary-accomodation"
+        role="tabpanel">
+        {{> "@read-more-description" content="Lorem Ipsum is simply dummy text of the printing and typesetting"}}
+        <div class="rlr-itinerary__room-details">
+            <div class="rlr-itinerary__room-prices">
+                <div class="rlr-itinerary__room-price">
+                    <span class="rlr-itinerary__room-type">Shared Room</span>
+                    <span>Included in packaged</span>
+                </div>
+                <div class="rlr-itinerary__room-price">
+                    <span class="rlr-itinerary__room-type">Double Room</span>
+                    <span>£45 per person extra</span>
+                </div>
+                <div class="rlr-itinerary__room-price">
+                    <span class="rlr-itinerary__room-type">Single Room</span>
+                    <span>£80 per person extra</span>
+                </div>
+            </div>
+            <div class="rlr-itinerary__media-group">
+                {{!-- <div class="rlr-itinerary__media">
+                    <span class="rlr-itinerary__media-title">Shared</span>
+                    <img class="img-fluid"
+                        src="../../assets/images/misc/itinerary-1.jpg"
+                        alt="itinerary 1" />
+                </div> --}}
+                <div class="rlr-itinerary__media">
+                    <span class="rlr-itinerary__media-title">Single</span>
+                    {{> "@lightbox--image" wrapperTag="figure" ahref="../../assets/images/gallery/1568/suzy-brooks-nygy9pb5mp4-unsplash1568.jpg" imgThumb="../../assets/images/misc/itinerary-1.jpg" alt="Anchor Button" imgCount="1" }}
+                </div>
+                <div class="rlr-itinerary__media">
+                    <span class="rlr-itinerary__media-title">Double</span>
+                    {{> "@lightbox--image" wrapperTag="figure" ahref="../../assets/images/gallery/1568/aman-kvknav96-di-unsplash1568.jpg" imgThumb="../../assets/images/misc/itinerary-2.jpg" alt="Anchor Button" imgCount="2" }}
+                </div>
+                <div class="rlr-itinerary__media">
+                    <span class="rlr-itinerary__media-title">Shared</span>
+                    {{> "@lightbox--image" wrapperTag="figure" ahref="../../assets/images/gallery/1568/anna-sullivan-g7b2bqwtluq-unsplash1568.jpg" imgThumb="../../assets/images/misc/itinerary-3.jpg" alt="Anchor Button" imgCount="3" }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade"
+        id="rlr-itinerary-meals"
+        role="tabpanel">
+        {{> "@read-more-description" content="It is a long established fact that a reader will be distracted by the readable
+        content of a page when looking at its layout. The point of using Lorem Ipsum is
+        that it has a more-or-less normal distribution of letters"}}
+    </div>
+    <div class="tab-pane fade"
+        id="rlr-itinerary-inclusions"
+        role="tabpanel">
+        {{> "@read-more-description" content="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+        old."}}
+    </div>
+    <div class="tab-pane fade"
+        id="rlr-itinerary-special_info"
+        role="tabpanel">
+        {{> "@read-more-description" content="There are many variations of passages of Lorem Ipsum available, but the majority
+        have suffered alteration in some form, by injected humour"}}
+    </div>
+</div>

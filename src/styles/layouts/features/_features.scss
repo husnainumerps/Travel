@@ -1,0 +1,124 @@
+.rlr-features {
+  padding: var(--spacing-15) 0;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-12);
+
+    @media (max-width: 992px) {
+      // temp
+      //  @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__header-text {
+    width: 768px;
+    max-width: 100%;
+
+    .type-h6 {
+      color: var(--gray-06);
+      line-height: 1.6;
+    }
+  }
+
+  &__header-btns {
+    display: flex;
+    gap: var(--spacing-4);
+
+    @media (max-width: 991px) {
+      // temp
+      margin-top: var(--spacing-4);
+      margin-left: auto;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: var(--spacing-4);
+    color: var(--warning-07);
+  }
+
+  &__title {
+    margin-bottom: var(--spacing-6);
+  }
+
+  // &__body {
+  //   // @media (max-width: 991px) { // temp
+  //   //   flex-direction: column-reverse !important;
+  //   // }
+  // }
+
+  &__body-img {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__body-text {
+    padding-top: var(--spacing-7);
+    list-style: none;
+  }
+
+  &__text-item {
+    display: grid;
+    margin-bottom: var(--spacing-10);
+    gap: var(--spacing-5);
+    grid-template-columns: 3rem auto;
+  }
+
+  &__list-icon {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    border: var(--spacing-3) solid var(--warning-02);
+    background-color: var(--warning-04);
+    border-radius: 50%;
+    color: var(--warning-07);
+    place-items: center;
+
+    i {
+      display: grid;
+      font-size: 1rem;
+      place-items: center;
+    }
+  }
+
+  &__list-desc {
+    margin-bottom: var(--spacing-6);
+    color: var(--gray-06);
+  }
+
+  &__link {
+    color: var(--warning-07);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--warning-07);
+    }
+
+    i {
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  &--v2 {
+    .rlr-features__body-img {
+      display: flex;
+      justify-content: flex-end;
+
+      @media (max-width: 991px) {
+        // temp
+        justify-content: center;
+      }
+
+      img {
+        width: 560px;
+        max-width: 100%;
+      }
+    }
+  }
+}

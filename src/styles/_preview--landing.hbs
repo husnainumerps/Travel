@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Your vacation, tours and travel theme needs are all met at emprise." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Travel Website Template | Emprise</title>
+    <link rel="shortcut icon" type="image/png"
+        href="{{path '/assets/favicon.ico'}}">
+    <!-- Preload assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+    <link rel="preconnect" href="https://d33wubrfki0l68.cloudfront.net/"
+        crossorigin>
+    <link rel="preconnect" href="https://cdn2.waituk.com/emprise/" crossorigin>
+    <link rel="preload" href="{{path '/styles/plugins.css'}}" as="style">
+    <link rel="preload" href="{{path '/styles/main.css'}}" as="style">
+    <link rel="preload" href="{{path '/vendors/navx/js/navigation.min.js'}}"
+        as="script">
+    <link rel="preload" href="{{path '/js/main.js'}}" as="script">
+    <link rel="preload" href="{{path '/styles/plugins.css'}}" as="style">
+    <link rel="preload"
+        href="https://cdn2.waituk.com/emprise/iStock-1364007793-compressed.mp4"
+        as="video" type="video/mp4">
+    <link rel="stylesheet" href="{{path '/styles/plugins.css'}}">
+    <link rel="stylesheet" href="{{path '/styles/main.css'}}">
+</head>
+
+<body class="rlr-landing">
+    <!-- Header and Navigation -->
+    <header class="sticky-top">
+        {{> "@navigation--landing"}}
+    </header>
+    <main id="rlr-main" class="rlr-landing">
+        {{{ yield }}}
+    </main>
+    <script src="{{path '/vendors/navx/js/navigation.min.js'}}"></script>
+    <script src="{{path '/js/main.js'}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.rlr-form-select {
+  height: 48px;
+  padding: 0 var(--spacing-5);
+  border: solid 2px var(--form-border-color);
+  background-image: url("../assets/svg/dropdown.svg");
+  background-size: auto;
+  border-radius: var(--spacing-3);
+
+  @media (max-width: 768px) {
+    @include font-size(1rem);
+  }
+
+  &:focus {
+    border-color: unset;
+    box-shadow: none;
+  }
+}

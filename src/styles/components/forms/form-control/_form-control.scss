@@ -1,0 +1,42 @@
+.form-control {
+  --form-control-field-height: 3rem;
+
+  height: var(--form-control-field-height);
+  padding: 0 var(--spacing-5);
+  border: solid 2px var(--form-border-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0;
+  color: var(--heading-color);
+  text-overflow: ellipsis;
+
+  &--light {
+    border-color: var(--form-border-color-light);
+  }
+
+  @media (max-width: 768px) {
+    @include font-size(1rem);
+  }
+
+  &:active,
+  &:focus {
+    border-color: unset;
+    box-shadow: 0 0;
+  }
+
+  &::placeholder {
+    color: var(--body-color);
+  }
+
+  &--validated {
+    background: url("../assets/images/greentick.png") no-repeat 95% 9px;
+  }
+
+  &--date {
+    background: url("../assets/images/calendar.png") 96% 50% no-repeat;
+  }
+
+  &--text-area {
+    height: var(--spacing-18);
+    padding: var(--spacing-3) var(--spacing-5);
+  }
+}

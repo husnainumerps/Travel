@@ -1,0 +1,172 @@
+<div class="rlr-product-filters__filters-wrapper">
+    <!-- Search filter -->
+    <div class="rlr-product-filters__filter">
+        {{> "@form-label" labelModifier="rlr-product-filters__label" formLabel="When are you travelling?"}}
+        <div
+            class="rlr-input-groups rlr-input-groups--daterange js-date-ranges">
+            {{> '@input-group' modifier="rlr-input-group__datefield rlr-custom-input rlr-custom-input--numberfield rlr-custom-input--option" inputType="hidden" }}
+            {{> '@input-group' id="rlr-booking-dateranges-input" inputGroupId="rlr-booking-startRange" modifier="rlr-input-group__datefield rlr-js-booking-form-daterange" inputType="text" }}
+        </div>
+    </div>
+    <!-- Popular tags filter -->
+    <div class="rlr-product-filters__filter">
+        {{> "@form-label" labelModifier="rlr-product-filters__label" formLabel="Popular Tags"}}
+        <ul class="rlr-checkboxes">
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-product-tag-1"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="Child Friendly" forLabel="rlr-product-tag-1"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-product-tag-2"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="Taking extra precautions" forLabel="rlr-product-tag-2"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-product-tag-3"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="Away from the chaos" forLabel="rlr-product-tag-3"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-product-tag-4"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="Epic Challenges" forLabel="rlr-product-tag-4"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-product-tag-5"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="Virtual Experiences" forLabel="rlr-product-tag-5"}}
+            </li>
+        </ul>
+    </div>
+    <!-- Price range filter -->
+    <div class="rlr-product-filters__filter">
+        {{> "@form-label" labelModifier="rlr-product-filters__label" formLabel="Price Range"}}
+        {{> "@input-range" modifier="rlr-product-filters__range-slider" minRange="100" maxRange="2000"}}
+    </div>
+    <!-- Duration filter -->
+    <div class="rlr-product-filters__filter">
+        {{> "@form-label" labelModifier="rlr-product-filters__label" formLabel="Duration"}}
+        <ul class="rlr-checkboxes">
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-duration-1"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="Upto 1 Hour" forLabel="rlr-filter-duration-1"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-duration-2"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="1 to 4 Hours" forLabel="rlr-filter-duration-2"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-duration-3"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="4 Hours to 1 Day" forLabel="rlr-filter-duration-3"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-duration-4"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="1 to 3 Days" forLabel="rlr-filter-duration-4"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-duration-5"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="3 Days or More" forLabel="rlr-filter-duration-5"}}
+            </li>
+        </ul>
+    </div>
+    <!-- Tour rating filter -->
+    <div class="rlr-product-filters__filter">
+        {{> "@form-label" labelModifier="rlr-product-filters__label" formLabel="Tour Rating"}}
+        <ul class="rlr-checkboxes">
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-rating-1"}}
+                <label aria-label="rating-1" for="rlr-filter-rating-1">
+                    <span class="rlr-product-filters__hidden">rating 1</span>
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                </label>
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-rating-2"}}
+                <label aria-label="rating-2" for="rlr-filter-rating-2">
+                    <span class="rlr-product-filters__hidden">rating 2</span>
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star"}}
+                </label>
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-rating-3"}}
+                <label aria-label="rating-3" for="rlr-filter-rating-3">
+                    <span class="rlr-product-filters__hidden">rating 3</span>
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star"}}
+                </label>
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-rating-4"}}
+                <label aria-label="rating-4" for="rlr-filter-rating-4">
+                    <span class="rlr-product-filters__hidden">rating 4</span>
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star"}}
+                </label>
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-rating-5"}}
+                <label aria-label="rating-5" for="rlr-filter-rating-5">
+                    <span class="rlr-product-filters__hidden">rating 5</span>
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star-1"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star"}}
+                    {{> '@icon-fonts' tagName="i" iconClass="flaticon-star"}}
+                </label>
+            </li>
+        </ul>
+    </div>
+    <!-- Age group filter -->
+    <div class="rlr-product-filters__filter">
+        {{> "@form-label" labelModifier="rlr-product-filters__label" formLabel="Age Group"}}
+        <ul class="rlr-checkboxes">
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-age-group-1"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="0+ Years" forLabel="rlr-filter-age-group-1"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-age-group-2"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="3+ Years" forLabel="rlr-filter-age-group-2"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-age-group-3"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="18+ Years" forLabel="rlr-filter-age-group-3"}}
+            </li>
+        </ul>
+    </div>
+    <div class="rlr-product-filters__filter">
+        {{> "@form-label" labelModifier="rlr-product-filters__label" formLabel="Specials"}}
+        <ul class="rlr-checkboxes">
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-speicals-1"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="Discounted deals" forLabel="rlr-filter-speicals-1"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-speicals-2"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="Free Cancellations" forLabel="rlr-filter-speicals-2"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-speicals-3"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="Private Groups" forLabel="rlr-filter-speicals-3"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-speicals-4"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="New on Emprise" forLabel="rlr-filter-speicals-4"}}
+            </li>
+            <li class="form-check form-check-block">
+                {{> '@checkbox' modifier="rlr-product-filters__checkbox" checkboxID="rlr-filter-speicals-5"}}
+                {{> '@form-label' labelModifier="rlr-product-filters__checkbox-label" type="checkbox" formLabel="Emprise Specials" forLabel="rlr-filter-speicals-5"}}
+            </li>
+        </ul>
+    </div>
+</div>

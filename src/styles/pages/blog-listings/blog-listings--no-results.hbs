@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row rlr-search-results-page__product-details">
+        <aside class="col-xl-4 rlr-search-results-page__sidebar">
+            {{> "@sidebar"}}
+        </aside>
+        <section class="col-xl-8 rlr-search-results-page__product-list">
+            <div class="row rlr-listings__header">
+                {{> '@typography--heading-h1' modifier="rlr-section__heading--main" tagname="h1" copyText="Search results"}}
+                {{> '@typography--type-body' modifier="rlr-section__heading--sub" tagname="span" copyText="Sorry, but nothing matched your search terms. Please try again."}}
+            </div>
+            <div class="row rlr-search-results-page__card-wrapper">
+                <div
+                    class="rlr-sidebar__widget rlr-sidebar--search widget_search">
+                    <form role="search" method="get"
+                        action="https://ui.emprise.tours"
+                        class="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
+                        <label for="wp-block-search__input-2"
+                            class="wp-block-search__label">Search</label>
+                        <div class="wp-block-search__inside-wrapper"><input
+                                type="search" id="wp-block-search__input-2"
+                                class="wp-block-search__input" name="s" value=""
+                                placeholder="" required=""></div>
+                    </form>
+                </div>
+            </div>
+            <hr class="rlr-search-results-page__divider">
+        </section>
+    </div>
+</div>

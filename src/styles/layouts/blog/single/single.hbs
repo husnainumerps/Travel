@@ -1,0 +1,51 @@
+<!-- Blog Element -->
+<div class="container-xxl">
+    <article class="rlr-article rlr-article-single--v2">
+        <header class="rlr-article__header">
+            <div class="rlr-article__header__timestamp">
+                Published 09 April Jan 2022
+            </div>
+            {{> '@typography--heading-h1' modifier="type-h1" tagname="h1" copyText="A weekend in Nagarkot"}}
+            {{> '@typography--type-sub-title' modifier="type-sub-title" tagname="h6" copyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat."}}
+        </header>
+        <div class="rlr-article__featured-photo">
+            <img src="../../assets/images/blog-image--main.jpg"
+                alt="Featured Photo" />
+        </div>
+        <div class="rlr-article__wrapper">
+            <div class="content">
+                <div class="content__highlight">
+                    {{> '@typography--heading-h3' modifier="type-h3" tagname="h2" copyText="About Nagarkot"}}
+                    {{> '@typography--type-lead' modifier="type-lead" tagname="p" copyText="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec ullamcorper mattis lorem non. Ultrices praesent
+                        amet ipsum justo massa. Eu dolor aliquet risus gravida
+                        nunc at feugiat consequat purus. Non massa enim vitae
+                        duis mattis. Vel in ultricies vel fringilla."
+          }}
+                </div>
+                <figure>
+                    <img src="../../assets/images/blog-single-02.jpg"
+                        alt="Photo" />
+                </figure>
+                {{> '@typography--type-lead' modifier="type-lead" tagname="p" copyText="Nunc commodo eros velit, vitae tempor purus laoreet in. Fusce a condimentum magna, sit amet ultricies nibh. Vivamus tristique enim non accumsan ornare. Cras tincidunt ultrices libero nec bibendum."}}
+                {{> '@typography--type-lead' modifier="type-lead" tagname="p" copyText="Cras dignissim eros ullamcorper sapien porttitor, eget laoreet ipsum dapibus. Nulla tincidunt pulvinar ante, in sollicitudin massa iaculis quis. Praesent ac venenatis mi. Vivamus risus dui, convallis nec risus a, luctus gravida ipsum. Donec erat libero, euismod nec quam nec, congue maximus urna. Fusce pharetra urna ut pharetra iaculis. In vitae venenatis sem, nec lacinia nibh. Pellentesque ac consectetur lectus."}}
+                {{> '@typography--type-lead' modifier="type-lead" tagname="p" copyText="Mauris vitae bibendum enim. Curabitur luctus ligula purus, sit amet venenatis orcijar Vivamus tristique enim non accumsan ornare. Cras tincidunt ultrices libero nec bibendum."}}
+                <blockquote>
+                    {{> '@typography--heading-h6-medium' modifier="type-h6-medium" tagname="h5" copyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."}}
+                    {{> '@typography--type-body' modifier="type-body content-quote__author" tagname="p" copyText="— Sanjeev Jha, Railar Solutions"}}
+                </blockquote>
+                {{> '@typography--heading-h6-medium' modifier="type-h6-medium" tagname="h5" copyText="Things to note"}}
+                {{> '@typography--type-lead' modifier="type-lead" tagname="p" copyText="Nunc commodo eros velit, vitae tempor purus laoreet in. Fusce a condimentum magna, sit amet ultricies nibh. Vivamus tristique enim non accumsan ornare. Cras tincidunt ultrices libero nec bibendum."}}
+                <div class="rlr-article__badges">
+                    {{> '@badge--abs-left' badgeLabel="Nomad" alignment="left" modifier="rating" customClass="rlr-badge rlr-badge--left" }}
+                    {{> '@badge--abs-left' badgeLabel="Wanderer" alignment="left" modifier="rating" customClass="rlr-badge rlr-badge--left" }}
+                    {{> '@badge--abs-left' badgeLabel="Off the Beat" alignment="left" modifier="rating" customClass="rlr-badge rlr-badge--left" }}
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- Newsletter Subscription -->
+    <section class="rlr-section rlr-section__mt row align-items-center">
+        {{> '@newsletter-block' }}
+    </section>
+</div>

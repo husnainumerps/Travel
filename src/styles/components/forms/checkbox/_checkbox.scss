@@ -1,0 +1,55 @@
+.rlr-form-check-input {
+  box-shadow: 0 0;
+  transition: all 0.3s;
+
+  // Check Boxes
+  &[type="checkbox"] {
+    width: var(--spacing-6);
+    height: var(--spacing-6);
+    border: solid 2px var(--body-color);
+    margin-top: var(--spacing-2);
+    border-radius: var(--spacing-2);
+
+    &:checked {
+      border: 0;
+      background: url("../assets/images/tick.png") no-repeat 50% 50% var(--brand);
+    }
+
+    + label {
+      padding: var(--spacing-2) 0 0 var(--spacing-3);
+    }
+  }
+
+  &:active {
+    filter: none;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+// Check Boxes
+.rlr-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 0;
+  margin-bottom: 0;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  .form-check-inline {
+    width: 44%;
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+  }
+
+  .form-check-block {
+    width: 100%;
+  }
+}

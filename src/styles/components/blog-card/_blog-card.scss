@@ -1,0 +1,81 @@
+.rlr-postcard {
+  display: block;
+  padding: var(--spacing-5);
+  margin-bottom: var(--spacing-8);
+  background: var(--white);
+  border-radius: var(--spacing-5);
+  box-shadow: 0 2px 8px 2px rgb(14 86 124 / 8%);
+  color: var(--body-color);
+  text-decoration: none;
+  transition: all 0.4s;
+
+  @media (max-width: 991px) {
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 8px 2px rgb(14 86 124 / 25%);
+    color: var(--body-color);
+  }
+
+  &__thumbnail {
+    width: 100%;
+    border-radius: var(--spacing-5);
+
+    @media (max-width: 991px) {
+      border-radius: 0.25rem;
+    }
+  }
+
+  &__summary {
+    padding: var(--spacing-5);
+  }
+
+  &__author {
+    @extend %type-small;
+
+    color: var(--brand-08);
+  }
+
+  &__title {
+    @extend %type-small;
+
+    margin: 0.5rem 0 1.5rem;
+    color: var(--heading-color);
+
+    @media (max-width: 768px) {
+      margin: 0.25rem 0 0.5rem;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 1.5rem 0 0;
+
+    li {
+      padding: 0 1.5rem;
+      margin: 0;
+      background: url("../assets/images/checkmark.png") no-repeat 0 8px;
+      color: var(--body-color);
+      list-style: none;
+    }
+  }
+
+  & .rlr-product-card__footer {
+    margin-top: var(--spacing-10);
+  }
+
+  & .rlr-product-card__title {
+    &:hover {
+      color: var(--brand);
+      transition: color 0.3s ease-in-out;
+    }
+  }
+
+  & p {
+    word-break: break-all;
+  }
+}

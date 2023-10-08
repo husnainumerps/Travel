@@ -1,0 +1,8 @@
+/* GRADIENT SKIN
+ ================================*/
+
+.navigation {
+  background: -moz-linear-gradient(top, var(--white) 0%, #e5e5e5 100%);
+  background: -webkit-linear-gradient(top, var(--white) 0%, #e5e5e5 100%);
+  background: linear-gradient(to bottom, var(--white) 0%, #e5e5e5 100%);
+}

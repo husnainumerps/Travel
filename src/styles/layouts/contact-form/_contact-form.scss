@@ -1,0 +1,29 @@
+.rlr-contact-form {
+  &__header {
+    margin-bottom: var(--spacing-10);
+  }
+
+  &__input-group {
+    margin-bottom: var(--spacing-7); // not working
+  }
+
+  &__label {
+    margin-bottom: var(--spacing-3);
+    color: var(--body-color);
+    line-height: 1.25rem;
+  }
+
+  .form-control {
+    border: 1px solid var(--gray-04);
+    color: var(--gray-05);
+
+    &::placeholder {
+      color: var(--gray-05);
+    }
+  }
+
+  .rlr-button--medium {
+    padding: 1.0625rem 1.25rem;
+    float: right;
+  }
+}

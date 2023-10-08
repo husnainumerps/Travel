@@ -1,0 +1,18 @@
+.rlr-img-bg-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: linear-gradient(45deg, #101828 0%, #475467 100%);
+
+  &__content {
+    & .type-h1 {
+      color: var(--white);
+    }
+
+    & .type-body-medium {
+      color: var(--gray-02);
+    }
+  }
+}

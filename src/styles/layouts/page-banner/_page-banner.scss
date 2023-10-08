@@ -1,0 +1,38 @@
+.rlr-page-banner {
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    height: 100vh;
+    min-height: 26.25rem;
+    max-height: 26.25rem;
+    align-items: center;
+    padding: var(--spacing-12);
+    vertical-align: middle;
+
+    &::before {
+      z-index: -1;
+    }
+
+    &--image-bg {
+      overflow: hidden;
+      background: url("../../../assets/images/artem-kniaz-bC7zaV3j7S4-unsplash.jpg") no-repeat center center fixed;
+      background-attachment: initial;
+      background-size: cover;
+      color: white;
+    }
+  }
+
+  & .rlr-section__title--sub,
+  .rlr-breadcrumb__item a {
+    color: var(--white);
+  }
+
+  & .rlr-breadcrumb__item {
+    color: var(--neutral);
+  }
+
+  & .rlr-breadcrumb__item.breadcrumb-item.active {
+    color: var(--neutral);
+  }
+}

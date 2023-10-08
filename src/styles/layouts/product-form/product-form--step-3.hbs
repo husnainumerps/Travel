@@ -1,0 +1,71 @@
+<fieldset class="rlr-product-form--hide rlr-js-product-form-fieldset"
+    data-attr="js-step-3">
+    {{> '@section-heading--product-form' copyText="Select theme & tags" bodyText="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."}}
+    <div class="rlr-fieldrow">
+        <div class="rlr-fieldrow__form-element">
+            <div class="rlr-fieldrow__item rlr-fieldrow__item--multiple">
+                <div class="row">
+                    <div class="col-xl-10">
+                        <div class="rlr-fieldrow__options js-fieldrow__item">
+                            {{> '@form-label' formLabel="Product Theme" type="dark" forLabel="rlr-product-form-product-theme"}}
+                            {{> '@form-select' id="rlr-product-form-product-theme" isRequired="required" optionSelected="Select" option1="Health and Fitness" option2="Outdoor and Adventure" option3="Religion" option4="Food and Drink" }}
+                        </div>
+                        <div class="rlr-fieldrow__options">
+                            {{> '@form-label' formLabel="Outdoor and Adventures" type="light"}}
+                            <ul class="rlr-checkboxes">
+                                <li class="form-check form-check-inline">
+                                    {{> '@checkbox' checkboxID="rlr-product-form-outdoor-adventure"}}
+                                    {{> '@form-label' type="checkbox" formLabel="Adventures" forLabel="rlr-product-form-outdoor-adventure"}}
+                                </li>
+                                <li class="form-check form-check-inline">
+                                    {{> '@checkbox' checkboxID="rlr-product-form-outdoor-animals"}}
+                                    {{> '@form-label' type="checkbox" formLabel="Animals and Wildlife" forLabel="rlr-product-form-outdoor-animals"}}
+                                </li>
+                                <li class="form-check form-check-inline">
+                                    {{> '@checkbox' checkboxID="rlr-product-form-outdoor-adrenaline"}}
+                                    {{> '@form-label' type="checkbox" formLabel="Adrenaline and Extreme" forLabel="rlr-product-form-outdoor-adrenaline"}}
+                                </li>
+                                <li class="form-check form-check-inline">
+                                    {{> '@checkbox' checkboxID="rlr-product-form-outdoor-health"}}
+                                    {{> '@form-label' type="checkbox" formLabel="Health and Fitness" forLabel="rlr-product-form-outdoor-health"}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                        {{> '@button--tooltip' dataTippyContent='<span class="type-lead-semibold">Product Title</span> <p>are used to describe the product your are about to add to Emprise</p>' }}
+                    </div>
+                </div>
+            </div>
+            {{> '@button' modifier="text-button rlr-button--product-form-repeater js-repeater" shape="rounded" size="small" btnBgColor="transparent" btnText="+ Add another theme"}}
+            <div class="rlr-fieldrow__item js-fieldrow__item">
+                <div class="row">
+                    <div class="col-xl-10">
+                        {{> '@form-label' formLabel="Product Tags" type="dark"}}
+                        <ul class="rlr-checkboxes">
+                            <li class="form-check form-check-inline">
+                                {{> '@checkbox' checkboxID="rlr-product-form-ptag-child"}}
+                                {{> '@form-label' type="checkbox" formLabel="Child Friendly" forLabel="rlr-product-form-ptag-child"}}
+                            </li>
+                            <li class="form-check form-check-inline">
+                                {{> '@checkbox' checkboxID="rlr-product-form-ptag-epic"}}
+                                {{> '@form-label' type="checkbox" formLabel="Epic Challenges" forLabel="rlr-product-form-ptag-epic"}}
+                            </li>
+                            <li class="form-check form-check-inline">
+                                {{> '@checkbox' checkboxID="rlr-product-form-ptag-away"}}
+                                {{> '@form-label' type="checkbox" formLabel="Away from Chaos" forLabel="rlr-product-form-ptag-away"}}
+                            </li>
+                            <li class="form-check form-check-inline">
+                                {{> '@checkbox' checkboxID="rlr-product-form-ptag-virtual"}}
+                                {{> '@form-label' type="checkbox" formLabel="Virtual Experiences" forLabel="rlr-product-form-ptag-virtual"}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2">
+                        {{> '@button--tooltip' dataTippyContent='<span class="type-lead-semibold">Product Title</span> <p>are used to describe the product your are about to add to Emprise</p>' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
