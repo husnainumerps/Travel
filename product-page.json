@@ -1,0 +1,66 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "horizontal_ticker_YRYrNi": {
+      "type": "horizontal-ticker",
+      "blocks": {
+        "text_3GE3AX": {
+          "type": "text",
+          "settings": {
+            "title": "✓ FREE SHIPPING"
+          }
+        },
+        "text_yqmDNi": {
+          "type": "text",
+          "settings": {
+            "title": "✓ 30-DAY MONEY BACK GUARANTEE"
+          }
+        },
+        "text_nbWqiE": {
+          "type": "text",
+          "settings": {
+            "title": "✓ 10,000+ HAPPY CUSTOMERS"
+          }
+        }
+      },
+      "block_order": [
+        "text_3GE3AX",
+        "text_yqmDNi",
+        "text_nbWqiE"
+      ],
+      "name": "Horizontal Ticker",
+      "settings": {
+        "visibility": "always-display",
+        "speed": 3,
+        "mobile_spacing": 60,
+        "desktop_spacing": 100,
+        "color_scheme": "custom",
+        "mobile_text_size": 11,
+        "desktop_text_size": 18,
+        "italic_text": false,
+        "uppercase_text": false,
+        "bold_text": true,
+        "mobile_image_height": 26,
+        "desktop_image_height": 40,
+        "hidden_products": "",
+        "enable_specific_display": false,
+        "displayed_products": "",
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 12,
+        "desktop_padding_top": 16,
+        "desktop_padding_bottom": 16,
+        "custom_colors_background": "#FF6B35",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#ffffff"
+      }
+    }
+  }
+}
